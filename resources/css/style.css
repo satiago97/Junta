@@ -197,7 +197,7 @@ iframe {
     /* background: #dddddd38; */
     color: #fff;
     font-size: 30px;
-    left: 10%;
+    left: -20%;
     right: 10%;
 }
 
@@ -281,6 +281,24 @@ iframe {
 
 .colorfullPanel{
   background-color: #333333;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.colorfullPanelFacebook{
+  background-color: #3b5998;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.colorfullPanelTwitter{
+  background-color: #00acee;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.colorfullPanelInstagram{
+  background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
   color: #fff;
   transition: background-color 0.5s ease;
 }

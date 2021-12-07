@@ -24,17 +24,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
        <style>
-            .HOVER:hover a:after {
-            content: attr(data-hover);
-            color: red;
-            display: block;
-            background: #000;
-            position: absolute;
-            top: 100%;
-            left: -7px;
-            right: -7px;
-            padding: 15px; 
-            }
+   .HOVER:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    }
+
+    .HOVER .dropdown-menu {
+        position: absolute;
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        padding: 10px;
+        -webkit-transition: opacity 600ms, visibility 600ms;
+        transition: opacity 600ms, visibility 600ms;
+    }
         </style>
 
     </head>
@@ -63,21 +66,14 @@
                                                             <div class="col-md-3 col-xs-3 col-sm-3">
                                                                 <a style="padding-top: 0px;" class="navbar-brand navBrandText text-uppercase font-weight-bold" href="index.html"><img src="/img/logo/logo.png" alt="logo" /></a>
                                                             </div>
-                                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                                <a href="index.html"><img class="img-responsive logo" style="padding-left: 20px;border-right-width: -10;height: 59px;" src="/img/logo/portal.png" alt="logo" /></a>
+                                                            <div class="col-md-9 col-sm-9 col-xs-9" style="padding-left: 40px;padding-top: 18px;">
+                                                                <a href="index.html"class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; role="button">Portal da Freguesia</a>
                                                             </div>
                                                         </div>
 
 
                                                     </div>
-                                                    <div class="col-md-3 col-sm-3 col-xs-3">
-                                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                                            <span class="sr-only">Toggle navigation</span>
-                                                            <span class="icon-bar"></span>
-                                                            <span class="icon-bar"></span>
-                                                            <span class="icon-bar"></span>
-                                                        </button>
-                                                    </div>
+                                
                                                 </div>
 
                                             </div>
@@ -87,7 +83,7 @@
                                             <ul class="nav navbar-nav navbar-right navBar">
                                                     <li class="nav-item"><a href="#section0" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home <span class="sr-only">(current)</span></a></li>
                                                     <!-- Dropdown Freguesia-->
-                                                    <li class="dropdown">
+                                                    <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Freguesisa</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">História</a></li>
@@ -122,7 +118,7 @@
                                                     <!-- End Dropdown Freguesia-->
 
                                                     <!-- Dropdown Autarquia-->
-                                                    <li class="dropdown">
+                                                    <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Autarquia</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">Documentos Executivo</a></li>
@@ -154,7 +150,7 @@
                                                     </li>
                                                     <!-- End Dropdown Autarquia-->
                                                     <!-- Dropdown Informações-->
-                                                    <li class="dropdown">
+                                                    <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Informações</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">Localização</a></li>
@@ -170,7 +166,7 @@
                                                     </li>
                                                     <!-- End Dropdown Informações-->
                                                     <!-- Dropdown Orçamento Participativo-->
-                                                    <li class="dropdown">
+                                                    <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Orçamento Participativo</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">Sobre</a></li>

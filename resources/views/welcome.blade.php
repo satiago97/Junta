@@ -43,7 +43,7 @@
                                                 <h2>Balcão Virtual</h2>
                                                 <h3>Área do cidadão</h3>
                                                 <p>Já experimentou solicitar ou renovar licenças dos canídeos <br> pelo Balcão Virtual da Freguesia? É simples!</p>
-                                                <a class="default-btn" href="about.html">Registe-se e aceda aqui!</a>
+                                                <a class="default-btn" href="{{ route('registar') }}">Registe-se e aceda aqui!</a>
                                                 <img class="classic" src="/img/new/icon.png">
 
                                             </div>

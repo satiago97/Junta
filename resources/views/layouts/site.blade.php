@@ -64,10 +64,10 @@
                                                     <div class="col-md-9 col-sm-9 col-xs-9">
                                                         <div class="row">
                                                             <div class="col-md-3 col-xs-3 col-sm-3">
-                                                                <a style="padding-top: 0px;" class="navbar-brand navBrandText text-uppercase font-weight-bold" href="index.html"><img src="/img/logo/logo.png" alt="logo" /></a>
+                                                                <a style="padding-top: 0px;" class="navbar-brand navBrandText text-uppercase font-weight-bold" href="{{ route('welcome') }}"><img src="/img/logo/logo.png" alt="logo" /></a>
                                                             </div>
                                                             <div class="col-md-9 col-sm-9 col-xs-9" style="padding-left: 40px;padding-top: 18px;">
-                                                                <a href="index.html"class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; role="button">Portal da Freguesia</a>
+                                                                <a href="{{ route('welcome') }}"class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; role="button">Portal da Freguesia</a>
                                                             </div>
                                                         </div>
 
@@ -83,8 +83,8 @@
                                             <ul class="nav navbar-nav navbar-right navBar">
                                                     <li class="nav-item"><a href="#section0" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home <span class="sr-only">(current)</span></a></li>
                                                     <!-- Dropdown Freguesia-->
-                                                    <li class="dropdown HOVER open">
-                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Freguesisa</a>
+                                                    <li class="HOVER open">
+                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Freguesisa</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">História</a></li>
                                                             <li class="divider"></li>
@@ -118,8 +118,8 @@
                                                     <!-- End Dropdown Freguesia-->
 
                                                     <!-- Dropdown Autarquia-->
-                                                    <li class="dropdown HOVER open">
-                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Autarquia</a>
+                                                    <li class="HOVER open">
+                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Autarquia</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">Documentos Executivo</a></li>
                                                             <li class="divider"></li>
@@ -150,8 +150,8 @@
                                                     </li>
                                                     <!-- End Dropdown Autarquia-->
                                                     <!-- Dropdown Informações-->
-                                                    <li class="dropdown HOVER open">
-                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Informações</a>
+                                                    <li class="HOVER open">
+                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Informações</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">Localização</a></li>
                                                             <li class="divider"></li>
@@ -166,8 +166,8 @@
                                                     </li>
                                                     <!-- End Dropdown Informações-->
                                                     <!-- Dropdown Orçamento Participativo-->
-                                                    <li class="dropdown HOVER open">
-                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Orçamento Participativo</a>
+                                                    <li class="HOVER open">
+                                                        <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Orçamento Participativo</a>
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="#">Sobre</a></li>
                                                             <li class="divider"></li>

@@ -23,12 +23,12 @@
           <div class="row">
           
           <div class="main">
-            <p class="sign" align="center">Sign in</p>
+            <p class="sign" align="center">Log in</p>
             <form class="form1">
-              <input class="un " type="text" align="center" placeholder="Username">
-              <input class="pass" type="password" align="center" placeholder="Password">
-              <a class="submit" align="center">Sign in</a>
-              <p class="forgot" align="center"><a href="#">Forgot Password?</p>
+              <input class="un " type="text" align="center" placeholder="Nome de utilizador">
+              <input class="pass" type="password" align="center" placeholder="Palavra-passe">
+              <a class="submit" href="{{ route('painel') }}" align="center">Seguinte</a>
+              <p class="forgot" align="center"><a href="#">Esqueceu-se da palavra-passe?</p>
                     
                         
     </div>

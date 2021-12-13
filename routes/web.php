@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+
+Route::get('/backoffice', function(){
+    return view('backoffice/painel');
+})->name('painel'); 

@@ -21,6 +21,9 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+Route::get('/registar', function(){
+    return view('registar');
+})->name('registar'); 
 
 Route::get('/backoffice', function(){
     return view('backoffice/painel');

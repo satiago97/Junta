@@ -23,10 +23,9 @@
           <div class="row">
           
           <div class="main">
-            <p class="sign" align="center">Bem Vindo</p>
-            <p class="sign" align="center">Novo Utilizador</p>
+            <p class="sign" align="center">Criar conta</p>
             <form class="form1">
-              <input class="pass" type="text" align="center" placeholder="Nome">
+              <input class="pass" type="text" style="text-align: center;" placeholder="Nome">
               <input class="un " type="text" align="center" placeholder="Username">
               <input class="pass" type="email" align="center" placeholder="Email">
               <input class="pass" type="password" align="center" placeholder="Password">

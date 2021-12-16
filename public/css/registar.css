@@ -1,11 +1,4 @@
-.main {
-    background-color: #FFFFFF;
-    width: 800px;
-    height: 800px;
-    margin: 7em auto;
-    border-radius: 1.5em;
-    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-}
+
 
 .sign {
     padding-top: 40px;
@@ -33,53 +26,20 @@ margin-left: 46px;
 text-align: center;
 margin-bottom: 27px;
 font-family: 'Ubuntu', sans-serif;
+margin-bottom: 40px;
 }
 
 form.form1 {
     padding-top: 40px;
 }
 
-.pass {
-        width: 76%;
-color: rgb(38, 50, 56);
-font-weight: 700;
-font-size: 14px;
-letter-spacing: 1px;
-background: rgba(136, 126, 126, 0.04);
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Ubuntu', sans-serif;
-}
 
-
-.un:focus, .pass:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+.un:focus {
+    border: 2px solid rgba(248, 168, 62, 0.446) !important;
     
 }
 
-.submit {
-  cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right, #262219, #f9b000);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-left: 35%;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
+
 
 .forgot {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
@@ -98,3 +58,75 @@ a {
         border-radius: 0px;
     }
 }
+
+
+  a2 {
+    margin-left: 75%;
+    text-decoration: none;
+    border: 3px solid rgba(248, 168, 62, 0.446);
+    color: transparent;
+    padding: 20px 80px;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 0.5s;
+    position: relative; 
+    border-radius: 10px;  
+    
+    padding-left: 88px;
+    top: 66px;
+    margin-left: 84%;
+
+  }
+  a2:before {
+    border-radius: 8px; 
+      cursor: pointer;
+    content: "Registar";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(143, 141, 141);
+    font-size: 28px;
+    top: 0;
+    left: 100%;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(0) rotatey(0);
+    opacity: 0;
+  }
+  a2:hover:before {
+    transform: scale(1) rotatey(360deg);
+    left: 0;
+    opacity: 1;
+  }
+  a2:after {
+    border-radius: 8px; 
+    content: "Seguinte";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(143, 141, 141);
+    font-size: 28px;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(1) rotatey(0);
+    opacity: 1;
+  }
+  a2:hover:after {
+    transform: scale(0) rotatey(360deg);
+    left: -100%;
+    opacity: 0;
+  }
+  

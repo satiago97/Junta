@@ -29,7 +29,7 @@
               <input class="pass" type="password" align="center" placeholder="Palavra-passe">
               <a class="submit" href="{{ route('painel') }}" align="center">Seguinte</a>
               <p class="forgot" align="center"><a href="#">Esqueceu-se da palavra-passe?</p>
-              <p class="forgot" align="center"><a href="{{ route('registar') }}">Registar</p>
+              <p class="forgot" align="center"><a href="{{ route('register') }}">Registar</p>
                     
                         
     </div>

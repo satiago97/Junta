@@ -21,9 +21,9 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::get('/registar', function(){
+/*Route::get('/registar', function(){
     return view('registar');
-})->name('registar'); 
+})->name('registar'); */
 
 Route::get('/backoffice', function(){
     return view('backoffice/painel');
@@ -87,3 +87,8 @@ Route::get('/ondeDormir', function(){
 Route::get('/paroquia', function(){
     return view('paroquia');
 })->name('paroquia');
+
+
+Route::get('/register', '\App\Http\Controllers\RegistrationController@create')->name('register');
+
+Route::post('register', '\App\Http\Controllers\RegistrationController@store');

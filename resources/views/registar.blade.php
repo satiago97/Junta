@@ -36,13 +36,15 @@
           
           <div class="registoContainer">
             
-            <form class="form1">
-              <input class="un" type="text"  placeholder="Nome">
-              <input class="un" type="email"  placeholder="E-mail">
-              <input class="un" type="password"  placeholder="Palavra-passe">
+            <form class="form1" method="POST" action="/register">
+            {{ csrf_field() }}
+              <input class="un" type="text"  id="name" name="name" placeholder="Nome">
+              <input class="un" type="email" id="email" name="email" placeholder="E-mail">
+              <input class="un" type="password" id="password"  name="password" placeholder="Palavra-passe">
               <input class="un" type="password"  placeholder="Confirmar palavra-passe">
+              <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
             
-              <a2 class="submit"></a2>
+              <!--<a2 class="submit" type="submit" ></a2>-->
             </form>
                         
           </div>

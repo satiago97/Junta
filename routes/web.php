@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+
 
 /*Route::get('/registar', function(){
     return view('registar');
@@ -92,3 +90,7 @@ Route::get('/paroquia', function(){
 Route::get('/register', '\App\Http\Controllers\RegistrationController@create')->name('register');
 
 Route::post('register', '\App\Http\Controllers\RegistrationController@store');
+
+Route::get('/login', '\App\Http\Controllers\SessionsController@create')->name('login');
+Route::post('/login', '\App\Http\Controllers\SessionsController@store');
+Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');

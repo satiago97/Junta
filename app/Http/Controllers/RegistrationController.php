@@ -17,13 +17,13 @@ class RegistrationController extends Controller
         $this->validate(request(), [
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|confirmed'
         ]);
 
         $utilizador = User::create(request(['name', 'email', 'password']));
 
         auth()->login($utilizador);
 
-        return redirect()->to('/backoffice');
+        return redirect()->to('/login');
     }
 }

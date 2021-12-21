@@ -74,14 +74,13 @@
             <!-- page title area end -->
             <div class="main-content-inner">
 
-            <form action="{{route('imagens.store')}}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">
         <h2>Insira a imagem</h2>
     </div>
     <div class="form-group">
-        <input type="text" name="nome" id="nome" placeholder="Insira o nome" required>
         <input type="file" name="file" id="file" required>
     </div>
     <button type="submit">Submit</button>

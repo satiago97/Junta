@@ -94,3 +94,12 @@ Route::post('register', '\App\Http\Controllers\RegistrationController@store');
 Route::get('/login', '\App\Http\Controllers\SessionsController@create')->name('login');
 Route::post('/login', '\App\Http\Controllers\SessionsController@store');
 Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
+
+
+
+Route::get('/insereGaleria', function(){
+    return view('/backoffice/insereGaleria');
+})->name('insereGaleria');
+
+
+Route::resource('imagens', 'App\Http\Controllers\GalleryController');

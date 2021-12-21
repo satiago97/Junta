@@ -133,7 +133,7 @@
                             <li><a href=""><i class="fa fa-book"></i> <span>Livro de reclamações</span></a></li>
                             <li><a href=""><i class="fa fa-question"></i> <span>Faqs</span></a></li>
                             <li><a href=""><i class="fa fa-folder"></i> <span>Ficheiros</span></a></li>
-                            <li><a href=""><i class="fa fa-camera"></i> <span>Galeria</span></a></li>
+                            <li><a href="{{ route('insereGaleria') }}"><i class="fa fa-camera"></i> <span>Galeria</span></a></li>
                             <li><a href=""><i class="fa fa-list"></i> <span>Lista de atividades</span></a></li>
                             <li><a href=""><i class="fa fa-map-marker"></i> <span>Locais de voto</span></a></li>
                             <li><a href=""><i class="fa fa-user-plus"></i><span>Gerir utilizadores</span></a></li>

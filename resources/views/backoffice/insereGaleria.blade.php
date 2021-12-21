@@ -81,6 +81,7 @@
         <h2>Insira a imagem</h2>
     </div>
     <div class="form-group">
+        <input type="text" name="nome" id="nome" required>
         <input type="file" name="file" id="file" required>
     </div>
     <button type="submit">Submit</button>

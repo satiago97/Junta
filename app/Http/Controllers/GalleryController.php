@@ -22,12 +22,13 @@ class GalleryController extends Controller
             $imagem = new Galerium([
                 "imagem" => $request->file->hashName(),
                 "id_freguesia" => '1',
-                "id_categoria" => '1'
+                "id_categoria" => '1',
+                "nome" => $request->input('nome'), 
             ]);
 
             $imagem->save();
 
-            return view('/backoffice/insereGaleria');
+            return view('/backoffice/painel');
         }
 
 

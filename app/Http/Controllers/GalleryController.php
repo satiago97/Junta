@@ -10,6 +10,12 @@ class GalleryController extends Controller
 {
 
 
+    public function index(){
+        $galeria = Galerium::all();
+        return view('/backoffice/insereGaleria', compact('galeria'));
+    }
+
+
     public function store(Request $request){
 
         if($request->hasFile('file')){
@@ -30,7 +36,6 @@ class GalleryController extends Controller
 
             return view('/backoffice/painel');
         }
-
 
         
     }

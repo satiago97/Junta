@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="css/default-css2.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
+
+    <link rel="stylesheet" href="css/paginasContainer.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/texto.css">
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -85,12 +89,22 @@
         <input type="file" name="file" id="file" required>
     </div>
     <button type="submit">Submit</button>
+
+
+    <div class="container">
+        <div class="row">
+            @foreach($galeria as $item)
+            <div class="mainContainerImage">
+            <div class="parent">
+                <div class="child"><img src="{{asset('galeria/galeria/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
+               <h4>{{$item -> nome}}</h4>
+            </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </form>
-                
-                
-                
-               
-         
+
         </div>
         <!-- main content area end -->
         <!-- footer area start-->

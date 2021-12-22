@@ -103,3 +103,9 @@ Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
+
+
+Route::get('/insereHistoria', 'App\Http\Controllers\InsertHistoryController@index')->name('inserirHistoria');
+Route::resource('inserirHistoria', 'App\Http\Controllers\InsertHistoryController');
+
+

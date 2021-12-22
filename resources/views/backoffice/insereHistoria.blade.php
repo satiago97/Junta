@@ -17,18 +17,14 @@
     <link rel="stylesheet" href="css/default-css2.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
-
-    <link rel="stylesheet" href="css/paginasContainer.css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/texto.css">
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+
 <body>
-    
-    <div id="preloader">
+<div id="preloader">
         <div class="loader"></div>
     </div>
 
@@ -62,7 +58,7 @@
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Galeria</span></li>
+                                <li><span>História</span></li>
                             </ul>
                         </div>
                     </div>
@@ -77,56 +73,29 @@
             </div>
             <!-- page title area end -->
             <div class="main-content-inner">
+                
+            @foreach($historia as $item)
+            <form class="form1" method="POST" action="{{ route('inserirHistoria.store') }}" id="historiaForm">
+            {{ csrf_field() }}
+              <input class="un" type="text"  id="titulo" name="titulo" value="{{$item -> titulo}}" required>
+              <p>
+              <textarea name="descricao" form="historiaForm" value="{{$item -> descricao}}" ></textarea>
+              <p>
+              <button style="cursor:pointer" type="submit" class="btn btn-primary">Adicionar</button>
 
-            <div class="container" style="margin-top: 20px;">
-                <div class="row">
-                    <div class="mainText">
-                    <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
-        <!-- Add CSRF Token -->
-        @csrf
-    <div class="form-group">
-        <h1>Adicionar imagem</h1>
-    </div>
-    <div class="form-group">
-        <div class="col-3">
-        <input class="effect-3" type="text" name="nome" id="nome" placeholder="Insira o nome da imagem" required>
-        <span class="focus-border"></span>
-        </div>
-        
-        <p><br>
-        <div class="file-input">
-            <input type="file" id="file" class="file" name="file">
-                    <label for="file">Selecionar</label>
-            </div>
+            
 
-    </div>
-    <button style="cursor:pointer" type="submit" class="btn btn-primary">Adicionar</button>
+              @include('partials.formerrors')
 
-    </form>
-                        
-                    </div>
-                </div>
-            </div>
-
-      
-
-    <div class="container">
-        <div class="row">
-            @foreach($galeria as $item)
-            <div class="mainContainerImage">
-            <div class="parent">
-             <div class="box"><img src="{{asset('galeria2/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
-             <label>Nome:</label>
-            <h6>{{$item -> nome}}</h6>
-            <label>Data de inserção:</label>
-            <h6>{{$item -> data}} </h6>
-                </div>
-            </div>
+            </form>
             @endforeach
-        </div>
-    </div>
-
-
+            
+              <!--<a2 class="submit" type="submit" ></a2>-->
+        
+            <p>
+            
+               
+         
         </div>
         <!-- main content area end -->
         <!-- footer area start-->
@@ -165,3 +134,5 @@
 </body>
 
 
+
+</body>

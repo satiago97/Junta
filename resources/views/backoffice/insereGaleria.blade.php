@@ -78,32 +78,54 @@
             <!-- page title area end -->
             <div class="main-content-inner">
 
-            <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
+            <div class="container" style="margin-top: 20px;">
+                <div class="row">
+                    <div class="mainText">
+                    <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">
-        <h2>Insira a imagem</h2>
+        <h1>Adicionar imagem</h1>
     </div>
     <div class="form-group">
-        <input type="text" name="nome" id="nome" required>
-        <input type="file" name="file" id="file" required>
-    </div>
-    <button type="submit">Submit</button>
+        <div class="col-3">
+        <input class="effect-3" type="text" name="nome" id="nome" placeholder="Insira o nome da imagem" required>
+        <span class="focus-border"></span>
+        </div>
+        
+        <p><br>
+        <div class="file-input">
+            <input type="file" id="file" class="file" name="file">
+                    <label for="file">Selecionar</label>
+            </div>
 
+    </div>
+    <button style="cursor:pointer" type="submit" class="btn btn-primary">Adicionar</button>
+
+    </form>
+                        
+                    </div>
+                </div>
+            </div>
+
+      
 
     <div class="container">
         <div class="row">
             @foreach($galeria as $item)
             <div class="mainContainerImage">
             <div class="parent">
-                <div class="child"><img src="{{asset('galeria/galeria/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
-               <h4>{{$item -> nome}}</h4>
-            </div>
+             <div class="box"><img src="{{asset('galeria/galeria/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
+             <label>Nome:</label>
+            <h6>{{$item -> nome}}</h6>
+            <label>Data de inserção:</label>
+            <h6>{{$item -> data}} </h6>
+                </div>
             </div>
             @endforeach
         </div>
     </div>
-</form>
+
 
         </div>
         <!-- main content area end -->

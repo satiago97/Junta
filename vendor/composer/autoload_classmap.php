@@ -42,7 +42,10 @@ return array(
     'App\\Models\\Empresa' => $baseDir . '/app/Models/Empresa.php',
     'App\\Models\\Escola' => $baseDir . '/app/Models/Escola.php',
     'App\\Models\\EstadoPropostum' => $baseDir . '/app/Models/EstadoPropostum.php',
+<<<<<<< HEAD
     'App\\Models\\FailedJob' => $baseDir . '/app/Models/FailedJob.php',
+=======
+>>>>>>> funcionalidade-de-galeria
     'App\\Models\\Faq' => $baseDir . '/app/Models/Faq.php',
     'App\\Models\\Freguesium' => $baseDir . '/app/Models/Freguesium.php',
     'App\\Models\\Galerium' => $baseDir . '/app/Models/Galerium.php',
@@ -60,8 +63,11 @@ return array(
     'App\\Models\\OrçamentoParticipativo' => $baseDir . '/app/Models/OrçamentoParticipativo.php',
     'App\\Models\\Paroquium' => $baseDir . '/app/Models/Paroquium.php',
     'App\\Models\\Partido' => $baseDir . '/app/Models/Partido.php',
+<<<<<<< HEAD
     'App\\Models\\PasswordReset' => $baseDir . '/app/Models/PasswordReset.php',
     'App\\Models\\PersonalAccessToken' => $baseDir . '/app/Models/PersonalAccessToken.php',
+=======
+>>>>>>> funcionalidade-de-galeria
     'App\\Models\\PontosInteresse' => $baseDir . '/app/Models/PontosInteresse.php',
     'App\\Models\\ProgramasEIniciativa' => $baseDir . '/app/Models/ProgramasEIniciativa.php',
     'App\\Models\\Proposta' => $baseDir . '/app/Models/Proposta.php',

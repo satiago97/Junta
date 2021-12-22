@@ -17,11 +17,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $foto
  * @property int $id_freguesia
  * 
- * @property Freguesium $freguesia
+ * @property Freguesium $freguesium
  *
  * @package App\Models
  */
-class Historia extends Model
+class Historium extends Model
 {
 	protected $table = 'historia';
 	public $timestamps = false;

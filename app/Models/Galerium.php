@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  * 
  * @property int $id
  * @property string $imagem
+ * @property string $nome
+ * @property int $data
  * @property int $id_freguesia
  * @property int $id_categoria
  * 
@@ -27,12 +29,15 @@ class Galerium extends Model
 	public $timestamps = false;
 
 	protected $casts = [
+		'data' => 'int',
 		'id_freguesia' => 'int',
 		'id_categoria' => 'int'
 	];
 
 	protected $fillable = [
 		'imagem',
+		'nome',
+		'data',
 		'id_freguesia',
 		'id_categoria'
 	];

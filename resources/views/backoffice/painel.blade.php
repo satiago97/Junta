@@ -29,6 +29,7 @@
     </div>
 
     <div class="page-container">
+<<<<<<< HEAD
 
         <div class="sidebar-menu">
             <div class="sidebar-header">
@@ -143,6 +144,9 @@
                 </div>
             </div>
         </div>
+=======
+    @include('backoffice/sidebar')
+>>>>>>> funcionalidade-de-galeria
         <!-- sidebar menu area end -->
         <!-- main content area start -->
         <div class="main-content">

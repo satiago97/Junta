@@ -97,9 +97,9 @@ Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
 
 
-Route::get('/insereGaleria', function(){
+/*Route::get('/insereGaleria', function(){
     return view('/backoffice/insereGaleria');
-})->name('insereGaleria');
+})->name('insereGaleria');*/
 
-
+Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');

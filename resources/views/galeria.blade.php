@@ -37,6 +37,15 @@
 </div>
 
 
+<div class="container">
+    <div class="row">
+        <div class="mainText">
+           
+        </div>
+    </div>
+</div>
+
+
 
 <footer>@include('layouts/footer')</footer>
 </section>

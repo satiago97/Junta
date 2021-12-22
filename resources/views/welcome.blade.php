@@ -246,6 +246,11 @@
             <div class="banner">
                 <div class="content text-center">
                 <h2>Meteorologia</h2>
+                <br>
+                <a class="weatherwidget-io" href="https://forecast7.com/en/41d69n8d83/viana-do-castelo/" data-label_1="VIANA DO CASTELO" data-label_2="WEATHER" data-theme="original" >VIANA DO CASTELO WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
                 </div>
             </div>
         </div>

@@ -587,10 +587,6 @@ class ComposerStaticInit1e34655bb6dd3c89d35c20209c479f7b
         'App\\Models\\Empresa' => __DIR__ . '/../..' . '/app/Models/Empresa.php',
         'App\\Models\\Escola' => __DIR__ . '/../..' . '/app/Models/Escola.php',
         'App\\Models\\EstadoPropostum' => __DIR__ . '/../..' . '/app/Models/EstadoPropostum.php',
-<<<<<<< HEAD
-        'App\\Models\\FailedJob' => __DIR__ . '/../..' . '/app/Models/FailedJob.php',
-=======
->>>>>>> funcionalidade-de-galeria
         'App\\Models\\Faq' => __DIR__ . '/../..' . '/app/Models/Faq.php',
         'App\\Models\\Freguesium' => __DIR__ . '/../..' . '/app/Models/Freguesium.php',
         'App\\Models\\Galerium' => __DIR__ . '/../..' . '/app/Models/Galerium.php',
@@ -608,11 +604,6 @@ class ComposerStaticInit1e34655bb6dd3c89d35c20209c479f7b
         'App\\Models\\OrçamentoParticipativo' => __DIR__ . '/../..' . '/app/Models/OrçamentoParticipativo.php',
         'App\\Models\\Paroquium' => __DIR__ . '/../..' . '/app/Models/Paroquium.php',
         'App\\Models\\Partido' => __DIR__ . '/../..' . '/app/Models/Partido.php',
-<<<<<<< HEAD
-        'App\\Models\\PasswordReset' => __DIR__ . '/../..' . '/app/Models/PasswordReset.php',
-        'App\\Models\\PersonalAccessToken' => __DIR__ . '/../..' . '/app/Models/PersonalAccessToken.php',
-=======
->>>>>>> funcionalidade-de-galeria
         'App\\Models\\PontosInteresse' => __DIR__ . '/../..' . '/app/Models/PontosInteresse.php',
         'App\\Models\\ProgramasEIniciativa' => __DIR__ . '/../..' . '/app/Models/ProgramasEIniciativa.php',
         'App\\Models\\Proposta' => __DIR__ . '/../..' . '/app/Models/Proposta.php',

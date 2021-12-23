@@ -108,7 +108,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Locais a Visitar</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Onde Comer</a></li>
+                                                            <li><a href="{{ route('onde-Comer') }}">Onde Comer</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Onde Dormir</a></li>
                                                             <li class="divider"></li>

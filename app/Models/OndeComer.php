@@ -14,13 +14,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property string $nome
  * @property string $descricao
- * @property string $foto
+ * @property string $imagem
  * @property string $morada
  * @property int $contacto
  * @property string $email
  * @property string $site
- * @property int $lat
- * @property int $lng
+ * @property double $lat
+ * @property double $lng
  * @property int $id_categoria
  * @property int $id_freguesia
  * 
@@ -36,8 +36,8 @@ class OndeComer extends Model
 
 	protected $casts = [
 		'contacto' => 'int',
-		'lat' => 'int',
-		'lng' => 'int',
+		'lat' => 'double',
+		'lng' => 'double',
 		'id_categoria' => 'int',
 		'id_freguesia' => 'int'
 	];
@@ -45,7 +45,7 @@ class OndeComer extends Model
 	protected $fillable = [
 		'nome',
 		'descricao',
-		'foto',
+		'imagem',
 		'morada',
 		'contacto',
 		'email',

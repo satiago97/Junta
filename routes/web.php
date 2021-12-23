@@ -74,9 +74,9 @@ Route::get('/locaisAvisitar', function(){
     return view('locaisAvisitar');
 })->name('locaisAvisitar');
 
-Route::get('/ondeComer', function(){
-    return view('ondeComer');
-})->name('ondeComer');
+/*Route::get('/onde-comer', function(){
+    return view('onde-Comer');
+})->name('onde-comer');*/
 
 Route::get('/ondeDormir', function(){
     return view('ondeDormir');
@@ -103,3 +103,7 @@ Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
+
+Route::get('/insereOndeComer', 'App\Http\Controllers\OndeComerController@index')->name('ondecomer');
+Route::get('/onde-Comer', 'App\Http\Controllers\OndeComerController@index2')->name('onde-Comer');
+Route::resource('ondeComer', 'App\Http\Controllers\OndeComerController');

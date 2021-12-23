@@ -106,7 +106,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="{{route('locaisAvisitar')}}">Locais a Visitar</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="{{route('ondeComer')}}">Onde Comer</a></li>
+                                                            <li><a href="{{ route('onde-Comer') }}">Onde Comer</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{route('ondeDormir')}}">Onde Dormir</a></li>
                                                             <li class="divider"></li>

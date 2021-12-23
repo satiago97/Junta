@@ -25,7 +25,7 @@
                                     <li><a href="">História</a></li>
                                     <li><a href="">Jornais</a></li>
                                     <li><a href="">Mensagem do presidente</a></li>
-                                    <li><a href="">Onde comer</a></li>
+                                    <li><a href="{{route('ondecomer')}}">Onde comer</a></li>
                                     <li><a href="">Onde dormir</a></li>
                                     <li><a href="">Oportunidades</a></li>
                                     <li><a href="">Paróquia</a></li>
@@ -101,11 +101,7 @@
                             <li><a href=""><i class="fa fa-book"></i> <span>Livro de reclamações</span></a></li>
                             <li><a href=""><i class="fa fa-question"></i> <span>Faqs</span></a></li>
                             <li><a href=""><i class="fa fa-folder"></i> <span>Ficheiros</span></a></li>
-<<<<<<< HEAD
-                            <li><a href="{{ route('insereGaleria') }}"><i class="fa fa-camera"></i> <span>Galeria</span></a></li>
-=======
                             <li><a href="{{route('inserirGaleria')}}"><i class="fa fa-camera"></i> <span>Galeria</span></a></li>
->>>>>>> funcionalidade-de-galeria
                             <li><a href=""><i class="fa fa-list"></i> <span>Lista de atividades</span></a></li>
                             <li><a href=""><i class="fa fa-map-marker"></i> <span>Locais de voto</span></a></li>
                             <li><a href=""><i class="fa fa-user-plus"></i><span>Gerir utilizadores</span></a></li>

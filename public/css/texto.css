@@ -1,0 +1,22 @@
+.main h1{
+    font-family: Georgia, sans-serif;
+    font-size: 5em;
+    padding: 10px;
+    letter-spacing: -2px;
+}
+
+#container1 {
+    font-family:georgia,serif;
+    color:#FFFFFF;
+    margin:10px; /*Customize */
+    padding:10px; /*Customize */
+    }
+   
+   #container h1 {
+    font-size:75px;
+    margin:10px 0px 10px 0px; /*Customize */
+    padding:0px; /*Customize */
+   
+   }
+   
+  

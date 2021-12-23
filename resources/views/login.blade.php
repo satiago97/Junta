@@ -23,13 +23,18 @@
           <div class="row">
           
           <div class="main">
-            <p class="sign" align="center">Bem Vindo</p>
-            <form class="form1">
-              <input class="un " type="text" align="center" placeholder="Username">
-              <input class="pass" type="password" align="center" placeholder="Password">
-              <a class="submit" align="center">Entrar</a>
-              <p class="forgot" align="center"><a href="#">Esqueceu a password?</p>
-              <p class="forgot" align="center"><a href="{{ route('registar') }}">Registar</p>      
+            <p class="sign" align="center">Log in</p>
+            <form class="form1" method="POST" action="/login">
+              {{csrf_field()}}
+              <input class="un " type="text" id="email" name="email" placeholder="E-mail">
+              <input class="pass" type="password" id="password" name="password" placeholder="Palavra-passe">
+              <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
+              <p class="forgot" align="center"><a href="#">Esqueceu-se da palavra-passe?</p>
+              <p class="forgot" align="center"><a href="{{ route('register') }}">Registar</p>
+
+              @include('partials.formerrors')
+             
+                    
                         
     </div>
 

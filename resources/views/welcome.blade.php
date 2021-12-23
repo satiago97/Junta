@@ -50,32 +50,10 @@
                                     </div>
                             </div>
                   </div>
-                    <!-- Start Slider Content -->
+                  
                 </div>	
                 
-                <div class="single-slide item" style="background-image: url(img/slider/1900x1000.png)">
-
-                    <!--<img src="img/slider/bakery.jpg">-->
-                    <!-- Start Slider Content -->
-
-                        <div class="slider-content-area">   
-                                <div class="row">
-                                        <div class="slide-content-wrapper text-center">
-                                            <div class="slide-content">
-                                                <img class="classic" src="/img/logo/logo.png">
-
-                                                <h3>BAKERY MAKES </h3>
-                                                <h2>A Taste Of  The Good Life</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>
-                                                <a class="default-btn" href="about.html">Learn more</a>
-                                                <img class="classic" src="/img/new/icon.png">
-
-                                            </div>
-                                    </div>
-                            </div>
-                        </div>
-                    <!-- Start Slider Content -->
-                </div>
+                
              </div>
         </section>
 
@@ -268,6 +246,11 @@
             <div class="banner">
                 <div class="content text-center">
                 <h2>Meteorologia</h2>
+                <br>
+                <a class="weatherwidget-io" href="https://forecast7.com/en/41d69n8d83/viana-do-castelo/" data-label_1="VIANA DO CASTELO" data-label_2="WEATHER" data-theme="original" >VIANA DO CASTELO WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
                 </div>
             </div>
         </div>

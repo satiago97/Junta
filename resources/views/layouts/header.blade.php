@@ -1,25 +1,25 @@
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Portal da Freguesia</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Portal da Freguesia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
-     
-        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+ 
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
        <style>
    .HOVER:hover .dropdown-menu {
@@ -35,7 +35,29 @@
         padding: 10px;
         -webkit-transition: opacity 600ms, visibility 600ms;
         transition: opacity 600ms, visibility 600ms;
+        height: 500px;
+        overflow-y: scroll;
     }
+        #style-2::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    #style-2::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+
+    #style-2::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #5f5f5f54;
+    }
+
         </style>
 
     </head>
@@ -83,7 +105,7 @@
                                                     <!-- Dropdown Freguesia-->
                                                     <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Freguesia</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="{{ route('historia') }}">História</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('heraldica') }}">Heráldica</a></li>
@@ -118,7 +140,7 @@
                                                     <!-- Dropdown Autarquia-->
                                                     <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Autarquia</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="#">Documentos Executivo</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Documentos Assembleia</a></li>
@@ -150,7 +172,7 @@
                                                     <!-- Dropdown Informações-->
                                                     <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Informações</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="#">Localização</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Contactos da Freguesisa</a></li>
@@ -166,7 +188,7 @@
                                                     <!-- Dropdown Orçamento Participativo-->
                                                     <li class="dropdown HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Orçamento Participativo</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="#">Sobre</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Como Participar</a></li>

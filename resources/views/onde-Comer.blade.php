@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/texto.css">
+  <link rel="stylesheet" href="css/buttons.css">
+
   <title>Onde comer</title>
 </head>
 

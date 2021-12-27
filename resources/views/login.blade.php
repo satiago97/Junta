@@ -26,7 +26,7 @@
             <p class="sign" align="center">Log in</p>
             <form class="form1" method="POST" action="/login">
               {{csrf_field()}}
-              <input class="un " type="text" id="email" name="email" placeholder="E-mail">
+              <input class="un" type="text" id="email" name="email" placeholder="E-mail">
               <input class="pass" type="password" id="password" name="password" placeholder="Palavra-passe">
               <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
               <p class="forgot" align="center"><a href="#">Esqueceu-se da palavra-passe?</p>

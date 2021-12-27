@@ -18,8 +18,11 @@
     <link rel="stylesheet" href="css/responsive2.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/texto.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/texto.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/buttons.css">
+
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,6 +45,14 @@
 			cursor: pointer;
 		}
 
+        #form1 , #a1 {
+        display:inline-block;
+        /* additional code */
+        }
+
+        #file:invalid + #labelImagem {
+            color: rgb(2, 0, 0);
+        }
 	</style>
 </head>
 
@@ -107,33 +118,42 @@
         <h1>Adicionar Onde Comer</h1>
     </div>
     <div class="form-group">
-        <div class="col-3">
-        <input class="effect-3" type="text" name="nome" id="nome" placeholder="Insira o nome" required>
+        <div class="row">
+        <div class="col-5">
+        <input class="un" type="text" name="nome" id="nome" placeholder="Insira o nome" required>
         <span class="focus-border"></span>
-        <input class="effect-3" type="text" name="descricao" id="descricao" placeholder="Insira a descrição" required>
+        <input class="un" type="text" name="descricao" id="descricao" placeholder="Insira a descrição" required>
         <span class="focus-border"></span>
-        <input class="effect-3" type="text" name="morada" id="morada" placeholder="Insira a morada" required>
+        <input class="un" type="text" name="morada" id="morada" placeholder="Insira a morada" required>
         <span class="focus-border"></span>
-        <input class="effect-3" type="tel" name="contacto" id="contacto" placeholder="Insira o contacto" required>
+        <select class="un" name="categoria" id="categoria">
+            @foreach($ondeComerCategoria as $categoria )
+              <option value="{{ $categoria->id }}">{{ $categoria->descricao }}</option>
+            @endforeach
+          </select>
         <span class="focus-border"></span>
-        <input class="effect-3" type="email" name="email" id="email" placeholder="Insira o email" required>
-        <span class="focus-border"></span>
-        <input class="effect-3" type="url" name="site" id="site" placeholder="Insira o site" required>
-        <span class="focus-border"></span>
-        <input class="effect-3" type="text" name="lat" id="lat" placeholder="Insira a latitude" required>
-        <span class="focus-border"></span>
-        <input class="effect-3" type="text" name="lng" id="lng" placeholder="Insira a longitude" required>
+        <input class="un" type="tel" name="contacto" id="contacto" placeholder="Insira o contacto" required>
         <span class="focus-border"></span>
         </div>
-        
+        <div class="col-5">
+        <input class="un" type="email" name="email" id="email" placeholder="Insira o email" required>
+        <span class="focus-border"></span>
+        <input class="un" type="url" name="site" id="site" placeholder="Insira o site" required>
+        <span class="focus-border"></span>
+        <input class="un" type="text" name="lat" id="lat" placeholder="Insira a latitude" required>
+        <span class="focus-border"></span>
+        <input class="un" type="text" name="lng" id="lng" placeholder="Insira a longitude" required>
+        <span class="focus-border"></span>
+        <div class="file-input" align="center">
+            <input type="file" id="file" class="file" name="file" required>
+                    <label for="file" id="labelImagem">Selecionar Imagem</label>
+        </div>
+        </div>
+        </div>
         <p><br>
-        <div class="file-input">
-            <input type="file" id="file" class="file" name="file">
-                    <label for="file">Selecionar</label>
-            </div>
 
     </div>
-    <button style="cursor:pointer" type="submit" class="btn btn-primary">Adicionar</button>
+    <button style="cursor:pointer; float: left;" type="submit" class="btn btn-primary button-76">Adicionar</button>
 
     </form>
                         
@@ -149,10 +169,24 @@
             <div class="mainContainerImage">
             <div class="parent">
              <div class="box"><img src="{{asset('galeria/ondeComer/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
-             <label>Nome:</label>
+            <label>Nome:</label>
             <h6>{{$item -> nome}}</h6>
-            <label>Data de inserção:</label>
+            <label>Descrição:</label>
             <h6>{{$item -> descricao}} </h6>
+            @foreach ($ondeComerCategoria as $item1)
+               @if($item1->id == $item->id_categoria)
+                <label>Categoria:</label>
+                <h6>{{$item1 -> descricao}} </h6>
+               @endif
+            @endforeach    
+            <td>
+            <a href="{{ route('edit-ondecomer',[$item->id]) }}" class="btn btn-primary btn-sm" id="a1">Edit</a>
+            <form action="{{ route('delete-ondecomer',[$item->id]) }}" method="post" id="form1">
+                @method('DELETE')
+                @csrf
+                <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
+            </form>
+            </td>
                 </div>
             </div>
             @endforeach

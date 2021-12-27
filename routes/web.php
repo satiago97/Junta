@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OndeComerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,3 +108,6 @@ Route::resource('imagens', 'App\Http\Controllers\GalleryController');
 Route::get('/insereOndeComer', 'App\Http\Controllers\OndeComerController@index')->name('ondecomer');
 Route::get('/onde-Comer', 'App\Http\Controllers\OndeComerController@index2')->name('onde-Comer');
 Route::resource('ondeComer', 'App\Http\Controllers\OndeComerController');
+Route::get('edit-ondecomer/{id}', ['as' => 'edit-ondecomer', 'uses' => 'App\Http\Controllers\OndeComerController@edit']);
+Route::put('update-ondecomer/{id}', ['as' => 'update-ondecomer', 'uses' => 'App\Http\Controllers\OndeComerController@update']);
+Route::delete('delete-ondecomer/{id}', ['as' => 'delete-ondecomer', 'uses' => 'App\Http\Controllers\OndeComerController@destroy']);

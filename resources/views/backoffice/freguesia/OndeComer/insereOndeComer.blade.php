@@ -53,6 +53,8 @@
         #file:invalid + #labelImagem {
             color: rgb(2, 0, 0);
         }
+
+        select:invalid {color: grey;}
 	</style>
 </head>
 
@@ -120,29 +122,32 @@
     <div class="form-group">
         <div class="row">
         <div class="col-5">
-        <input class="un" type="text" name="nome" id="nome" placeholder="Insira o nome" required>
+        <input class="un" type="text" name="nome" id="nome" placeholder="Nome" required>
         <span class="focus-border"></span>
-        <input class="un" type="text" name="descricao" id="descricao" placeholder="Insira a descrição" required>
+        <input class="un" type="text" name="descricao" id="descricao" placeholder="Descrição" required>
         <span class="focus-border"></span>
-        <input class="un" type="text" name="morada" id="morada" placeholder="Insira a morada" required>
+        <input class="un" type="text" name="morada" id="morada" placeholder="Morada" required>
         <span class="focus-border"></span>
-        <select class="un" name="categoria" id="categoria">
+        
+        <span class="focus-border"></span>
+        <input class="un" type="tel" name="contacto" id="contacto" placeholder="Contacto" required>
+        <span class="focus-border"></span>
+        <select class="un" name="categoria" id="categoria" >
+            <option value="" disabled selected hidden>Categoria</option>
             @foreach($ondeComerCategoria as $categoria )
               <option value="{{ $categoria->id }}">{{ $categoria->descricao }}</option>
             @endforeach
           </select>
-        <span class="focus-border"></span>
-        <input class="un" type="tel" name="contacto" id="contacto" placeholder="Insira o contacto" required>
-        <span class="focus-border"></span>
         </div>
         <div class="col-5">
-        <input class="un" type="email" name="email" id="email" placeholder="Insira o email" required>
+        <input class="un" type="email" name="email" id="email" placeholder="Email" required>
         <span class="focus-border"></span>
-        <input class="un" type="url" name="site" id="site" placeholder="Insira o site" required>
+        <input class="un" type="url" name="site" id="site" placeholder="Site" required>
         <span class="focus-border"></span>
-        <input class="un" type="text" name="lat" id="lat" placeholder="Insira a latitude" required>
+        <input class="un" type="text" name="lat" id="lat" placeholder="Latitude" required>
         <span class="focus-border"></span>
-        <input class="un" type="text" name="lng" id="lng" placeholder="Insira a longitude" required>
+        <input class="un" type="text" name="lng" id="lng" placeholder="Longitude" required>
+        
         <span class="focus-border"></span>
         <div class="file-input" align="center">
             <input type="file" id="file" class="file" name="file" required>
@@ -153,7 +158,7 @@
         <p><br>
 
     </div>
-    <button style="cursor:pointer; float: left;" type="submit" class="btn btn-primary button-76">Adicionar</button>
+    <button style="cursor:pointer; float: right; border-radius: 10px;"  type="submit" class="btn btn-primary button-76">Adicionar</button>
 
     </form>
                         

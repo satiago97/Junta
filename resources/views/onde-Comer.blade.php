@@ -1,25 +1,7 @@
 <head>
-
-<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap2.min.css">
-<link rel="stylesheet" href="css/font-awesome.min2.css">
-<link rel="stylesheet" href="css/themify-icons.css">
-<link rel="stylesheet" href="css/metisMenu.css">
-<link rel="stylesheet" href="css/owl.carousel.min2.css">
-<link rel="stylesheet" href="css/slicknav.min.css">
-<!-- amchart css -->
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<!-- others css -->
-<link rel="stylesheet" href="css/typography.css">
-<link rel="stylesheet" href="css/default-css2.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/responsive2.css">
-
 <link rel="stylesheet" href="css/paginasContainer.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/texto.css">
-<link rel="stylesheet" href="css/login.css">
-<link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/texto.css">
   <title>Onde comer</title>
 </head>
 
@@ -38,7 +20,7 @@
     @include('layouts/header')
 </header>
 
-<section id="sectionImprensa" class="topOff teste">
+<section id="sectionOndeComer" class="topOff teste">
     <div class="container">
         <div class="row">
             <div class="main">
@@ -47,7 +29,7 @@
             </div>
                    </div>
     </div>
-              <!-- main content area end -->
+
     <div class="container">
         <div class="row">
             @foreach($ondeComerCategoria as $item)

@@ -37,7 +37,30 @@
         padding: 10px;
         -webkit-transition: opacity 600ms, visibility 600ms;
         transition: opacity 600ms, visibility 600ms;
+        max-height: 500px;
+        height: auto;
+        overflow-y: scroll;
     }
+        #style-2::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    #style-2::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+
+    #style-2::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #5f5f5f54;
+    }
+
         </style>
 
     </head>
@@ -83,9 +106,9 @@
                                             <ul class="nav navbar-nav navbar-right navBar">
                                                     <li class="nav-item"><a href="#section0" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home <span class="sr-only">(current)</span></a></li>
                                                     <!-- Dropdown Freguesia-->
-                                                    <li class="dropdown HOVER open">
+                                                    <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Freguesia</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="{{ route('historia') }}">História</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Heráldica</a></li>
@@ -120,7 +143,7 @@
                                                     <!-- Dropdown Autarquia-->
                                                     <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Autarquia</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="#">Documentos Executivo</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Documentos Assembleia</a></li>
@@ -152,7 +175,7 @@
                                                     <!-- Dropdown Informações-->
                                                     <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Informações</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="#">Localização</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Contactos da Freguesisa</a></li>
@@ -168,7 +191,7 @@
                                                     <!-- Dropdown Orçamento Participativo-->
                                                     <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Orçamento Participativo</a>
-                                                            <ul class="dropdown-menu" role="menu">
+                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="#">Sobre</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Como Participar</a></li>

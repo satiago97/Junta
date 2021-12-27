@@ -11,7 +11,11 @@ class InsertHistoryController extends Controller
     public function index(){
         $historia = Historium::all();
         return view('/backoffice/insereHistoria', compact('historia'));
-      
+    }
+
+    public function indexPagina(){
+        $historia = Historium::all();
+        return view('/historia', compact('historia'));
     }
 
 
@@ -35,6 +39,18 @@ class InsertHistoryController extends Controller
 
 
             return view('backoffice/painel');
+}
+
+
+public function update(Request $request, $id){
+    $historia = Historium::find($id);
+    $historia->titulo = $request->input('titulo');
+    $historia->descricao = $request->input('descricao');
+
+    $historia->update();
+
+    return redirect()->route('painel');
+
 }
 
 }

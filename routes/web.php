@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,23 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-/*Route::get('/registar', function(){
-    return view('registar');
-})->name('registar'); */
-
 Route::get('/backoffice', function(){
     return view('backoffice/painel');
 })->name('painel'); 
 
-Route::get('/historia', function(){
-    return view('historia');
-})->name('historia');
 
-Route::get('/heraldica', function(){
-    return view('heraldica');
-})->name('heraldica');
 
 Route::get('/galeria', function(){
     return view('galeria');
@@ -107,5 +96,12 @@ Route::resource('imagens', 'App\Http\Controllers\GalleryController');
 
 Route::get('/insereHistoria', 'App\Http\Controllers\InsertHistoryController@index')->name('inserirHistoria');
 Route::resource('inserirHistoria', 'App\Http\Controllers\InsertHistoryController');
+Route::put('update-inserirHistoria/{id}', ['as' => 'update-inserirHistoria', 'uses' => 'App\Http\Controllers\InsertHistoryController@update']);
+
+Route::get('/historia', 'App\Http\Controllers\InsertHistoryController@indexPagina')->name('historia');
+
+Route::get('/insereHeraldica', 'App\Http\Controllers\insereHeraldicaController@index')->name('inserirHeraldica');
+Route::resource('inserirHeraldica', 'App\Http\Controllers\insereHeraldicaController');
+Route::put('update-insereHeraldica/{id}', ['as' => 'update-insereHeraldica', 'uses' => 'App\Http\Controllers\insereHeraldicaController@update']);
 
 

@@ -21,7 +21,7 @@
                                     <li><a href="">Agenda</a></li>
                                     <li><a href="">Imprensa</a></li>
                                     <li><a href="">Instituições e Associações</a></li>
-                                    <li><a href="">Heráldica</a></li>
+                                    <li><a href="{{route('inserirHeraldica')}}">Heráldica</a></li>
                                     <li><a href="{{route('inserirHistoria')}}">História</a></li>
                                     <li><a href="">Jornais</a></li>
                                     <li><a href="">Mensagem do presidente</a></li>

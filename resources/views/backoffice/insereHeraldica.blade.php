@@ -31,43 +31,35 @@
 
 </head>
 
-
 <body>
 <div id="preloader">
         <div class="loader"></div>
     </div>
 
     <div class="page-container">
-    @include('backoffice/sidebar')
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
-                    <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
+         @include('backoffice/sidebar')
+
+
+         <div class="main-content">
+             <div class="header-area">
+                 <div class="row align-items-center">
+                     <div class="col-md-6 col-sm-8 clearfix">
+                     <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        
-                    </div>
-                    <!-- profile info & task notification -->
-           
-                </div>
-            </div>
-            <!-- header area end -->
-            <!-- page title area start -->
-            <div class="page-title-area">
+                     </div>
+                 </div>
+             </div>
+             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>História</span></li>
+                                <li><span>Heráldica</span></li>
                             </ul>
                         </div>
                     </div>
@@ -80,20 +72,19 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-         
-                <div class="container" style="margin-top:20px;">
+            
+            <div class="container" style="margin-top:20px;">
                     <div class="row">
                         <div class="mainTextFormContainer">
-                        @foreach($historia as $item)
-            <form class="form1" method="post" action="{{ url('update-inserirHistoria/'.$item->id)}} " id="historiaForm">
+                        @foreach($heraldica as $item)
+            <form class="form1" method="post" action="{{ url('update-insereHeraldica/'.$item->id)}} " id="historiaForm">
             {{ csrf_field() }}
             @method('PUT')
 
             <label>Título</label>
               <input class="un" type="text"  id="titulo" name="titulo" value="{{$item -> titulo}}" required>
               <p>
-              <label>História</label>
+              <label>Heráldica</label>
               <textarea class="unTextArea" name="descricao" form="historiaForm" >{{$item -> descricao}}</textarea>
               <p>
               <button style="cursor:pointer" type="submit" class="btn btn-primary">Alterar</button>
@@ -109,26 +100,19 @@
                         </div>
                     </div>
                 </div>
-                
-       
-              <!--<a2 class="submit" type="submit" ></a2>-->
-        
-        
-            
-               
-         
-     
-        <!-- main content area end -->
-        <!-- footer area start-->
-        <footer>
+                <footer>
             <div class="footer-area">
                 <p>© Copyright 2021. All right reserved.</p>
             </div>
         </footer>
-        <!-- footer area end-->
+       
+         </div>
     </div>
-   
-    <!-- offset area end -->
+
+
+
+
+ <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -153,6 +137,3 @@
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
 </body>
-
-
-

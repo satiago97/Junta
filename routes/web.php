@@ -24,6 +24,8 @@ Route::get('/backoffice', function(){
 
 
 
+
+
 Route::get('/galeria', function(){
     return view('galeria');
 })->name('galeria');
@@ -108,5 +110,3 @@ Route::get('/insereCaracterizacao', 'App\Http\Controllers\Caracterizacao@index')
 Route::resource('inserirCaracterizacao', 'App\Http\Controllers\Caracterizacao');
 Route::put('update-inserirCaracterizacao/{id}', ['as' => 'update-inserirCaracterizacao', 'uses' => 'App\Http\Controllers\Caracterizacao@update']);
 Route::get('/caracterizacao', 'App\Http\Controllers\Caracterizacao@indexSite')->name('caracterizacao');
-
-

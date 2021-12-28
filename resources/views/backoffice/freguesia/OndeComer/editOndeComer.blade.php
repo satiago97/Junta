@@ -123,7 +123,7 @@
     </div>
         
         <p><br>
-            <button style="cursor:pointer; float: left;" type="submit" class="btn btn-primary button-76">Editar</button>
+            <button style="cursor:pointer; float: right;" type="submit" class="btn btn-primary button-76">Editar</button>
     </div>
 
 

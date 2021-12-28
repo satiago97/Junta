@@ -20,7 +20,13 @@ class OndeComerController extends Controller
     public function index2(){
         $ondeComer = OndeComer::all();
         $ondeComerCategoria = CategoriaOndeComer::all();
-        return view('/onde-Comer', compact('ondeComer','ondeComerCategoria'));
+        return view('/site/freguesia/OndeComer/onde-Comer', compact('ondeComer','ondeComerCategoria'));
+    }
+
+    public function detalhes($id)
+    {
+        $ondeComer = OndeComer::find($id);
+        return view('/site/freguesia/OndeComer/detalhesOndeComer', compact('ondeComer'));
     }
 
     public function store(Request $request){

@@ -17,7 +17,13 @@ class OndeDormirController extends Controller
     
         public function index2(){
             $ondeDormir = OndeDormir::all();
-            return view('/onde-Dormir', compact('ondeDormir'));
+            return view('/site/freguesia/OndeDormir/onde-Dormir', compact('ondeDormir'));
+        }
+
+        public function detalhes($id)
+        {
+            $ondeDormir = OndeDormir::find($id);
+            return view('/site/freguesia/OndeDormir/detalhesOndeDormir', compact('ondeDormir'));
         }
     
         public function store(Request $request){

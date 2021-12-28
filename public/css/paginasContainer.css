@@ -24,6 +24,19 @@
     align-items: center;
 }
 
+.mainTextCategorias {
+    background-color: #FFFFFF;
+    width: 50%;
+    padding: 10px;
+    height: auto;
+    margin:  auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    text-align: center;
+    align-items: center;
+}
+
+
 
 
 .registoContainer {
@@ -41,8 +54,8 @@
 .mainContainerImage {
     display: flex;
     background-color: #FFFFFF;
-    width: auto;
-    height: auto;
+    width: 800px;
+    height: 600px;
     margin:  auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -143,5 +156,27 @@
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
     text-align: center;
     align-items: center;
+    cursor: pointer;
+}
+
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
     
   }
+
+
+
+  .fill-div{
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+      
+  }
+
+  

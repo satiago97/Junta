@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\CategoriaGalerium;
 use App\Models\Galerium;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class GalleryController extends Controller
 
     public function index(){
         $galeria = Galerium::all();
-        return view('/backoffice/insereGaleria', compact('galeria'));
+        $categoriasGaleria = CategoriaGalerium::all();
+        return view('/backoffice/insereGaleria', compact('galeria', 'categoriasGaleria'));
     }
 
 
@@ -38,5 +40,12 @@ class GalleryController extends Controller
         }
 
         
+    }
+
+    public function open($id_categoria){
+        $galeria = Galerium::find($id_categoria);
+
+        return view('backoffice.editaGaleria', compact('galeria'));
+
     }
 }

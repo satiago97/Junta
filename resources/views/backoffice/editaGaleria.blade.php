@@ -24,47 +24,45 @@
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 </head>
 
+
+
 <body>
-    
-    <div id="preloader">
+
+<div id="preloader">
         <div class="loader"></div>
     </div>
 
     <div class="page-container">
-    @include('backoffice/sidebar')
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
-                    <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
+         @include('backoffice/sidebar')
+
+
+         <div class="main-content">
+             <div class="header-area">
+                 <div class="row align-items-center">
+                     <div class="col-md-6 col-sm-8 clearfix">
+                     <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        
-                    </div>
-                    <!-- profile info & task notification -->
-           
-                </div>
-            </div>
-            <!-- header area end -->
-            <!-- page title area start -->
-            <div class="page-title-area">
+                     </div>
+                 </div>
+             </div>
+             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Galeria</span></li>
+                                <li><span>Heráldica</span></li>
                             </ul>
                         </div>
                     </div>
@@ -77,66 +75,18 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-            <div class="main-content-inner">
-
-            <div class="container" style="margin-top: 20px;">        
-                    <div class="mainText">
-                        <div class="containerBottom">
-                        <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
-        <!-- Add CSRF Token -->
-        @csrf
-    <div class="form-group">
-        <h1>Adicionar imagem</h1>
-    </div>
-    <div class="form-group">
-        
-        <input class="effect-3" type="text" name="nome" id="nome" placeholder="Insira o nome da imagem" required>
-        <span class="focus-border"></span>
-      
-        <p><br>
-        <div class="file-input">
-            <input type="file" id="file" class="file" name="file">
-                    <label for="file">Selecionar</label>
-            </div>
-
-    </div>
-    <button style="cursor:pointer; margin-top:20px;" type="submit" class="btn btn-primary">Adicionar</button>
-
-    </form>
-    </div>
-    </div>
-    </div>
-    <hr class="rounded">
-    <h1 style="text-align: center; margin-top:20px;">Editar</h1>
-
-    @foreach($categoriasGaleria as $item)
-    <div class="container">
-        <div class="row">
-            <div class="mainTextCategorias" style="margin-top: 15px;">
-            <a href="{{route('open-inserirGaleria', [$item->id])}}" class="fill-div"><h3>{{$item->descricao}}</h3></a>
-                
-            </div>
-        </div>
-    </div>
-    @endforeach
-
-      
-
-
-
-        </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
-        <footer>
+            
+                <footer>
             <div class="footer-area">
                 <p>© Copyright 2021. All right reserved.</p>
             </div>
         </footer>
-        <!-- footer area end-->
+       
+         </div>
     </div>
-   
-    <!-- offset area end -->
+
+
+     <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -160,20 +110,4 @@
     <!-- others plugins -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-$(".box").hover(function() {
-  $(".box-right").toggleClass('cl-box2');
-  $(".bar").toggleClass('cl-bar2');
-});
-
-$(".bar").click(function() {
-  alert("Deleted");
-});
-});
-    </script>
 </body>
-
-

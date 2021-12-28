@@ -88,12 +88,14 @@
               <textarea class="unTextArea" name="descricao" form="heraldicaForm" >{{$item -> descricao}}</textarea>
               <p>
               <button style="cursor:pointer" type="submit" class="btn btn-primary">Alterar</button>
-
-            
+                
+              
 
               @include('partials.formerrors')
 
             </form>
+
+            
             @endforeach
             
 

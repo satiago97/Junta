@@ -86,7 +86,9 @@ Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
 
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
+
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
+Route::get('open-inserirGaleria/{id}', ['as' => 'open-inserirGaleria', 'uses' => 'App\Http\Controllers\GalleryController@open']);
 
 Route::get('/insereOndeComer', 'App\Http\Controllers\OndeComerController@index')->name('ondecomer');
 Route::get('/onde-Comer', 'App\Http\Controllers\OndeComerController@index2')->name('onde-Comer');
@@ -110,3 +112,4 @@ Route::get('/insereCaracterizacao', 'App\Http\Controllers\Caracterizacao@index')
 Route::resource('inserirCaracterizacao', 'App\Http\Controllers\Caracterizacao');
 Route::put('update-inserirCaracterizacao/{id}', ['as' => 'update-inserirCaracterizacao', 'uses' => 'App\Http\Controllers\Caracterizacao@update']);
 Route::get('/caracterizacao', 'App\Http\Controllers\Caracterizacao@indexSite')->name('caracterizacao');
+

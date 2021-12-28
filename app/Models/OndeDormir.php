@@ -19,8 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $contacto
  * @property string $email
  * @property string $site
- * @property int $lat
- * @property int $lng
+ * @property double $lat
+ * @property double $lng
  * @property int $id_freguesia
  * 
  * @property Freguesium $freguesium
@@ -34,8 +34,8 @@ class OndeDormir extends Model
 
 	protected $casts = [
 		'contacto' => 'int',
-		'lat' => 'int',
-		'lng' => 'int',
+		'lat' => 'double',
+		'lng' => 'double',
 		'id_freguesia' => 'int'
 	];
 

@@ -105,9 +105,19 @@ Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
 
+
+//Route Freguesia Onde Comer
 Route::get('/insereOndeComer', 'App\Http\Controllers\OndeComerController@index')->name('ondecomer');
 Route::get('/onde-Comer', 'App\Http\Controllers\OndeComerController@index2')->name('onde-Comer');
 Route::resource('ondeComer', 'App\Http\Controllers\OndeComerController');
 Route::get('edit-ondecomer/{id}', ['as' => 'edit-ondecomer', 'uses' => 'App\Http\Controllers\OndeComerController@edit']);
 Route::put('update-ondecomer/{id}', ['as' => 'update-ondecomer', 'uses' => 'App\Http\Controllers\OndeComerController@update']);
 Route::delete('delete-ondecomer/{id}', ['as' => 'delete-ondecomer', 'uses' => 'App\Http\Controllers\OndeComerController@destroy']);
+
+//Route Freguesia Onde Dormir
+Route::get('/insereOndeDormir', 'App\Http\Controllers\OndeDormirController@index')->name('ondedormir');
+Route::get('/onde-Dormir', 'App\Http\Controllers\OndeDormirController@index2')->name('onde-Dormir');
+Route::resource('ondeDormir', 'App\Http\Controllers\OndeDormirController');
+Route::get('edit-ondedormir/{id}', ['as' => 'edit-ondedormir', 'uses' => 'App\Http\Controllers\OndeDormirController@edit']);
+Route::put('update-ondedormir/{id}', ['as' => 'update-ondedormir', 'uses' => 'App\Http\Controllers\OndeDormirController@update']);
+Route::delete('delete-ondedormir/{id}', ['as' => 'delete-ondedormir', 'uses' => 'App\Http\Controllers\OndeDormirController@destroy']);

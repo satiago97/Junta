@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/paginasContainer.css">
   <link rel="stylesheet" href="css/texto.css">
+  <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Sign in</title>
 </head>
@@ -43,7 +44,7 @@
               <input class="un" type="password" id="password"  name="password" placeholder="Palavra-passe">
               <input class="un" type="password" id="password_confirmation"
                    name="password_confirmation"  placeholder="Confirmar palavra-passe">
-              <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+              <button style="cursor:pointer" type="submit" class="button-62">Submit</button>
 
               @include('partials.formerrors')
             

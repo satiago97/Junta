@@ -26,7 +26,7 @@
                                     <li><a href="">Jornais</a></li>
                                     <li><a href="">Mensagem do presidente</a></li>
                                     <li><a href="{{route('ondecomer')}}">Onde comer</a></li>
-                                    <li><a href="">Onde dormir</a></li>
+                                    <li><a href="{{route('ondedormir')}}">Onde dormir</a></li>
                                     <li><a href="">Oportunidades</a></li>
                                     <li><a href="">Paróquia</a></li>
                                     <li><a href="">Locais a visitar</a></li>

@@ -5,6 +5,7 @@
 
 <head>
   <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/buttons.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <title>Sign in</title>
@@ -28,7 +29,7 @@
               {{csrf_field()}}
               <input class="un" type="text" id="email" name="email" placeholder="E-mail">
               <input class="pass" type="password" id="password" name="password" placeholder="Palavra-passe">
-              <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
+              <button style="cursor:pointer" align="center" type="submit" class="button-62">Login</button>
               <p class="forgot" align="center"><a href="#">Esqueceu-se da palavra-passe?</p>
               <p class="forgot" align="center"><a href="{{ route('register') }}">Registar</p>
 

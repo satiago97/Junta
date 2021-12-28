@@ -24,6 +24,7 @@
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -78,21 +79,20 @@
             <!-- page title area end -->
             <div class="main-content-inner">
 
-            <div class="container" style="margin-top: 20px;">
-                <div class="row">
+            <div class="container" style="margin-top: 20px;">        
                     <div class="mainText">
-                    <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
+                        <div class="containerBottom">
+                        <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">
         <h1>Adicionar imagem</h1>
     </div>
     <div class="form-group">
-        <div class="col-3">
+        
         <input class="effect-3" type="text" name="nome" id="nome" placeholder="Insira o nome da imagem" required>
         <span class="focus-border"></span>
-        </div>
-        
+      
         <p><br>
         <div class="file-input">
             <input type="file" id="file" class="file" name="file">
@@ -100,12 +100,15 @@
             </div>
 
     </div>
-    <button style="cursor:pointer" type="submit" class="btn btn-primary">Adicionar</button>
+    <button style="cursor:pointer; margin-top:20px;" type="submit" class="btn btn-primary">Adicionar</button>
 
     </form>
-                        
+              
+
+                        </div>
+               
                     </div>
-                </div>
+               
             </div>
 
       

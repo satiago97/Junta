@@ -12,7 +12,6 @@
 }
 
 
-
 .mainText {
     background-color: #FFFFFF;
     width: 100%;
@@ -24,6 +23,8 @@
     text-align: center;
     align-items: center;
 }
+
+
 
 .registoContainer {
     background-color: #FFFFFF;
@@ -106,13 +107,13 @@
   .file-input label {
     display: block;
     position: relative;
-    width: 200px;
+    width: 20%;
+    margin: 0 auto;
     height: 50px;
     border-radius: 25px;
     background: linear-gradient(40deg, #ff6ec4, #7873f5);
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
     display: flex;
-    margin-left: 30px;
     align-items: center;
     justify-content: center;
     color: #fff;

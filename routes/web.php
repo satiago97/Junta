@@ -17,12 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+<<<<<<< HEAD
 
 
 
 /*Route::get('/registar', function(){
     return view('registar');
 })->name('registar'); */
+=======
+>>>>>>> funcionalidadeDeHistoria
 
 Route::get('/backoffice', function(){
     return view('backoffice/painel');

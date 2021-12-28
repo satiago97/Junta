@@ -22,18 +22,26 @@
     @include('layouts/header')
 </header>
 
-<section id="sectionImprensa" class="topOff teste">
-    <div class="container">
-        <div class="row">
-            <div class="main">
-                <h1>Caracterização</h1>
-                <img class="classic" src="/img/new/icon.png">
-            </div>
+
+<section id="sectionHeraldica" class="topOff teste">
+@foreach($caracterizacao as $item)
+<div class="container">
+    <div class="row">
+        <div class="main">
+            <h1>{{$item-> titulo}}</h1>
+            <img class="classic" src="/img/new/icon.png">
         </div>
     </div>
+</div>
 
-    <footer>
-    @include('layouts/footer')
-</footer>
+
+<div class="container">
+    <div class="row">
+        <div class="mainText">
+            <h6>{{$item->descricao}}</h6>
+        </div>
+    </div>
+</div>
+@endforeach
+<footer>@include('layouts/footer')</footer>
 </section>
-

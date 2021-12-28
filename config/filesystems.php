@@ -68,7 +68,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
-        public_path('galeria') => storage_path('app/public'),
+        public_path('galeria2') => storage_path('app/public'),
+      
     ],
 
 ];

@@ -16,13 +16,13 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-home"></i><span>Freguesia
                                     </span></a>
                                 <ul class="collapse">
-                                    <li><a href="">Caracterização</a></li>
+                                    <li><a href="{{route('inserirCaracterizacao')}}">Caracterização</a></li>
                                     <li><a href="">Empresas</a></li>
                                     <li><a href="">Agenda</a></li>
                                     <li><a href="">Imprensa</a></li>
                                     <li><a href="">Instituições e Associações</a></li>
-                                    <li><a href="">Heráldica</a></li>
-                                    <li><a href="">História</a></li>
+                                    <li><a href="{{route('inserirHeraldica')}}">Heráldica</a></li>
+                                    <li><a href="{{route('inserirHistoria')}}">História</a></li>
                                     <li><a href="">Jornais</a></li>
                                     <li><a href="">Mensagem do presidente</a></li>
                                     <li><a href="{{route('ondecomer')}}">Onde comer</a></li>

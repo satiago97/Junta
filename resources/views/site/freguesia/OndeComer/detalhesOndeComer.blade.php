@@ -59,7 +59,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://picsum.photos/id/90/800" alt="Admin" width="350" height="350">
+                    <img src="{{asset('ondeComer/ondeComer/'.$ondeComer->imagem)}}" alt="Admin" width="350" height="350">
                   </div>
                 </div>
               </div>
@@ -132,7 +132,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                        <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+                        <h6 class="mb-0">Website</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{$ondeComer->site}}

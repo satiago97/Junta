@@ -36,9 +36,9 @@
 <div class="container">
     <div class="row">
         <div class="mainText">
-            <h2>
+            <h6>
             {{$item -> descricao}}
-            </h2>
+            </h6>
         </div>
         
     </div>

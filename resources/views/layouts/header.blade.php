@@ -86,7 +86,7 @@
                                                             <ul class="dropdown-menu" role="menu">
                                                             <li><a href="{{ route('Historia') }}">História</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="{{ route('heraldica') }}">Heráldica</a></li>
+                                                            <li><a href="{{ route('Heraldica') }}">Heráldica</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('galeria') }}">Galeria</a></li>
                                                             <li class="divider"></li>

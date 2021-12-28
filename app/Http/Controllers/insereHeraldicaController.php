@@ -13,6 +13,11 @@ class insereHeraldicaController extends Controller
         return view('/backoffice/insereHeraldica', compact('heraldica'));
     }
 
+    public function indexSite(){
+        $heraldica = Heraldica::all();
+        return view('heraldica', compact('heraldica'));
+    }
+
 
     public function update(Request $request, $id){
         $heraldica = Heraldica::find($id);

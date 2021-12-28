@@ -16,7 +16,7 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-home"></i><span>Freguesia
                                     </span></a>
                                 <ul class="collapse">
-                                    <li><a href="">Caracterização</a></li>
+                                    <li><a href="{{route('inserirCaracterizacao')}}">Caracterização</a></li>
                                     <li><a href="">Empresas</a></li>
                                     <li><a href="">Agenda</a></li>
                                     <li><a href="">Imprensa</a></li>

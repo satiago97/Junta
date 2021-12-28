@@ -37,29 +37,36 @@
     </div>
 
     <div class="page-container">
-         @include('backoffice/sidebar')
-
-
-         <div class="main-content">
-             <div class="header-area">
-                 <div class="row align-items-center">
-                     <div class="col-md-6 col-sm-8 clearfix">
-                     <div class="nav-btn pull-left">
+    @include('backoffice/sidebar')
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="page-title-area">
+                        
+                    </div>
+                    <!-- profile info & task notification -->
+           
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Heráldica</span></li>
+                                <li><span>Caracterização</span></li>
                             </ul>
                         </div>
                     </div>
@@ -72,20 +79,21 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="container" style="margin-top:20px;">
+            <!-- page title area end -->
+         
+                <div class="container" style="margin-top:20px;">
                     <div class="row">
                         <div class="mainTextFormContainer">
-                        @foreach($heraldica as $item)
-            <form class="form1" method="post" action="{{ url('update-insereHeraldica/'.$item->id)}} " id="heraldicaForm">
+                        @foreach($caracterizacao as $item)
+            <form class="form1" method="post" action="{{ url('update-inserirCaracterizacao/'.$item->id)}} " id="caracterizacaoForm">
             {{ csrf_field() }}
             @method('PUT')
 
             <label>Título</label>
               <input class="un" type="text"  id="titulo" name="titulo" value="{{$item -> titulo}}" required>
               <p>
-              <label>Heráldica</label>
-              <textarea class="unTextArea" name="descricao" form="heraldicaForm" >{{$item -> descricao}}</textarea>
+              <label>Caracterizacao</label>
+              <textarea class="unTextArea" name="descricao" id="descricao" form="caracterizacaoForm" >{{$item->descricao}}</textarea>
               <p>
               <button style="cursor:pointer" type="submit" class="btn btn-primary">Alterar</button>
 
@@ -100,19 +108,40 @@
                         </div>
                     </div>
                 </div>
-                <footer>
+                
+       
+              <!--<a2 class="submit" type="submit" ></a2>-->
+        
+        
+            
+               
+         
+     
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
             <div class="footer-area">
                 <p>© Copyright 2021. All right reserved.</p>
             </div>
         </footer>
-       
-         </div>
+        <!-- footer area end-->
     </div>
 
 
 
 
- <!-- offset area end -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

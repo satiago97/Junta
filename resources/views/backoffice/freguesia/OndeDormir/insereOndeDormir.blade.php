@@ -167,7 +167,7 @@
             @foreach($ondeDormir as $item)
             <div class="mainContainerImage">
             <div class="parent">
-             <div class="box"><img src="{{asset('galeria/ondeComer/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
+             <div class="box"><img src="{{asset('ondeDormir/ondeDormir/'.$item->foto)}}" style="object-fit:contain; width:200px; height:300px;" alt="Image"/></div>
             <label>Nome:</label>
             <h6>{{$item -> nome}}</h6>
             <label>Descrição:</label>

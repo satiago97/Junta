@@ -59,7 +59,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://picsum.photos/id/100/800" alt="Admin" width="350" height="350">
+                    <img src="{{asset('ondeDormir/ondeDormir/'.$ondeDormir->foto)}}" alt="Admin" width="350" height="350">
                   </div>
                 </div>
               </div>

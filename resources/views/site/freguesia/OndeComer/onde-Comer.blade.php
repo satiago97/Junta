@@ -39,7 +39,7 @@
       <div class="card-grid">
       @foreach ($ondeComer as $item)
         <a class="card" href="{{route('detalhesOndeComer',[$item->id])}}">
-          <div class="card__background" style="background-image: url(https://picsum.photos/id/{{$item->id+80}}/800)"></div>
+          <div class="card__background" style="background-image: url({{asset('ondeComer/ondeComer/'.$item->imagem)}})"></div>
           <div class="card__content">
             <!--<p class="card__category">{{$item->nome}}</p>-->
             <h3 class="card__heading">{{$item->nome}}</h3>

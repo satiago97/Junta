@@ -167,12 +167,13 @@
             @foreach($ondeDormir as $item)
             <div class="mainContainerImage">
             <div class="parent">
-             <div class="box"><img src="{{asset('ondeDormir/ondeDormir/'.$item->foto)}}" style="object-fit:contain; width:200px; height:300px;" alt="Image"/></div>
+             <div class="box"><img class="rounded" src="{{asset('ondeDormir/ondeDormir/'.$item->foto)}}" style="object-fit:contain; width:200px; height:300px;" alt="Image"/></div>
             <label>Nome:</label>
             <h6>{{$item -> nome}}</h6>
-            <label>Descrição:</label>
-            <h6>{{$item -> descricao}} </h6>
+            <label>Morada:</label>
+            <h6 style="font-size: 8px">{{$item -> morada}} </h6>
             <td>
+                <hr>
             <a href="{{ route('edit-ondedormir',[$item->id]) }}" class="btn btn-primary btn-sm" id="a1">Edit</a>
             <form action="{{ route('delete-ondedormir',[$item->id]) }}" method="post" id="form1">
                 @method('DELETE')

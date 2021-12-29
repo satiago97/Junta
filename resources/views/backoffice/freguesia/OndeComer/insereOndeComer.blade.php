@@ -176,8 +176,6 @@
              <div class="box"><img src="{{asset('ondeComer/ondeComer/'.$item->imagem)}}" style="object-fit:contain; width:200px; height:300px;" alt="Image"/></div>
             <label>Nome:</label>
             <h6>{{$item -> nome}}</h6>
-            <label>Descrição:</label>
-            <h6>{{$item -> descricao}} </h6>
             @foreach ($ondeComerCategoria as $item1)
                @if($item1->id == $item->id_categoria)
                 <label>Categoria:</label>
@@ -185,6 +183,7 @@
                @endif
             @endforeach    
             <td>
+                <hr>
             <a href="{{ route('edit-ondecomer',[$item->id]) }}" class="btn btn-primary btn-sm" id="a1">Edit</a>
             <form action="{{ route('delete-ondecomer',[$item->id]) }}" method="post" id="form1">
                 @method('DELETE')

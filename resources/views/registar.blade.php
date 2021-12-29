@@ -42,9 +42,8 @@
               <input class="un" type="text"  id="name" name="name" placeholder="Nome">
               <input class="un" type="email" id="email" name="email" placeholder="E-mail">
               <input class="un" type="password" id="password"  name="password" placeholder="Palavra-passe">
-              <input class="un" type="password" id="password_confirmation"
-                   name="password_confirmation"  placeholder="Confirmar palavra-passe">
-              <button style="cursor:pointer" type="submit" class="button-62">Submit</button>
+              <input class="un" type="password" id="password_confirmation" name="password_confirmation"  placeholder="Confirmar palavra-passe">
+              <button style="cursor:pointer; margin:0 auto; display:block;" type="submit" class="button-62">Registar</button>
 
               @include('partials.formerrors')
             

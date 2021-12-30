@@ -13,11 +13,9 @@ use Illuminate\Database\Eloquent\Model;
  * Class DocumentosExecutivo
  * 
  * @property int $id
- * @property int $nome
- * @property int $data
+ * @property date $data
  * @property int $categoria_documento_executivo
  * @property int $id_freguesia
- * @property int $id_detalhes
  * 
  * @property Freguesium $freguesium
  * @property DetalhesDocumentoExecutivo $detalhes_documento_executivo
@@ -33,19 +31,16 @@ class DocumentosExecutivo extends Model
 
 	protected $casts = [
 		'id' => 'int',
-		'nome' => 'int',
-		'data' => 'int',
+		'data' => 'date',
 		'categoria_documento_executivo' => 'int',
-		'id_freguesia' => 'int',
-		'id_detalhes' => 'int'
+		'id_freguesia' => 'int'
 	];
 
 	protected $fillable = [
 		'nome',
 		'data',
 		'categoria_documento_executivo',
-		'id_freguesia',
-		'id_detalhes'
+		'id_freguesia'
 	];
 
 	public function freguesium()

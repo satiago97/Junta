@@ -71,6 +71,8 @@ return [
         public_path('galeria') => storage_path('app/public'),
         public_path('ondeComer') => storage_path('app/public'),
         public_path('ondeDormir') => storage_path('app/public'),
+        public_path('uploads_documentosExec') => storage_path('app/public'),
+
     ],
 
 ];

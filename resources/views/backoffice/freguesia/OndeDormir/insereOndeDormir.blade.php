@@ -1,3 +1,4 @@
+@if( auth()->check() )
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,6 +31,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+    <title>Onde Dormir</title>
     
 	<style>
 		body { margin:0; padding:0; }
@@ -282,5 +284,10 @@ $.each(geojson, function (i, marker) {
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
 </body>
+@else
+<script>
+    window.location.href='http://127.0.0.1:8000/login';
+</script>
+@endif
 
 

@@ -144,7 +144,7 @@
                                                     <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent";>Autarquia</a>
                                                             <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
-                                                            <li><a href="#">Documentos Executivo</a></li>
+                                                            <li><a href="{{ route('list-docexec') }}">Documentos Executivo</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Documentos Assembleia</a></li>
                                                             <li class="divider"></li>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OndeComerController;
+use App\Http\Controllers\DocumentoExecController;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,3 +120,9 @@ Route::get('edit-ondedormir/{id}', ['as' => 'edit-ondedormir', 'uses' => 'App\Ht
 Route::put('update-ondedormir/{id}', ['as' => 'update-ondedormir', 'uses' => 'App\Http\Controllers\OndeDormirController@update']);
 Route::delete('delete-ondedormir/{id}', ['as' => 'delete-ondedormir', 'uses' => 'App\Http\Controllers\OndeDormirController@destroy']);
 Route::get('/detalhesOndeDormir/{id}', ['as' => 'detalhesOndeDormir', 'uses' => 'App\Http\Controllers\OndeDormirController@detalhes']);
+
+
+//Routes Documentos Executivo
+Route::get('upload-DocumentoExec', [DocumentoExecController::class, 'createForm'])->name('upload-docexec');
+Route::get('list-DocumentoExec', [DocumentoExecController::class, 'createList'])->name('list-docexec');
+Route::post('/upload-DocumentoExec', [DocumentoExecController::class, 'fileUpload'])->name('upload-DocumentoExec');

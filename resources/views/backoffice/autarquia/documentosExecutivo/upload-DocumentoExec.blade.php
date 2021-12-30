@@ -1,5 +1,12 @@
 @if( auth()->check() )
+<!doctype html>
+<html lang="en">
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
  
@@ -20,15 +27,29 @@
     <link rel="stylesheet" href="css/responsive2.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/texto.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/texto.css">
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Documentos Executivo</title>
+
+
+    <style>
+        .container {
+            max-width: 500px;
+        }
+        dl, ol, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
 </head>
 
 <body>
-    
+
+
     <div id="preloader">
         <div class="loader"></div>
     </div>
@@ -62,8 +83,8 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>Galeria</span></li>
+                                <li><a href="{{route('painel')}}">Home</a></li>
+                                <li><span>Documentos Executivo</span></li>
                             </ul>
                         </div>
                     </div>
@@ -76,62 +97,69 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-            <div class="main-content-inner">
 
-            <div class="container" style="margin-top: 20px;">
-                <div class="row">
-                    <div class="mainText">
-                    <form action="{{ route('imagens.store') }}" method="post" enctype="multipart/form-data">
-        <!-- Add CSRF Token -->
-        @csrf
-    <div class="form-group">
-        <h1>Adicionar imagem</h1>
-    </div>
-    <div class="form-group">
-        <div class="col-3">
-        <input class="effect-3" type="text" name="nome" id="nome" placeholder="Insira o nome da imagem" required>
-        <span class="focus-border"></span>
-        </div>
-        
-        <p><br>
-        <div class="file-input">
-            <input type="file" id="file" class="file" name="file">
-                    <label for="file">Selecionar</label>
+    <div class="container mt-5">
+        <form action="{{route('upload-DocumentoExec')}}" method="post" enctype="multipart/form-data">
+          <h3 class="text-center mb-5">Upload de Documento Executivo</h3>
+            @csrf
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <strong>{{ $message }}</strong>
+            </div>
+          @endif
+
+          @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+          @endif
+
+
+            <input type="text" name="data" id="data" placeholder="data">
+            <input type="text" name="titulo" id="titulo" placeholder="titulo">
+            <select class="un" name="categoria" id="categoria" >
+                <option value="" disabled selected hidden>Categoria</option>
+                @foreach($documentoExecCategoria as $categoria )
+                  <option value="{{ $categoria->id }}">{{ $categoria->descricao }}</option>
+                @endforeach
+            </select>
+
+            <div class="custom-file">
+                <label class="custom-file-label" for="chooseFile">Select file</label>
+                <input type="file" name="file" class="custom-file-input" id="chooseFile">
+                <div id="file-upload-filename" style="font-size: 9px"></div>
             </div>
 
-    </div>
-    <button style="cursor:pointer" type="submit" class="btn btn-primary">Adicionar</button>
+            <button type="submit" name="submit" class="btn btn-primary btn-block mt-4">
+                Upload Files
+            </button>
+            <script>
+            var input = document.getElementById( 'chooseFile' );
+            var infoArea = document.getElementById( 'file-upload-filename' );
 
-    </form>
-                        
-                    </div>
-                </div>
-            </div>
+            input.addEventListener( 'change', showFileName );
 
-      
-
-    <div class="container">
-        <div class="row">
-            @foreach($galeria as $item)
-            <div class="mainContainerImage">
-            <div class="parent">
-             <div class="box"><img src="{{asset('galeria/galeria/'.$item->imagem)}}" width="200px" height="300px" alt="Image"/></div>
-             <label>Nome:</label>
-            <h6>{{$item -> nome}}</h6>
-            <label>Data de inserção:</label>
-            <h6>{{$item -> data}} </h6>
-                </div>
-            </div>
-            @endforeach
-        </div>
+            function showFileName( event ) {
+            
+            // the change event gives us the input it occurred in 
+            var input = event.srcElement;
+            
+            // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+            var fileName = input.files[0].name;
+            
+            // use fileName however fits your app best, i.e. add it into a div
+            infoArea.textContent = 'Selected file: ' + fileName;
+            }
+            </script>
+        </form>
     </div>
 
-
-        </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
-        <footer>
+           <!-- footer area start-->
+           <footer>
             <div class="footer-area">
                 <p>© Copyright 2021. All right reserved.</p>
             </div>
@@ -163,13 +191,11 @@
     <!-- others plugins -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
+
 </body>
+</html>
 @else
 <script>
     window.location.href='http://127.0.0.1:8000/login';
 </script>
 @endif
-
-
-
-

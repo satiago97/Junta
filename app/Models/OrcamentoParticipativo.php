@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class OrçamentoParticipativo
+ * Class OrcamentoParticipativo
  * 
  * @property int $id
  * @property int $titulo
@@ -26,7 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class OrçamentoParticipativo extends Model
 {
-	protected $table = 'orçamento_participativo';
+	protected $table = 'orcamento_participativo';
 	public $incrementing = false;
 	public $timestamps = false;
 

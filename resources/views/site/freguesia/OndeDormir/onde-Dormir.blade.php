@@ -26,7 +26,7 @@
     @include('layouts/header')
 </header>
 
-<section id="sectionImprensa" class="topOff teste">
+<section id="sectionOndeDormir" class="topOff teste">
     <div class="container">
         <div class="row">
             <div class="main">

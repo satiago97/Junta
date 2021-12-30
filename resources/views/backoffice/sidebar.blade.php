@@ -8,6 +8,15 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
+                            @if( auth()->check() )
+                                <li class="nav-item">
+                                    <a class="nav-link font-weight-bold" href="#">Hi {{ auth()->user()->name }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout">Log Out</a>
+                                </li>
+                            @endif
+
                             <li class="active">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-tachometer"></i><span>Painel de controlo</span></a>
                                
@@ -37,7 +46,7 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-university"></i></i><span>Autarquia</span></a>
                                 <ul class="collapse">
-                                    <li><a href="">Executivo</a></li>
+                                    <li><a href="{{ route('upload-docexec') }}">Executivo</a></li>
                                     <li><a href="">Assembleia</a></li>
                                     <li><a href="">Antigos</a></li>
                                     <li><a href="">Funcionários</a></li>

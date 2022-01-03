@@ -88,7 +88,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('Heraldica') }}">Heráldica</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="{{ route('galeria') }}">Galeria</a></li>
+                                                            <li><a href="{{ route('Galeria') }}">Galeria</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{route('imprensa')}}">Imprensa</a></li>
                                                             <li class="divider"></li>

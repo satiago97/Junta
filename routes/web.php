@@ -83,7 +83,7 @@ Route::resource('imagens', 'App\Http\Controllers\GalleryController');
 Route::get('open-editaGaleria/{id}', ['as' => 'open-editaGaleria', 'uses' => 'App\Http\Controllers\GalleryController@open']);
 Route::get('open2-Galeria/{id}', ['as' => 'open2-Galeria', 'uses' => 'App\Http\Controllers\GalleryController@open2']);
 Route::delete('delete-editaGaleria/{id}', ['as' => 'delete-editaGaleria', 'uses' =>'App\Http\Controllers\GalleryController@destroy']);
-Route::get('galeria', 'App\Http\Controllers\GalleryController@index2')->name('galeria');
+Route::get('galeria', 'App\Http\Controllers\GalleryController@index2')->name('Galeria');
 
 Route::get('/insereOndeComer', 'App\Http\Controllers\OndeComerController@index')->name('ondecomer');
 Route::get('/onde-Comer', 'App\Http\Controllers\OndeComerController@index2')->name('onde-Comer');

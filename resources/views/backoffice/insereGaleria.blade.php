@@ -87,7 +87,7 @@
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">
-        <h1>Adicionar imagem</h1>
+        <h1>Adicionar</h1>
     </div>
     <div class="form-group">
         
@@ -99,6 +99,17 @@
             <input type="file" id="file" class="file" name="file">
                     <label for="file">Selecionar</label>
             </div>
+
+          <div class="select">
+          <select class="un" name="categoria" id="categoria" >
+            <option value="" disabled selected hidden>Categoria</option>
+            @foreach($categoriasGaleria as $item )
+              <option value="{{ $item->id }}">{{ $item->descricao }}</option>
+            @endforeach
+          </select>
+          </div>
+
+           
 
     </div>
     <button style="cursor:pointer; margin-top:20px;" type="submit" class="btn btn-primary">Adicionar</button>
@@ -114,7 +125,7 @@
     <div class="container">
         <div class="row">
             <div class="mainTextCategorias" style="margin-top: 15px;">
-            <a href="{{route('open-inserirGaleria', [$item->id])}}" class="fill-div"><h3>{{$item->descricao}}</h3></a>
+            <a href="{{route('open-editaGaleria', [$item->id])}}" id="a1" class="fill-div"><h3>{{$item->descricao}}</h3></a>
                 
             </div>
         </div>

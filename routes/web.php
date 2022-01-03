@@ -23,13 +23,6 @@ Route::get('/backoffice', function(){
 })->name('painel'); 
 
 
-
-
-
-Route::get('/galeria', function(){
-    return view('galeria');
-})->name('galeria');
-
 Route::get('/imprensa', function(){
     return view('imprensa');
 })->name('imprensa');
@@ -86,9 +79,11 @@ Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
 
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
-
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
-Route::get('open-inserirGaleria/{id}', ['as' => 'open-inserirGaleria', 'uses' => 'App\Http\Controllers\GalleryController@open']);
+Route::get('open-editaGaleria/{id}', ['as' => 'open-editaGaleria', 'uses' => 'App\Http\Controllers\GalleryController@open']);
+Route::get('open2-Galeria/{id}', ['as' => 'open2-Galeria', 'uses' => 'App\Http\Controllers\GalleryController@open2']);
+Route::delete('delete-editaGaleria/{id}', ['as' => 'delete-editaGaleria', 'uses' =>'App\Http\Controllers\GalleryController@destroy']);
+Route::get('galeria', 'App\Http\Controllers\GalleryController@index2')->name('galeria');
 
 Route::get('/insereOndeComer', 'App\Http\Controllers\OndeComerController@index')->name('ondecomer');
 Route::get('/onde-Comer', 'App\Http\Controllers\OndeComerController@index2')->name('onde-Comer');

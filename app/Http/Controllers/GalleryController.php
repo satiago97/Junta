@@ -17,6 +17,11 @@ class GalleryController extends Controller
         return view('/backoffice/insereGaleria', compact('galeria', 'categoriasGaleria'));
     }
 
+    public function index2(){
+        $categoriasGaleria = CategoriaGalerium::all();
+        return view('/galeria', compact('categoriasGaleria'));
+    }
+
 
     public function store(Request $request){
 
@@ -30,7 +35,7 @@ class GalleryController extends Controller
             $imagem = new Galerium([
                 "imagem" => $request->file->hashName(),
                 "id_freguesia" => '1',
-                "id_categoria" => '1',
+                "id_categoria" => $request->input('categoria'),
                 "nome" => $request->input('nome'), 
             ]);
 
@@ -43,9 +48,30 @@ class GalleryController extends Controller
     }
 
     public function open($id_categoria){
-        $galeria = Galerium::find($id_categoria);
+      
+        $galeria = Galerium::all()->where('id_categoria', $id_categoria);
 
-        return view('backoffice.editaGaleria', compact('galeria'));
+        return view('/backoffice/editaGaleria', compact('galeria'));
 
     }
+
+    public function open2($id_categoria){
+     
+        $categoriaGaleria = CategoriaGalerium::all()->where('id', $id_categoria);
+        $galeria = Galerium::all()->where('id_categoria', $id_categoria);
+
+        return view('/fotos', compact('galeria', 'categoriaGaleria'));
+
+    }
+
+   
+
+    public function destroy($id){
+        $galeria = Galerium::find($id);
+        $galeria->delete();
+        return redirect()->route('painel')->with('status', 'Imagem eliminada com sucesso');
+    }
+
+
+
 }

@@ -2,6 +2,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 <link rel="stylesheet" href="css/paginasContainer.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/texto.css">
   <title>Galeria</title>
@@ -36,14 +39,6 @@
     </div>
 </div>
 
-
-<div class="container">
-    <div class="row">
-        <div class="mainText">
-           
-        </div>
-    </div>
-</div>
 
 
 

@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $pdf
  * @property string $descricao
  * @property int $id_freguesia
+ * @property date $data
  * 
  * @property Freguesium $freguesium
  *
@@ -31,8 +32,9 @@ class Imprensa extends Model
 
 	protected $fillable = [
 		'pdf',
-		'descricao',
-		'id_freguesia'
+		'nome',
+		'id_freguesia',
+		'data'
 	];
 
 	public function freguesium()

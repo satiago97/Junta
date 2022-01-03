@@ -75,7 +75,7 @@ Route::get('/login', '\App\Http\Controllers\SessionsController@create')->name('l
 Route::post('/login', '\App\Http\Controllers\SessionsController@store');
 Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
-
+//Galeria
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
 Route::get('open-editaGaleria/{id}', ['as' => 'open-editaGaleria', 'uses' => 'App\Http\Controllers\GalleryController@open']);
@@ -125,4 +125,10 @@ Route::get('/insereCaracterizacao', 'App\Http\Controllers\Caracterizacao@index')
 Route::resource('inserirCaracterizacao', 'App\Http\Controllers\Caracterizacao');
 Route::put('update-inserirCaracterizacao/{id}', ['as' => 'update-inserirCaracterizacao', 'uses' => 'App\Http\Controllers\Caracterizacao@update']);
 Route::get('/caracterizacao', 'App\Http\Controllers\Caracterizacao@indexSite')->name('caracterizacao');
+
+
+//Imprensa
+Route::get('/imprensaBackoffice' , 'App\Http\Controllers\ImprensaController@indexBackoffice')->name('inserirImprensa');
+Route::get('/insereImprensa', 'App\Http\Controllers\ImprensaController@create')->name('insereImprensa');
+Route::resource('insertImprensa', 'App\Http\Controllers\ImprensaController');
 

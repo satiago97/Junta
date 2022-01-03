@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/default-css2.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
+    <link rel="stylesheet" href="css/table.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -28,7 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+   
 </head>
 
 
@@ -39,13 +40,11 @@
 
     <div class="page-container">
     @include('backoffice/sidebar')
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
+    <div class="main-content">
+
             <div class="header-area">
                 <div class="row align-items-center">
-                    <!-- nav and search button -->
+              
                     <div class="col-md-6 col-sm-8 clearfix">
                         <div class="nav-btn pull-left">
                             <span></span>
@@ -54,12 +53,11 @@
                         </div>
                         
                     </div>
-                    <!-- profile info & task notification -->
+          
            
                 </div>
             </div>
-            <!-- header area end -->
-            <!-- page title area start -->
+     
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
@@ -67,7 +65,8 @@
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>História</span></li>
+                                <li><span>Imprensa</span></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -80,55 +79,70 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-         
-                <div class="container" style="margin-top:20px;">
-                    <div class="row">
-                        <div class="mainTextFormContainer">
-                        @foreach($historia as $item)
-            <form class="form1" method="post" action="{{ url('update-inserirHistoria/'.$item->id)}} " id="historiaForm">
-            {{ csrf_field() }}
-            @method('PUT')
+    
+    
+            <div class="containerMarginButton">
+            <a id="containerButton" href="{{route('insereImprensa')}}">Adicionar</a>
+            </div>
 
-            <label>Título</label>
-              <input class="un" type="text"  id="titulo" name="titulo" value="{{$item -> titulo}}" required>
-              <p>
-              <label>História</label>
-              <textarea class="unTextArea" name="descricao" form="historiaForm" >{{$item -> descricao}}</textarea>
-              <p>
-              <button style="cursor:pointer" type="submit" class="btn btn-primary">Alterar</button>
 
-            
 
-              @include('partials.formerrors')
 
-            </form>
-            @endforeach
-            
-
-                        </div>
-                    </div>
-                </div>
-                
-       
-              <!--<a2 class="submit" type="submit" ></a2>-->
+          
+<div class="table-wrapper">
+    <table class="fl-table">
         
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Ficheiro</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        @foreach($imprensa as $item)
+        <tbody>
+        <tr>
+            <td>{{$item->nome}}</td>
+            <td>{{$item->data}}</td>
+            <td><a href="/imprensa/{{$item->pdf}}">{{$item->pdf}}</a></td>
+            <td>
+            <a href="#" class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            <span><strong>Editar</strong></span>     
+            </a>
+            <a href="#" class="btn btn-primary a-btn-slide-text" >
+       <span class="glyphicon glyphicon-remove" aria-hidden="true" ></span>
+        <span ><strong>Eliminar</strong></span>            
+    </a>
+            </td>
+        </tr>
+      
+        <tbody>
+            @endforeach
+    </table>
+</div>
+           
+          
+    
         
             
                
-         
-     
-        <!-- main content area end -->
-        <!-- footer area start-->
+
         <footer>
+
         <div id="footer">
         <p>© Copyright 2021. All right reserved.</p>
         </div>
+            
         </footer>
-        <!-- footer area end-->
+
     </div>
-   
-    <!-- offset area end -->
+
+
+
+
+ <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -153,6 +167,3 @@
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
 </body>
-
-
-

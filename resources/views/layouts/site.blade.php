@@ -108,7 +108,7 @@
                                                     <!-- Dropdown Freguesia-->
                                                     <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Freguesia</a>
-                                                            <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
+                                                            <ul class="dropdown-menu" role="menu">
                                                             <li><a href="{{ route('historia') }}">História</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Heráldica</a></li>

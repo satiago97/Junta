@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OndeComerController;
 use App\Http\Controllers\DocumentoExecController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,27 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-
-
-/*Route::get('/registar', function(){
-    return view('registar');
-})->name('registar'); */
-
 Route::get('/backoffice', function(){
     return view('backoffice/painel');
 })->name('painel'); 
 
-Route::get('/historia', function(){
-    return view('historia');
-})->name('historia');
-
-Route::get('/heraldica', function(){
-    return view('heraldica');
-})->name('heraldica');
-
-Route::get('/galeria', function(){
-    return view('galeria');
-})->name('galeria');
 
 Route::get('/imprensa', function(){
     return view('imprensa');
@@ -55,9 +39,7 @@ Route::get('/agenda', function(){
     return view('agenda');
 })->name('agenda');
 
-Route::get('/caracterizacao', function(){
-    return view('caracterizacao');
-})->name('caracterizacao');
+
 
 Route::get('/empresas', function(){
     return view('empresas');
@@ -94,13 +76,12 @@ Route::post('/login', '\App\Http\Controllers\SessionsController@store');
 Route::get('/logout', '\App\Http\Controllers\SessionsController@destroy');
 
 
-
-/*Route::get('/insereGaleria', function(){
-    return view('/backoffice/insereGaleria');
-})->name('insereGaleria');*/
-
 Route::get('/insereGaleria', 'App\Http\Controllers\GalleryController@index')->name('inserirGaleria');
 Route::resource('imagens', 'App\Http\Controllers\GalleryController');
+Route::get('open-editaGaleria/{id}', ['as' => 'open-editaGaleria', 'uses' => 'App\Http\Controllers\GalleryController@open']);
+Route::get('open2-Galeria/{id}', ['as' => 'open2-Galeria', 'uses' => 'App\Http\Controllers\GalleryController@open2']);
+Route::delete('delete-editaGaleria/{id}', ['as' => 'delete-editaGaleria', 'uses' =>'App\Http\Controllers\GalleryController@destroy']);
+Route::get('galeria', 'App\Http\Controllers\GalleryController@index2')->name('Galeria');
 
 
 //Route Freguesia Onde Comer
@@ -126,3 +107,22 @@ Route::get('/detalhesOndeDormir/{id}', ['as' => 'detalhesOndeDormir', 'uses' => 
 Route::get('upload-DocumentoExec', [DocumentoExecController::class, 'createForm'])->name('upload-docexec');
 Route::get('list-DocumentoExec', [DocumentoExecController::class, 'createList'])->name('list-docexec');
 Route::post('/upload-DocumentoExec', [DocumentoExecController::class, 'fileUpload'])->name('upload-DocumentoExec');
+
+
+Route::get('/insereHistoria', 'App\Http\Controllers\InsertHistoryController@index')->name('inserirHistoria');
+Route::resource('inserirHistoria', 'App\Http\Controllers\InsertHistoryController');
+Route::put('update-inserirHistoria/{id}', ['as' => 'update-inserirHistoria', 'uses' => 'App\Http\Controllers\InsertHistoryController@update']);
+
+Route::get('/historia', 'App\Http\Controllers\InsertHistoryController@indexPagina')->name('Historia');
+
+Route::get('/insereHeraldica', 'App\Http\Controllers\insereHeraldicaController@index')->name('inserirHeraldica');
+Route::get('/heraldica', 'App\Http\Controllers\insereHeraldicaController@indexSite')->name('Heraldica');
+Route::resource('inserirHeraldica', 'App\Http\Controllers\insereHeraldicaController');
+Route::put('update-insereHeraldica/{id}', ['as' => 'update-insereHeraldica', 'uses' => 'App\Http\Controllers\insereHeraldicaController@update']);
+
+//Caracterizacao 
+Route::get('/insereCaracterizacao', 'App\Http\Controllers\Caracterizacao@index')->name('inserirCaracterizacao');
+Route::resource('inserirCaracterizacao', 'App\Http\Controllers\Caracterizacao');
+Route::put('update-inserirCaracterizacao/{id}', ['as' => 'update-inserirCaracterizacao', 'uses' => 'App\Http\Controllers\Caracterizacao@update']);
+Route::get('/caracterizacao', 'App\Http\Controllers\Caracterizacao@indexSite')->name('caracterizacao');
+

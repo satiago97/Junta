@@ -111,10 +111,13 @@
             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
             <span><strong>Editar</strong></span>     
             </a>
-            <a href="#" class="btn btn-primary a-btn-slide-text" >
-       <span class="glyphicon glyphicon-remove" aria-hidden="true" ></span>
-        <span ><strong>Eliminar</strong></span>            
-    </a>
+            <form action="{{route('delete-inserirImprensa', [$item->id])}}" method="post" id="form1">
+                @method('DELETE')
+                @csrf
+                <input  class="btn btn-primary" type="submit" value="Eliminar" style="margin-top: 5px; background: red; border-color: red; width: 90px;"> 
+                        
+            </form>
+             
             </td>
         </tr>
       

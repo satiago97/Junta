@@ -42,7 +42,15 @@ class ImprensaController extends Controller
             return view('/backoffice/painel');
         }
         
-        }
+    }
+
+    public function destroy($id){
+        $imprensa = Imprensa::find($id);
+
+        $imprensa->delete();
+
+        return back();
+    }
 
 
 

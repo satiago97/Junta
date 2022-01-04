@@ -131,4 +131,5 @@ Route::get('/caracterizacao', 'App\Http\Controllers\Caracterizacao@indexSite')->
 Route::get('/imprensaBackoffice' , 'App\Http\Controllers\ImprensaController@indexBackoffice')->name('inserirImprensa');
 Route::get('/insereImprensa', 'App\Http\Controllers\ImprensaController@create')->name('insereImprensa');
 Route::resource('insertImprensa', 'App\Http\Controllers\ImprensaController');
+Route::delete('delete-inserirImprensa/{id}' , ['as' => 'delete-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@destroy']);
 

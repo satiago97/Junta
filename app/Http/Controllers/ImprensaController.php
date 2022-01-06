@@ -44,6 +44,29 @@ class ImprensaController extends Controller
         
     }
 
+
+    public function open($id){
+            $imprensa = Imprensa::all()->where('id', $id);
+            return view('/backoffice/freguesia/imprensa/editaImprensa', compact('imprensa'));
+        }
+    
+
+
+    public function update(Request $request, $id){
+        $imprensa = Imprensa::find($id);
+        $imprensa->nome = $request->input('nome');
+        $imprensa->data = $request->input('data');
+
+
+
+        $imprensa->update();
+
+
+        return redirect()->route('painel')->with('status', 'Imprensa editada com sucesso');
+        }
+
+
+
     public function destroy($id){
         $imprensa = Imprensa::find($id);
 

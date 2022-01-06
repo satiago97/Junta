@@ -132,4 +132,6 @@ Route::get('/imprensaBackoffice' , 'App\Http\Controllers\ImprensaController@inde
 Route::get('/insereImprensa', 'App\Http\Controllers\ImprensaController@create')->name('insereImprensa');
 Route::resource('insertImprensa', 'App\Http\Controllers\ImprensaController');
 Route::delete('delete-inserirImprensa/{id}' , ['as' => 'delete-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@destroy']);
+Route::get('open-inserirImprensa/{id}', ['as' => 'open-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@open']);
+Route::put('update-inserirImprensa/{id}', ['as' => 'update-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@update']);
 

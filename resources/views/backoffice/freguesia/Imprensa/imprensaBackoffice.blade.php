@@ -107,7 +107,7 @@
             <td>{{$item->data}}</td>
             <td><a href="/imprensa/{{$item->pdf}}">{{$item->pdf}}</a></td>
             <td>
-            <a href="#" class="btn btn-primary a-btn-slide-text">
+            <a href="{{ url('open-inserirImprensa/'.$item->id)}}" class="btn btn-primary a-btn-slide-text">
             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
             <span><strong>Editar</strong></span>     
             </a>

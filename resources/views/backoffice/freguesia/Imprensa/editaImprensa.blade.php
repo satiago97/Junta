@@ -3,7 +3,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
  
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="/css/bootstrap2.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min2.css">
     <link rel="stylesheet" href="/css/themify-icons.css">
@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="/css/default-css2.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive2.css">
-    <link rel="stylesheet" href="/css/imagesBackoffice.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="/css/form.css">
 
     <link rel="stylesheet" href="/css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -29,52 +30,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<style>
-#footer{
-    position: fixed;
-    padding: 10px 10px 0px 10px;
-    bottom: 0;
-    width: 100%;
-
-}
-
-</style>
-
+   
 </head>
 
 
-
-
 <body>
-
 <div id="preloader">
         <div class="loader"></div>
     </div>
 
     <div class="page-container">
-         @include('backoffice/sidebar')
+    @include('backoffice/sidebar')
+    <div class="main-content">
 
-
-         <div class="main-content">
-             <div class="header-area">
-                 <div class="row align-items-center">
-                     <div class="col-md-6 col-sm-8 clearfix">
-                     <div class="nav-btn pull-left">
+            <div class="header-area">
+                <div class="row align-items-center">
+              
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="page-title-area">
+                        
+                    </div>
+          
+           
+                </div>
+            </div>
+     
+            <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Editar Galeria</span></li>
+                                <li><span>Imprensa</span></li>
                             </ul>
                         </div>
                     </div>
@@ -89,48 +81,46 @@
             </div>
 
 
-            @foreach($galeria as $item)
-            <div class="responsive">
-                <div class="gallery">
-                <a target="_blank" href="/galeria2/{{$item->imagem}}">
-                <img src="/galeria2/{{$item->imagem}}" width="600" height="400">
-                </a>
-            
-                <div class="desc">{{$item->nome}}</div>
+            <div class="form-style-2">
+<div class="form-style-2-heading">Editar dados para a imprensa</div>
+@foreach($imprensa as $item)
+<form action="{{route('update-inserirImprensa', [$item->id])}}" method="post" enctype="multipart/form-data">
+{{ csrf_field() }}
+            @method('PUT')
+<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="nome" name="nome" value="{{$item->nome}}" /></label>
+<label for="field2"><span>Data <span class="required">*</span></span><input type="date" class="input-field" id="data" name="data" value="{{$item->data}}" /></label>
+
+<label><a href="/imprensa/{{$item->pdf}}">{{$item->pdf}}</a></label>
+@endforeach
+<label><span> </span><input type="submit" value="Submit" /></label>
+
+
+</form>
+</div>
+
+
+
+
+          
+
         
-                
-                <form action="{{route('delete-editaGaleria', [$item->id])}}" method="post" id="form1">
-                    @method('DELETE')
-                    @csrf
-                     <input class="btn btn-danger btn-sm" type="submit" value="Eliminar" style="margin-top: 5px;">
-                </form>
-           
-               
-                </div>
-            </div>
-            @endforeach
-
-
-
-
-
-
-
-
-
-
             
-                <footer>
-            <div id="footer">
-                <p>© Copyright 2021. All right reserved.</p>
-            </div>
+               
+
+        <footer>
+
+        <div id="footer">
+        <p>© Copyright 2021. All right reserved.</p>
+        </div>
+            
         </footer>
-       
-         </div>
+
     </div>
 
 
-     <!-- offset area end -->
+
+
+ <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

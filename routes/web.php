@@ -135,3 +135,10 @@ Route::delete('delete-inserirImprensa/{id}' , ['as' => 'delete-inserirImprensa',
 Route::get('open-inserirImprensa/{id}', ['as' => 'open-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@open']);
 Route::put('update-inserirImprensa/{id}', ['as' => 'update-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@update']);
 
+//Jornal 
+Route::get('/jornalBackoffice', 'App\Http\Controllers\JornalController@indexBackoffice')->name('inserirJornal');
+Route::get('/insereJornal', 'App\Http\Controllers\JornalController@create')->name('insereJornal');
+Route::resource('insertJornal', 'App\Http\Controllers\JornalController');
+Route::delete('delete-inserirJornal/{id}', ['as' => 'delete-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@destroy']);
+Route::get('open-inserirJornal/{id}', ['as' => 'open-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@open']);
+Route::put('update-inserirJornal/{id}', ['as' => 'update-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@update']);

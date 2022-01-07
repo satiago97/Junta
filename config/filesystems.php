@@ -72,6 +72,7 @@ return [
         public_path('ondeDormir') => storage_path('app/public'),
         public_path('uploads_documentosExec') => storage_path('app/public'),
         public_path('imprensa') => storage_path('app/public/'),
+        public_path('jornal') => storage_path('app/public/'),
 
         public_path('galeria2') => storage_path('app/public'),
     ],

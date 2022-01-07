@@ -32,7 +32,7 @@
                                     <li><a href="">Instituições e Associações</a></li>
                                     <li><a href="{{route('inserirHeraldica')}}">Heráldica</a></li>
                                     <li><a href="{{route('inserirHistoria')}}">História</a></li>
-                                    <li><a href="">Jornais</a></li>
+                                    <li><a href="{{route('inserirJornal')}}">Jornais</a></li>
                                     <li><a href="">Mensagem do presidente</a></li>
                                     <li><a href="{{route('ondecomer')}}">Onde comer</a></li>
                                     <li><a href="{{route('ondedormir')}}">Onde dormir</a></li>

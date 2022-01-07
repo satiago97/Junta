@@ -1,7 +1,7 @@
 <head>
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="/css/paginasContainer.css">
+      <link rel="stylesheet" href="/css/details-paroquia.css">
       <link rel="stylesheet" href="/css/font-awesome.min.css">
       <link rel="stylesheet" href="/css/texto.css">
       <link rel="stylesheet" href="/css/details.css">

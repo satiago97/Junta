@@ -74,7 +74,7 @@
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>EditarGaleria</span></li>
+                                <li><span>Editar Galeria</span></li>
                             </ul>
                         </div>
                     </div>

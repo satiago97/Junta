@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/texto.css">
   <link rel="stylesheet" href="css/buttons.css">
-  <link rel="stylesheet" href="css/cards.css">
+  
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
   <title>Onde comer</title>
@@ -39,7 +39,7 @@
       <div class="card-grid">
       @foreach ($ondeComer as $item)
         <a class="card" href="{{route('detalhesOndeComer',[$item->id])}}">
-          <div class="card__background" style="background-image: url({{asset('ondeComer/ondeComer/'.$item->imagem)}})"></div>
+          <div class="card__background" style="background-image: url(/ondeComer/{{$item->imagem}})"></div>
           <div class="card__content">
             <!--<p class="card__category">{{$item->nome}}</p>-->
             <h3 class="card__heading">{{$item->nome}}</h3>

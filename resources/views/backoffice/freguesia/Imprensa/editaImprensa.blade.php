@@ -1,7 +1,7 @@
-@if( auth()->check() )
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="/assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="/css/bootstrap2.min.css">
@@ -17,35 +17,35 @@
     <link rel="stylesheet" href="/css/default-css2.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/responsive2.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="/css/form.css">
 
-   <link rel="stylesheet" href="/css/paginasContainer.css">
-   <link rel="stylesheet" href="/css/font-awesome.min.css">
-   <link rel="stylesheet" href="/css/texto.css">
-   <link rel="stylesheet" href="/css/login.css">
-   <link rel="stylesheet" href="/css/buttons.css">
-
-
+    <link rel="stylesheet" href="/css/paginasContainer.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/texto.css">
     <!-- modernizr css -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Onde Comer</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   
 </head>
 
+
 <body>
-    
-    <div id="preloader">
+<div id="preloader">
         <div class="loader"></div>
     </div>
 
     <div class="page-container">
     @include('backoffice/sidebar')
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
+    <div class="main-content">
+
             <div class="header-area">
                 <div class="row align-items-center">
-                    <!-- nav and search button -->
+              
                     <div class="col-md-6 col-sm-8 clearfix">
                         <div class="nav-btn pull-left">
                             <span></span>
@@ -54,21 +54,19 @@
                         </div>
                         
                     </div>
-                    <!-- profile info & task notification -->
+          
            
                 </div>
             </div>
-            <!-- header area end -->
-            <!-- page title area start -->
+     
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="{{ route('painel') }}">Home</a></li>
-                                <li><a href="{{ route('ondecomer') }}">Onde Comer</a></li>
-                                <li><span>Editar Onde Comer</span></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><span>Imprensa</span></li>
                             </ul>
                         </div>
                     </div>
@@ -81,72 +79,48 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
-            <div class="main-content-inner">
 
-            <div class="container" style="margin-top: 20px;">
-                <div class="row">
-                    <div class="mainText">
-<form action="{{ route('update-ondecomer',[$ondeComer->id]) }}" method="post" enctype="multipart/form-data">
-        <!-- Add CSRF Token -->
-        @csrf
-        @method('PUT')
-    <div class="form-group">
-        <h1>Editar Onde Comer</h1>
-    </div>
-    <div class="form-group">
-        <div class="row">
-        <div class="col-5">
-        <input class="un" type="text" name="nome" id="nome" value="{{$ondeComer->nome}}"  required>
-        <span class="focus-border"></span>
-        <input class="un" type="text" name="descricao" id="descricao" value="{{$ondeComer->descricao}}" required>
-        <span class="focus-border"></span>
-        <input class="un" type="text" name="morada" id="morada" value="{{$ondeComer->morada}}" required>
-        <span class="focus-border"></span>
-        <input class="un" type="tel" name="contacto" id="contacto" value="{{$ondeComer->contacto}}" required>
-        <span class="focus-border"></span>
-        </div>
-        <div class="col-5">
-        <input class="un" type="email" name="email" id="email" value="{{$ondeComer->email}}" required>
-        <span class="focus-border"></span>
-        <input class="un" type="url" name="site" id="site" value="{{$ondeComer->site}}" required>
-        <span class="focus-border"></span>
-        <input class="un" type="text" name="lat" id="lat" value="{{$ondeComer->lat}}" required>
-        <span class="focus-border"></span>
-        <input class="un" type="text" name="lng" id="lng" value="{{$ondeComer->lng}}" required>
-        <span class="focus-border"></span>
-        <div class="file-input" align="center">
-            <input type="file" id="file" class="file" name="file">
-                    <label for="file" id="labelImagem">Selecionar Imagem</label>
-        </div>
 
-        </div>
-        </div>
-    </div>
+            <div class="form-style-2">
+<div class="form-style-2-heading">Editar dados para a imprensa</div>
+@foreach($imprensa as $item)
+<form action="{{route('update-inserirImprensa', [$item->id])}}" method="post" enctype="multipart/form-data">
+{{ csrf_field() }}
+            @method('PUT')
+<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="nome" name="nome" value="{{$item->nome}}" /></label>
+<label for="field2"><span>Data <span class="required">*</span></span><input type="date" class="input-field" id="data" name="data" value="{{$item->data}}" /></label>
+
+<label><a href="/imprensa/{{$item->pdf}}">{{$item->pdf}}</a></label>
+@endforeach
+<label><span> </span><input type="submit" value="Submit" /></label>
+
+
+</form>
+</div>
+
+
+
+
+          
+
         
-        <p><br>
-            <button style="cursor:pointer; float: right;" type="submit" class="btn btn-primary button-76">Editar</button>
-    </div>
+            
+               
 
-
-    </form>
-                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
         <footer>
+
         <div id="footer">
         <p>© Copyright 2021. All right reserved.</p>
         </div>
+            
         </footer>
-        <!-- footer area end-->
+
     </div>
-   
-    <!-- offset area end -->
+
+
+
+
+ <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -171,8 +145,3 @@
     <script src="/js/plugins.js"></script>
     <script src="/js/scripts.js"></script>
 </body>
-@else
-<script>
-    window.location.href='http://127.0.0.1:8000/login';
-</script>
-@endif

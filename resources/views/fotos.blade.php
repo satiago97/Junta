@@ -38,10 +38,11 @@
   <div class="card-grid">
       @foreach($galeria as $item)
    
-    <a class="card" href="{{route('open2-Galeria', [$item->id])}}">
-      <div class="card__background" style="background-image: url(/galeria2/{{$item->imagem}})"></div>
+    <a class="card" target="_blank" href="/galeria2/{{$item->imagem}}">
+        <div class="card__background" style="background-image: url(/galeria2/{{$item->imagem}})"></div>
       <div class="card__content">
-        <p class="card__category">Categoria</p>
+      
+        <p class="card__category"></p>
         <h3 class="card__heading">{{$item->nome}}</h3>
       </div>
     </a>

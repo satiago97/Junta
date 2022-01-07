@@ -63,7 +63,7 @@ Route::get('/ondeDormir', function(){
 })->name('ondeDormir');
 
 Route::get('/paroquia', function(){
-    return view('paroquia');
+    return view('freguesia/Paroquia/paroquia');
 })->name('paroquia');
 
 
@@ -108,13 +108,13 @@ Route::get('upload-DocumentoExec', [DocumentoExecController::class, 'createForm'
 Route::get('list-DocumentoExec', [DocumentoExecController::class, 'createList'])->name('list-docexec');
 Route::post('/upload-DocumentoExec', [DocumentoExecController::class, 'fileUpload'])->name('upload-DocumentoExec');
 
-
+// Routes Historia
 Route::get('/insereHistoria', 'App\Http\Controllers\InsertHistoryController@index')->name('inserirHistoria');
 Route::resource('inserirHistoria', 'App\Http\Controllers\InsertHistoryController');
 Route::put('update-inserirHistoria/{id}', ['as' => 'update-inserirHistoria', 'uses' => 'App\Http\Controllers\InsertHistoryController@update']);
-
 Route::get('/historia', 'App\Http\Controllers\InsertHistoryController@indexPagina')->name('Historia');
 
+// Routes Heraldica
 Route::get('/insereHeraldica', 'App\Http\Controllers\insereHeraldicaController@index')->name('inserirHeraldica');
 Route::get('/heraldica', 'App\Http\Controllers\insereHeraldicaController@indexSite')->name('Heraldica');
 Route::resource('inserirHeraldica', 'App\Http\Controllers\insereHeraldicaController');
@@ -126,3 +126,35 @@ Route::resource('inserirCaracterizacao', 'App\Http\Controllers\Caracterizacao');
 Route::put('update-inserirCaracterizacao/{id}', ['as' => 'update-inserirCaracterizacao', 'uses' => 'App\Http\Controllers\Caracterizacao@update']);
 Route::get('/caracterizacao', 'App\Http\Controllers\Caracterizacao@indexSite')->name('caracterizacao');
 
+//Routes Paroquia
+Route::get('/insereParoquia', 'App\Http\Controllers\ParoquiaController@index')->name('inserirParoquia');
+Route::put('update-inserirParoquia/{id}', ['as' => 'update-inserirParoquia', 'uses' => 'App\Http\Controllers\ParoquiaController@update']);
+Route::get('/paroquia', 'App\Http\Controllers\ParoquiaController@indexPagina')->name('paroquia');
+Route::resource('Paroquia', 'App\Http\Controllers\ParoquiaController');
+
+//Route Empresas
+Route::get('/insereEmpresa', 'App\Http\Controllers\EmpresasController@index')->name('empresas');
+Route::get('/Empresas', 'App\Http\Controllers\EmpresasController@index2')->name('Empresas');
+Route::resource('empresa', 'App\Http\Controllers\EmpresasController');
+Route::get('edit-empresa/{id}', ['as' => 'edit-empresa', 'uses' => 'App\Http\Controllers\EmpresasController@edit']);
+Route::put('update-empresa/{id}', ['as' => 'update-empresa', 'uses' => 'App\Http\Controllers\EmpresasController@update']);
+Route::delete('delete-empresa/{id}', ['as' => 'delete-empresa', 'uses' => 'App\Http\Controllers\EmpresasController@destroy']);
+Route::get('/detalhesEmpresa/{id}', ['as' => 'detalhesEmpresa', 'uses' => 'App\Http\Controllers\EmpresasController@detalhes']);
+
+//Route Locais a Visitar
+Route::get('/insereLocal', 'App\Http\Controllers\LocaisVisitarController@index')->name('locais');
+Route::get('/Local', 'App\Http\Controllers\LocaisVisitarController@index2')->name('Local');
+Route::resource('local', 'App\Http\Controllers\LocaisVisitarController');
+Route::get('edit-local/{id}', ['as' => 'edit-local', 'uses' => 'App\Http\Controllers\LocaisVisitarController@edit']);
+Route::put('update-local/{id}', ['as' => 'update-local', 'uses' => 'App\Http\Controllers\LocaisVisitarController@update']);
+Route::delete('delete-local/{id}', ['as' => 'delete-local', 'uses' => 'App\Http\Controllers\LocaisVisitarController@destroy']);
+Route::get('/detalhesLocal/{id}', ['as' => 'detalhesLocal', 'uses' => 'App\Http\Controllers\LocaisVisitarController@detalhes']);
+
+//Route Associações
+Route::get('/insereAssociacao', 'App\Http\Controllers\AssociacaoController@index')->name('associacoes');
+Route::get('/Associacao', 'App\Http\Controllers\AssociacaoController@index2')->name('Associacao');
+Route::resource('associacao', 'App\Http\Controllers\AssociacaoController');
+Route::get('edit-associacao/{id}', ['as' => 'edit-associacao', 'uses' => 'App\Http\Controllers\AssociacaoController@edit']);
+Route::put('update-associacao/{id}', ['as' => 'update-associacao', 'uses' => 'App\Http\Controllers\AssociacaoController@update']);
+Route::delete('delete-associacao/{id}', ['as' => 'delete-associacao', 'uses' => 'App\Http\Controllers\AssociacaoController@destroy']);
+Route::get('/detalhesAssociacao/{id}', ['as' => 'detalhesassociacao', 'uses' => 'App\Http\Controllers\AssociacaoController@detalhes']);

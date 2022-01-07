@@ -17,10 +17,14 @@
     height: 20%;
     }
 
+    #myIframe {
+        display: table;
+        margin: 0 auto;
+    }
+
     #myspecialdiv {
-  width: 90%;
-  margin: 0 auto;
-}
+        width:100%
+    }
 </style>
 
 <header>

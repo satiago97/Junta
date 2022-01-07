@@ -14,7 +14,6 @@
     background-size: cover;
     height: 20%;
     }
-
    
 </style>
 

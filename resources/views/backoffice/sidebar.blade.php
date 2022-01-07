@@ -26,10 +26,10 @@
                                     </span></a>
                                 <ul class="collapse">
                                     <li><a href="{{route('inserirCaracterizacao')}}">Caracterização</a></li>
-                                    <li><a href="">Empresas</a></li>
+                                    <li><a href="{{ route('empresas') }}">Empresas</a></li>
                                     <li><a href="">Agenda</a></li>
                                     <li><a href="">Imprensa</a></li>
-                                    <li><a href="">Instituições e Associações</a></li>
+                                    <li><a href="{{ route('associacoes') }}">Instituições e Associações</a></li>
                                     <li><a href="{{route('inserirHeraldica')}}">Heráldica</a></li>
                                     <li><a href="{{route('inserirHistoria')}}">História</a></li>
                                     <li><a href="">Jornais</a></li>
@@ -37,8 +37,8 @@
                                     <li><a href="{{route('ondecomer')}}">Onde comer</a></li>
                                     <li><a href="{{route('ondedormir')}}">Onde dormir</a></li>
                                     <li><a href="">Oportunidades</a></li>
-                                    <li><a href="">Paróquia</a></li>
-                                    <li><a href="">Locais a visitar</a></li>
+                                    <li><a href="{{ route('inserirParoquia') }}">Paróquia</a></li>
+                                    <li><a href="{{ route('locais') }}">Locais a visitar</a></li>
                                     <li><a href="">Rede escolar</a></li>
                                     <li><a href="">Trilhos</a></li>
                                 </ul>

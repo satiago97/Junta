@@ -17,7 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $titulo
  * @property string $descricao
  * @property string $imagem
- * @property Carbon $data
+ * @property Carbon $data_inicio
+ * @property Carbon $data_fim
  * @property Carbon $hora
  * @property int $id_freguesia
  * 
@@ -44,7 +45,8 @@ class Agenda extends Model
 		'titulo',
 		'descricao',
 		'imagem',
-		'data',
+		'data_inicio',
+		'data_fim',
 		'hora',
 		'id_freguesia'
 	];

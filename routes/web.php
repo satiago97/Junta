@@ -142,3 +142,11 @@ Route::resource('insertJornal', 'App\Http\Controllers\JornalController');
 Route::delete('delete-inserirJornal/{id}', ['as' => 'delete-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@destroy']);
 Route::get('open-inserirJornal/{id}', ['as' => 'open-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@open']);
 Route::put('update-inserirJornal/{id}', ['as' => 'update-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@update']);
+
+
+
+//Agenda
+Route::get('/agendaBackoffice', 'App\Http\Controllers\AgendaController@indexBackoffice')->name('inserirAgenda');
+Route::get('/insereAgenda', 'App\Http\Controllers\AgendaController@create')->name('insereAgenda');
+Route::resource('insertAgenda', 'App\Http\Controllers\AgendaController');
+Route::delete('delete-inserirAgenda/{id}', ['as' => 'delete-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@destroy']);

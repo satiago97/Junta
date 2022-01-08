@@ -27,7 +27,7 @@
                                 <ul class="collapse">
                                     <li><a href="{{route('inserirCaracterizacao')}}">Caracterização</a></li>
                                     <li><a href="">Empresas</a></li>
-                                    <li><a href="">Agenda</a></li>
+                                    <li><a href="{{route('inserirAgenda')}}">Agenda</a></li>
                                     <li><a href="{{route('inserirImprensa')}}">Imprensa</a></li>
                                     <li><a href="">Instituições e Associações</a></li>
                                     <li><a href="{{route('inserirHeraldica')}}">Heráldica</a></li>

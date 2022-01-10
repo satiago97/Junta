@@ -150,3 +150,11 @@ Route::get('/agendaBackoffice', 'App\Http\Controllers\AgendaController@indexBack
 Route::get('/insereAgenda', 'App\Http\Controllers\AgendaController@create')->name('insereAgenda');
 Route::resource('insertAgenda', 'App\Http\Controllers\AgendaController');
 Route::delete('delete-inserirAgenda/{id}', ['as' => 'delete-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@destroy']);
+
+//Rede escolar
+Route::get('/redeescolarBackoffice', 'App\Http\Controllers\RedeEscolarController@indexBackoffice')->name('inserirRedeEscolar');
+Route::get('/insereRedeEscolar', 'App\Http\Controllers\RedeEscolarController@create')->name('insereRedeEscolar');
+Route::resource('insertRedeEscolar', 'App\Http\Controllers\RedeEscolarController');
+Route::delete('delete-inserirRedeEscolar/{id}', ['as' => 'delete-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@destroy']);
+Route::put('update-inserirRedeEscolar/{id}', ['as' => 'update-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@update']);
+Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@open']);

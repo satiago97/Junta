@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $lng
  * @property string $foto
  * @property int $id_freguesia
+ * @property string $link
  * 
  * @property Freguesium $freguesium
  *
@@ -42,7 +43,8 @@ class Escola extends Model
 		'lat',
 		'lng',
 		'foto',
-		'id_freguesia'
+		'id_freguesia',
+		'link'
 	];
 
 	public function freguesium()

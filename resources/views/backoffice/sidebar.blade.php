@@ -39,7 +39,7 @@
                                     <li><a href="">Oportunidades</a></li>
                                     <li><a href="">Paróquia</a></li>
                                     <li><a href="">Locais a visitar</a></li>
-                                    <li><a href="">Rede escolar</a></li>
+                                    <li><a href="{{route('inserirRedeEscolar')}}">Rede escolar</a></li>
                                     <li><a href="">Trilhos</a></li>
                                 </ul>
                             </li>

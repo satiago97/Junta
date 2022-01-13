@@ -40,7 +40,7 @@
                                     <li><a href="{{ route('inserirParoquia') }}">Paróquia</a></li>
                                     <li><a href="{{ route('locais') }}">Locais a visitar</a></li>
                                     <li><a href="">Rede escolar</a></li>
-                                    <li><a href="">Trilhos</a></li>
+                                    <li><a href="{{ route('trilhos') }}">Trilhos</a></li>
                                 </ul>
                             </li>
                             <li>

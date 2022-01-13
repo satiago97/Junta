@@ -109,6 +109,10 @@
                     </div>
                 </div>
             </div>
+
+
+    <!--  the map -->
+	<div id='map'></div>
             <!-- page title area end -->
             <div class="main-content-inner">
 

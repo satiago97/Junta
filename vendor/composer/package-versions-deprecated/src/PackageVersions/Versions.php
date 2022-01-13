@@ -46,10 +46,14 @@ final class Versions
   'dragonmantank/cron-expression' => 'v3.1.0@7a8c6e56ab3ffcc538d05e8155bb42269abf1a0c',
   'egulias/email-validator' => '2.1.25@0dbf5d78455d4d6a41d186da50adc1122ec066f4',
   'fruitcake/laravel-cors' => 'v2.0.4@a8ccedc7ca95189ead0e407c43b530dc17791d6a',
+  'geo-io/interface' => 'v1.0.1@cf46fe7b013de20ab8b601238c7d91b480810644',
+  'geo-io/wkb-parser' => 'v1.0.1@cceee8f4e8b2058f3f1a0372c930140f23fe1ee1',
   'graham-campbell/result-type' => 'v1.0.4@0690bde05318336c7221785f2a932467f98b64ca',
+  'grimzy/laravel-mysql-spatial' => '4.0.0@f70a82e528c579b63f6fa16cebe069a668cb3e6b',
   'guzzlehttp/guzzle' => '7.4.0@868b3571a039f0ebc11ac8f344f4080babe2cb94',
   'guzzlehttp/promises' => '1.5.1@fe752aedc9fd8fcca3fe7ad05d419d32998a06da',
   'guzzlehttp/psr7' => '2.1.0@089edd38f5b8abba6cb01567c2a8aaa47cec4c72',
+  'jmikola/geojson' => '1.0.2@6ec3016cc0215667b7775f6ead7bd0337ad66eee',
   'laravel/framework' => 'v8.74.0@004ea195012d5132eca07a176a6e587c6a74815e',
   'laravel/sanctum' => 'v2.12.2@76b2d552c00477d520338889160f80a0cfb5fc55',
   'laravel/serializable-closure' => 'v1.0.5@25de3be1bca1b17d52ff0dc02b646c667ac7266c',
@@ -150,11 +154,7 @@ final class Versions
   'sebastian/type' => '2.3.4@b8cd8a1c753c90bc1a0f5372170e3e489136f914',
   'sebastian/version' => '3.0.2@c6c1022351a901512170118436c764e473f6de8c',
   'theseer/tokenizer' => '1.2.1@34a41e998c2183e22995f158c581e7b5e755ab9e',
-<<<<<<< HEAD
-  'laravel/laravel' => 'dev-master@9ea25fd2f66c2dd5efb7a708db2cb602ddb6b925',
-=======
-  'laravel/laravel' => 'dev-master@7f8f35703ed0075fc42aa77766b260c7d3a54068',
->>>>>>> funcionalidade-de-galeria
+  'laravel/laravel' => 'dev-master@5ef5d2b88336bc41753d7b3d2a7c4f9839ac271d',
 );
 
     private function __construct()

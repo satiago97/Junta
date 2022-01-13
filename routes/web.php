@@ -158,3 +158,12 @@ Route::get('edit-associacao/{id}', ['as' => 'edit-associacao', 'uses' => 'App\Ht
 Route::put('update-associacao/{id}', ['as' => 'update-associacao', 'uses' => 'App\Http\Controllers\AssociacaoController@update']);
 Route::delete('delete-associacao/{id}', ['as' => 'delete-associacao', 'uses' => 'App\Http\Controllers\AssociacaoController@destroy']);
 Route::get('/detalhesAssociacao/{id}', ['as' => 'detalhesassociacao', 'uses' => 'App\Http\Controllers\AssociacaoController@detalhes']);
+
+
+
+//Route Trilhos
+Route::get('/insereTrilhos', 'App\Http\Controllers\TrilhosController@index')->name('trilhos');
+Route::resource('trilho', 'App\Http\Controllers\TrilhosController');
+Route::post('trilhos2', 'App\Http\Controllers\TrilhosController@storePonto')->name('trilhos2');
+Route::delete('delete-trilho/{id}', ['as' => 'delete-trilho', 'uses' => 'App\Http\Controllers\TrilhosController@destroy']);
+Route::get('/edit-trilho/{id}', ['as' => 'edit-trilho', 'uses' => 'App\Http\Controllers\TrilhosController@edit']);

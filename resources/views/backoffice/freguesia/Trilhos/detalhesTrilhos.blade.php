@@ -4,6 +4,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    
     <link rel="stylesheet" href="/css/bootstrap2.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min2.css">
     <link rel="stylesheet" href="/css/themify-icons.css">
@@ -23,6 +24,8 @@
     <link rel="stylesheet" href="/css/texto.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/popup.css">
+
 
     <!-- modernizr css -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -199,8 +202,8 @@
             <h6>{{$item -> descricao}}</h6>
             <td>
                 <hr>
-            <a href="" class="btn btn-primary btn-sm" id="a1">Edit</a>
-            <form action="" method="post" id="form1">
+            <a href="{{ route('edit-ponto',['id'=>$item->id,'id_trilho'=>$item->id_trilho]) }}" class="btn btn-primary btn-sm" id="a1">Edit</a>
+            <form action="{{ route('delete-ponto',[$item->id]) }}" method="post" id="form1">
                 @method('DELETE')
                 @csrf
                 <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
@@ -232,12 +235,14 @@
  
          map.addControl(Draw, 'top-left');
  
+         
          map.on('click', function (e) {
                      console.log("click on map");
                      var coor = Draw.getAll();
                      var coors = coor.features[0].geometry.coordinates;
                      document.getElementById('pontos').value = coors;
                  });
+
  
          var saved_markers = <?php echo json_encode($trilho) ?>;
          var pTrilhos = <?php echo json_encode($pontosTrilho) ?>;
@@ -295,11 +300,13 @@
                 // Adicionar pontos
                 for(var i = 0; i < chunked1.length; i++) {
                     var obj = chunked1[i];
+                    var imageurl = '{{ URL::asset('/storage/pontos_trilhos/') }}';
+                    var image = imageurl +"/"+ pTrilhos[i].imagem
                     let myLatlng = new mapboxgl.LngLat(obj[0], obj[1]);
                     let marker = new mapboxgl.Marker()
                     .setLngLat(myLatlng)
                     .setPopup(new mapboxgl.Popup({ offset: 25 })
-                    .setHTML('<h3>' + obj.name + '</h3><p>' + obj.address1 + '</p>'))
+                    .setHTML('<div width="300px"><div class="profile-card text-center"><img class="img-responsive" src="'+image+'"><div class="profile-info"><h2 class="hvr-underline-from-center">Ponto de Interesse<span>'+pTrilhos[i].nome+'</span></h2><div>'+pTrilhos[i].descricao+'</div></div></div>'))
                     .addTo(map);
                 }
                 

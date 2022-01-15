@@ -136,6 +136,8 @@
                                                             <li><a href="{{ route('onde-Dormir') }}">Onde Dormir</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('paroquia') }}">Paróquia</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="{{ route('Trilhos') }}">Trilhos</a></li>
                                                             </ul>
                                                     </li>
                                                     <!-- End Dropdown Freguesia-->

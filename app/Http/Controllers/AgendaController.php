@@ -50,6 +50,32 @@ class AgendaController extends Controller
             }
     }
 
+    public function open($id){
+        $agenda = Agenda::all()->where('id', $id);
+        return view('/backoffice/freguesia/Agenda/editAgenda', compact('agenda'));
+
+    }
+
+    public function update(Request $request, $id){
+        $agenda = Agenda::find($id);
+
+        $agenda->titulo = $request->input('titulo');
+        $agenda->descricao = $request->input('descricao');
+        $agenda->data_inicio = $request->input('data_inicio');
+        $agenda->data_fim = $request->input('data_fim');
+        $agenda->link = $request->input('link');
+        $agenda->hora = $request->input('hora');
+
+
+
+        $agenda->update();
+
+
+        return redirect()->route('painel')->with('status', 'Agenda atualizada com sucesso');
+
+    }
+
+
 
     public function destroy($id){
 
@@ -59,4 +85,6 @@ class AgendaController extends Controller
         return back();
 
     }
+
+
 }

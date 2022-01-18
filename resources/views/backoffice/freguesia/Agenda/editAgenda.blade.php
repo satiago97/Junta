@@ -3,33 +3,46 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
  
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap2.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min2.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/metisMenu.css">
-    <link rel="stylesheet" href="css/owl.carousel.min2.css">
-    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="/css/bootstrap2.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min2.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/metisMenu.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min2.css">
+    <link rel="stylesheet" href="/css/slicknav.min.css">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/default-css2.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive2.css">
-    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/default-css2.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive2.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="/css/form.css">
 
-    <link rel="stylesheet" href="css/paginasContainer.css">
+    <link rel="stylesheet" href="/css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/texto.css">
+  <link rel="stylesheet" href="/css/texto.css">
     <!-- modernizr css -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-   
+    <style> 
+textarea {
+  width: 48%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  resize: none;
+}
+</style>
 </head>
 
 
@@ -66,7 +79,6 @@
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
                                 <li><span>Agenda</span></li>
-                                
                             </ul>
                         </div>
                     </div>
@@ -79,63 +91,30 @@
                     </div>
                 </div>
             </div>
-    
-    
-            <div class="containerMarginButton">
-            <a id="containerButton" href="{{route('insereAgenda')}}">Adicionar</a>
-            </div>
 
 
-
-
-          
-<div class="table-wrapper">
-    <table class="fl-table">
-        
-        <thead>
-        <tr>
-            <th>Título</th>
-       
-            <th>Data Início</th>
-            <th>Data Fim</th>
-            <th>Hora</th>
-            <th>Link</th>
-            <th>Imagem</th>
-            <th>Ações</th>
-        </tr>
-        </thead>
-        @foreach($agenda as $item)
-        <tbody>
-        <tr>
-            <td>{{$item->titulo}}</td>
- 
-            <td>{{$item->data_inicio}}</td>
-            <td>{{$item->data_fim}}</td>
-            <td>{{$item->hora}}</td>
-            <td>{{$item->link}}</td>
-            <td><a href="/agenda/{{$item->imagem}}">{{$item->imagem}}</a></td>
-            <td>
-            <a href="{{ url('open-inserirAgenda/'.$item->id)}}" class="btn btn-primary a-btn-slide-text">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-            <span><strong>Editar</strong></span>     
-            </a>
-            <form action="{{route('delete-inserirAgenda', [$item->id])}}" method="post" id="form1">
-                @method('DELETE')
-                @csrf
-                <input  class="btn btn-primary" type="submit" value="Eliminar" style="margin-top: 5px; background: red; border-color: red; width: 90px;"> 
-                        
-            </form>
-             
-            </td>
-        </tr>
-      
-        <tbody>
-          @endforeach
-    </table>
+            <div class="form-style-2">
+<div class="form-style-2-heading">Editar dados para a imprensa</div>
+@foreach($agenda as $item)
+<form action="{{route('update-inserirAgenda', [$item->id])}}" method="post" enctype="multipart/form-data" id="agendaForm">
+{{ csrf_field() }}
+@method('PUT')
+<label for="field1"><span>Título<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="{{$item->titulo}}" required /></label>
+<label for="field1"><span>Link<span class="required">*</span></span><input type="text" class="input-field" id="link" name="link" value="{{$item->link}}"  required/></label>
+<label for="field1"><span>Decrição do evento<span class="required">*</span></span><textarea class="textArea" name="descricao" form="agendaForm"  required>{{$item->descricao}}</textarea></label>
+<label for="field2"><span>Data Início<span class="required">*</span></span><input type="date" class="input-field" id="data_inicio" name="data_inicio" value="{{$item->data_inicio}}"  required/></label>
+<label for="field2"><span>Data Fim<span class="required">*</span></span><input type="date" class="input-field" id="data_fim" name="data_fim" value="{{$item->data_fim}}" required/></label>
+<label for="field2"><span>Hora<span class="required">*</span></span><input type="time" class="input-field" id="hora" name="hora" value="" required /></label>
+@endforeach
+<label><span> </span><input type="submit" value="Submit" /></label>
+</form>
 </div>
-           
+
+
+
+
           
-    
+
         
             
                
@@ -155,14 +134,14 @@
 
  <!-- offset area end -->
     <!-- jquery latest version -->
-    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min2.js"></script>
-    <script src="js/metisMenu.min.js"></script>
-    <script src="js/jquery.slimscroll.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min2.js"></script>
+    <script src="/js/metisMenu.min.js"></script>
+    <script src="/js/jquery.slimscroll.min.js"></script>
+    <script src="/js/jquery.slicknav.min.js"></script>
 
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -173,8 +152,8 @@
   
 
     <!-- all pie chart -->
-    <script src="js/pie-chart.js"></script>
+    <script src="/js/pie-chart.js"></script>
     <!-- others plugins -->
-    <script src="js/plugins.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>

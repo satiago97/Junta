@@ -18,7 +18,7 @@ class JornalController extends Controller
     public function indexSite(){
         $jornal = Jornal::all();
 
-        return view();
+        return view('/jornais', compact('jornal'));
     }
 
     public function create(){

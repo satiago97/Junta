@@ -142,7 +142,7 @@ Route::resource('insertJornal', 'App\Http\Controllers\JornalController');
 Route::delete('delete-inserirJornal/{id}', ['as' => 'delete-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@destroy']);
 Route::get('open-inserirJornal/{id}', ['as' => 'open-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@open']);
 Route::put('update-inserirJornal/{id}', ['as' => 'update-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@update']);
-
+Route::get('jornais', 'App\Http\Controllers\JornalController@indexSite')->name('Jornal');
 
 
 //Agenda
@@ -160,3 +160,4 @@ Route::resource('insertRedeEscolar', 'App\Http\Controllers\RedeEscolarController
 Route::delete('delete-inserirRedeEscolar/{id}', ['as' => 'delete-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@destroy']);
 Route::put('update-inserirRedeEscolar/{id}', ['as' => 'update-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@update']);
 Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@open']);
+Route::get('redeEscolar', 'App\Http\Controllers\RedeEscolarController@indexSite')->name('redeEscolar');

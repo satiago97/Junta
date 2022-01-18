@@ -14,6 +14,11 @@ class RedeEscolarController extends Controller
         return view('/backoffice/freguesia/RedeEscolar/redeEscolarBackoffice', compact('redeEscolar'));
     }
 
+    public function indexSite(){
+        $redeEscolar = Escola::all();
+        return view('/redeEscolar', compact('redeEscolar'));
+    }
+
 
     public function create(){
         return view('/backoffice/freguesia/RedeEscolar/insereRedeEscolar');

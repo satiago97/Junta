@@ -117,7 +117,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Imprensa</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Rede escolar</a></li>
+                                                            <li><a href="{{ route('redeEscolar') }}">Rede escolar</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Agenda</a></li>
                                                             <li class="divider"></li>
@@ -127,7 +127,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Instituições e Associações</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Jornais</a></li>
+                                                            <li><a href="{{ route('Jornal')}}">Jornais</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Locais a Visitar</a></li>
                                                             <li class="divider"></li>

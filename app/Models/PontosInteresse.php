@@ -16,8 +16,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $descricao
  * @property string $foto
  * @property string $morada
- * @property int $lat
- * @property int $lng
+ * @property double $lat
+ * @property double $lng
  * @property int $id_categoria
  * @property int $id_freguesia
  * 
@@ -32,8 +32,8 @@ class PontosInteresse extends Model
 	public $timestamps = false;
 
 	protected $casts = [
-		'lat' => 'int',
-		'lng' => 'int',
+		'lat' => 'double',
+		'lng' => 'double',
 		'id_categoria' => 'int',
 		'id_freguesia' => 'int'
 	];

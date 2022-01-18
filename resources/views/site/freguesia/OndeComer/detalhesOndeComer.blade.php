@@ -1,7 +1,7 @@
 <head>
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="/css/paginasContainer.css">
+      <link rel="stylesheet" href="/css/paginasContainer-details.css">
       <link rel="stylesheet" href="/css/font-awesome.min.css">
       <link rel="stylesheet" href="/css/texto.css">
       <link rel="stylesheet" href="/css/details.css">
@@ -24,7 +24,7 @@
    
 
 		body { margin:0; padding:0; }
-		#map {   width: 50%; margin: 50px auto;width:75%; height: 75%}
+		#map {   width: 50%; margin: 50px auto;width:75%; height: 500px;}
 
 		.marker {
 			background-image: url('./marker.png');
@@ -153,8 +153,10 @@
 
 
     <script>
-        // var saved_markers = <?php echo json_encode($ondeComer) ?>;
-
+        var dados = <?php echo json_encode($ondeComer) ?>;
+        var saved_markers = [];
+        saved_markers.push(dados);
+      
 		mapboxgl.accessToken = 'pk.eyJ1IjoidGlhZ29nb21lcyIsImEiOiJja3hxaWk1OWMxMnRwMnZvZThrcXhsc3hsIn0.vaNy1s8-70xdodel6VAnMw';
         const map = new mapboxgl.Map({
   container: 'map',
@@ -164,7 +166,7 @@
 });
 
 
-/*
+
 var marker;
 
 // After the map style has loaded on the page, add a source layer and default
@@ -204,7 +206,7 @@ $.each(geojson, function (i, marker) {
         .addTo(map);
 });
 }
-*/
+
     </script>
 
     

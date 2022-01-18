@@ -45,8 +45,18 @@ class DocumentoExecController extends Controller
                 $fileName = time().'_'.$req->file->getClientOriginalName();
                 $fileModel->titulo = $req->input('titulo');
                 $fileModel->id_documento_executivo = DocumentosExecutivo::orderBy('id', 'desc')->first()->id;
-                $filePath = $req->file('file')->storeAs('uploads_documentosExec', $fileName, 'public');
+
+                $ano = date("Y",strtotime($req->input('data')));
+                $cats = CategoriaDocumentoExecutivo::all();
+                foreach($cats as $cat){
+                  if($cat->id == $req->input('categoria')){
+                    $categoriaFolder = $cat->descricao;
+                  }
+                }
+
+                $filePath = $req->file('file')->storeAs('uploads_documentosExec/files/'.$categoriaFolder.'/'.$ano, $fileName, 'public');
                 $fileModel->documento = '/storage/' . $filePath;
+
                 $fileModel->save();
     
                 return back()

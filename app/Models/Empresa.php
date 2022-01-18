@@ -19,8 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $email
  * @property string $facebook
  * @property string $site
- * @property int $lat
- * @property int $lng
+ * @property double $lat
+ * @property double $lng
  * @property int $categoria
  * @property string $foto
  * @property int $id_freguesia
@@ -37,8 +37,8 @@ class Empresa extends Model
 
 	protected $casts = [
 		'contacto' => 'int',
-		'lat' => 'int',
-		'lng' => 'int',
+		'lat' => 'double',
+		'lng' => 'double',
 		'categoria' => 'int',
 		'id_freguesia' => 'int'
 	];

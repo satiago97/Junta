@@ -18,8 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $site
  * @property string $foto
  * @property string $descricao
- * @property int $lat
- * @property string $lng
+ * @property double $lat
+ * @property double $lng
  * @property string $nome
  * @property int $id_freguesia
  * 
@@ -34,8 +34,8 @@ class Associaco extends Model
 
 	protected $casts = [
 		'contacto' => 'int',
-		'lat' => 'int',
-		'lng' => 'binary',
+		'lat' => 'double',
+		'lng' => 'double',
 		'id_freguesia' => 'int'
 	];
 

@@ -140,6 +140,13 @@ Route::delete('delete-inserirImprensa/{id}' , ['as' => 'delete-inserirImprensa',
 Route::get('open-inserirImprensa/{id}', ['as' => 'open-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@open']);
 Route::put('update-inserirImprensa/{id}', ['as' => 'update-inserirImprensa', 'uses' => 'App\Http\Controllers\ImprensaController@update']);
 
+//Jornal 
+Route::get('/jornalBackoffice', 'App\Http\Controllers\JornalController@indexBackoffice')->name('inserirJornal');
+Route::get('/insereJornal', 'App\Http\Controllers\JornalController@create')->name('insereJornal');
+Route::resource('insertJornal', 'App\Http\Controllers\JornalController');
+Route::delete('delete-inserirJornal/{id}', ['as' => 'delete-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@destroy']);
+Route::get('open-inserirJornal/{id}', ['as' => 'open-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@open']);
+Route::put('update-inserirJornal/{id}', ['as' => 'update-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@update']);
 
 //Route Empresas
 Route::get('/insereEmpresa', 'App\Http\Controllers\EmpresasController@index')->name('empresas');
@@ -183,3 +190,21 @@ Route::delete('delete-ponto/{id}', ['as' => 'delete-ponto', 'uses' => 'App\Http\
 Route::put('update-ponto/{id}', ['as' => 'update-ponto', 'uses' => 'App\Http\Controllers\TrilhosController@updatePonto']);
 Route::get('/edit-ponto/{id}/{id_trilho}', ['as' => 'edit-ponto', 'uses' => 'App\Http\Controllers\TrilhosController@editPonto']);
 
+
+
+
+//Agenda
+Route::get('/agendaBackoffice', 'App\Http\Controllers\AgendaController@indexBackoffice')->name('inserirAgenda');
+Route::get('/insereAgenda', 'App\Http\Controllers\AgendaController@create')->name('insereAgenda');
+Route::resource('insertAgenda', 'App\Http\Controllers\AgendaController');
+Route::delete('delete-inserirAgenda/{id}', ['as' => 'delete-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@destroy']);
+Route::put('update-inserirAgenda/{id}', ['as' => 'update-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@update']);
+Route::get('open-inserirAgenda/{id}', ['as' => 'open-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@open']);
+
+//Rede escolar
+Route::get('/redeescolarBackoffice', 'App\Http\Controllers\RedeEscolarController@indexBackoffice')->name('inserirRedeEscolar');
+Route::get('/insereRedeEscolar', 'App\Http\Controllers\RedeEscolarController@create')->name('insereRedeEscolar');
+Route::resource('insertRedeEscolar', 'App\Http\Controllers\RedeEscolarController');
+Route::delete('delete-inserirRedeEscolar/{id}', ['as' => 'delete-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@destroy']);
+Route::put('update-inserirRedeEscolar/{id}', ['as' => 'update-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@update']);
+Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@open']);

@@ -33,6 +33,21 @@
     </div>
 </div>
 
+<section class="hero-section">
+  <div class="card-grid">
+      @foreach($redeEscolar as $item)
+   
+    <a class="card" href="{{route('openSite-redeEscolar', [$item->id])}}">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">{{$item->morada}}</p>
+        <h3 class="card__heading">{{$item->nome}}</h3>
+      </div>
+    </a>
+  
+    @endforeach
+  <div>
+</section>
 
 <footer>
     @include('layouts/footer')

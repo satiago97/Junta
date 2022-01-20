@@ -14,6 +14,12 @@ class AgendaController extends Controller
         return view('/backoffice/freguesia/agenda/agendaBackoffice', compact('agenda'));
     }
 
+    public function indexSite(){
+        $agenda = Agenda::all();
+
+        return view('/agenda', compact('agenda'));
+    }
+
 
 
     public function create(){
@@ -54,6 +60,12 @@ class AgendaController extends Controller
         $agenda = Agenda::all()->where('id', $id);
         return view('/backoffice/freguesia/Agenda/editAgenda', compact('agenda'));
 
+    }
+
+    public function openSite($id){
+        $agenda = Agenda::all()->where('id', $id);
+       
+        return view('/agendaDetalhes', compact('agenda'));
     }
 
     public function update(Request $request, $id){

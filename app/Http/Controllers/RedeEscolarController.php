@@ -14,6 +14,11 @@ class RedeEscolarController extends Controller
         return view('/backoffice/freguesia/RedeEscolar/redeEscolarBackoffice', compact('redeEscolar'));
     }
 
+    public function indexSite(){
+        $redeEscolar = Escola::all();
+        return view('/redeEscolar', compact('redeEscolar'));
+    }
+
 
     public function create(){
         return view('/backoffice/freguesia/RedeEscolar/insereRedeEscolar');
@@ -66,6 +71,11 @@ class RedeEscolarController extends Controller
     public function open($id){
         $redeEscolar = Escola::all()->where('id', $id);
         return view('/backoffice/freguesia/RedeEscolar/editaRedeEscolar', compact('redeEscolar'));
+    }
+
+    public function openSite($id){
+        $redeEscolar = Escola::all()->where('id', $id);
+        return view('escola', compact('redeEscolar'));
     }
 
     public function destroy($id){

@@ -147,6 +147,7 @@ Route::resource('insertJornal', 'App\Http\Controllers\JornalController');
 Route::delete('delete-inserirJornal/{id}', ['as' => 'delete-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@destroy']);
 Route::get('open-inserirJornal/{id}', ['as' => 'open-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@open']);
 Route::put('update-inserirJornal/{id}', ['as' => 'update-inserirJornal', 'uses' => 'App\Http\Controllers\JornalController@update']);
+Route::get('/jornais', 'App\Http\Controllers\JornalController@indexSite')->name('Jornal');
 
 //Route Empresas
 Route::get('/insereEmpresa', 'App\Http\Controllers\EmpresasController@index')->name('empresas');
@@ -200,6 +201,9 @@ Route::resource('insertAgenda', 'App\Http\Controllers\AgendaController');
 Route::delete('delete-inserirAgenda/{id}', ['as' => 'delete-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@destroy']);
 Route::put('update-inserirAgenda/{id}', ['as' => 'update-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@update']);
 Route::get('open-inserirAgenda/{id}', ['as' => 'open-inserirAgenda', 'uses' => 'App\Http\Controllers\AgendaController@open']);
+Route::get('/agenda', 'App\Http\Controllers\AgendaController@indexSite')->name('Agenda'); 
+Route::get('openSite-Agenda/{id}', ['as' => 'openSite-Agenda', 'uses' => 'App\Http\Controllers\AgendaController@openSite']);
+
 
 //Rede escolar
 Route::get('/redeescolarBackoffice', 'App\Http\Controllers\RedeEscolarController@indexBackoffice')->name('inserirRedeEscolar');
@@ -208,3 +212,7 @@ Route::resource('insertRedeEscolar', 'App\Http\Controllers\RedeEscolarController
 Route::delete('delete-inserirRedeEscolar/{id}', ['as' => 'delete-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@destroy']);
 Route::put('update-inserirRedeEscolar/{id}', ['as' => 'update-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@update']);
 Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@open']);
+Route::get('/redeEscolar', 'App\Http\Controllers\RedeEscolarController@indexSite')->name('redeEscolar');
+Route::get('openSite-redeEscolar/{id}', ['as' => 'openSite-redeEscolar', 'uses'=>'App\Http\Controllers\RedeEscolarController@openSite']);
+
+

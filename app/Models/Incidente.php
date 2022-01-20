@@ -18,11 +18,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $mensagem
  * @property string $imagem
  * @property string $morada
- * @property int $lat
- * @property int $lng
+ * @property string $ponto
  * @property int $id_freguesia
  * @property int $tipo_situacao
  * @property int $tipo_incidente
+ * @property int $estado
  * 
  * @property Freguesium $freguesium
  *
@@ -35,8 +35,6 @@ class Incidente extends Model
 
 	protected $casts = [
 		'contacto' => 'int',
-		'lat' => 'int',
-		'lng' => 'int',
 		'id_freguesia' => 'int',
 		'tipo_situacao' => 'int',
 		'tipo_incidente' => 'int'
@@ -49,11 +47,11 @@ class Incidente extends Model
 		'mensagem',
 		'imagem',
 		'morada',
-		'lat',
-		'lng',
+		'ponto',
 		'id_freguesia',
 		'tipo_situacao',
-		'tipo_incidente'
+		'tipo_incidente',
+		'estado'
 	];
 
 	public function freguesium()

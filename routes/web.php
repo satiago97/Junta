@@ -208,3 +208,7 @@ Route::resource('insertRedeEscolar', 'App\Http\Controllers\RedeEscolarController
 Route::delete('delete-inserirRedeEscolar/{id}', ['as' => 'delete-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@destroy']);
 Route::put('update-inserirRedeEscolar/{id}', ['as' => 'update-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@update']);
 Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@open']);
+
+//Routes Incidentes
+Route::resource('insertIncidente', 'App\Http\Controllers\IncidentesController');
+Route::get('/Incidentes', 'App\Http\Controllers\IncidentesController@index2')->name('Incidentes');

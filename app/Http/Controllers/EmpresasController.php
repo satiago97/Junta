@@ -18,13 +18,15 @@ class EmpresasController extends Controller
 
     public function index2(){
         $empresa = Empresa::all();
-        return view('/site/freguesia/Empresas/Empresa-list', compact('empresa'));
+        $empresaCategoria = CategoriaEmpresa::all();
+        return view('/site/freguesia/Empresas/empresas', compact('empresa','empresaCategoria'));
     }
 
     public function detalhes($id)
     {
         $empresa = Empresa::find($id);
-        return view('/site/freguesia/Empresas/detalhesEmpresa', compact('empresa'));
+        $empresaCategoria = CategoriaEmpresa::all();
+        return view('/site/freguesia/Empresas/detalhesEmpresa', compact('empresa','empresaCategoria'));
     }
 
     public function store(Request $request){

@@ -16,13 +16,13 @@ class AssociacaoController extends Controller
     
         public function index2(){
             $associacao = Associaco::all();
-            return view('/site/freguesia/OndeComer/onde-Comer', compact('associacao'));
+            return view('/site/freguesia/Associacoes/Associacoes', compact('associacao'));
         }
     
         public function detalhes($id)
         {
             $associacao = Associaco::find($id);
-            return view('/site/freguesia/OndeComer/detalhesOndeComer', compact('associacao'));
+            return view('/site/freguesia/Associacoes/detalhesAssociacao', compact('associacao'));
         }
     
         public function store(Request $request){

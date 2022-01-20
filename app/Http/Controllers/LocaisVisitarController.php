@@ -19,13 +19,13 @@ class LocaisVisitarController extends Controller
         public function index2(){
             $pontoInteresse = PontosInteresse::all();
             $pontoInteresseCategoria = CategoriaPontoInteresse::all();
-            return view('/site/freguesia/Locais/locais', compact('pontoInteresse','pontoInteresseCategoria'));
+            return view('/site/freguesia/Locais-a-Visitar/locaisVisitar', compact('pontoInteresse','pontoInteresseCategoria'));
         }
     
         public function detalhes($id)
         {
             $pontoInteresse = PontosInteresse::find($id);
-            return view('/site/freguesia/Locais/detalhesLocal', compact('pontoInteresse'));
+            return view('/site/freguesia/Locais-a-Visitar/detalhesLocal', compact('pontoInteresse'));
         }
     
         public function store(Request $request){

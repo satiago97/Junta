@@ -167,7 +167,7 @@
             @foreach($pontoInteresse as $item)
             <div class="mainContainerImage">
             <div class="parent">
-             <div class="box"><img src="{{asset('ondeComer/locais/'.$item->foto)}}" style="object-fit:contain; width:200px; height:300px;" alt="Image"/></div>
+             <div class="box"><img src="{{asset('storage/locais/'.$item->foto)}}" style="object-fit:contain; width:200px; height:300px;" alt="Image"/></div>
             <label>Nome:</label>
             <h6>{{$item -> nome}}</h6>
             @foreach ($pontoInteresseCategoria as $item1)

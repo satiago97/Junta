@@ -123,13 +123,13 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Caracterização</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Empresas</a></li>
+                                                            <li><a href="{{ route('Empresas') }}">Empresas</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Instituições e Associações</a></li>
+                                                            <li><a href="{{ route('Associacao')}}">Instituições e Associações</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Jornais</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Locais a Visitar</a></li>
+                                                            <li><a href="{{ route('Local') }}">Locais a Visitar</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('onde-Comer') }}">Onde Comer</a></li>
                                                             <li class="divider"></li>
@@ -152,7 +152,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Concursos Publicos</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Incidentes</a></li>
+                                                            <li><a href="{{ route('Incidentes')}}">Incidentes</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Infraestruturas</a></li>
                                                             <li class="divider"></li>

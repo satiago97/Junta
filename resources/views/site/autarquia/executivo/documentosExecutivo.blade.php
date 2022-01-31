@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/paginasContainer.css">
 <link rel="stylesheet" href="css/texto.css">
-<!-- Include our stylesheet -->
-<!--<link href="/css/file-explore.css" rel="stylesheet"/>-->
+t>
+
   <title>Documentos Executivo</title>
 </head>
 
@@ -51,6 +51,6 @@
 		@include('layouts/footer')
 	</footer>
     <!-- Include our script files -->
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <script src="/js/file-explore.js"></script>
 </section>

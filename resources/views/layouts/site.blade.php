@@ -184,7 +184,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Contactos Gerais</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Faqs</a></li>
+                                                            <li><a href="{{route('faqs')}}">Faqs</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Formulário de contacto</a></li>
                                                             </ul>

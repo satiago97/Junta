@@ -15,7 +15,7 @@
 -------------------------*/
 
 body {
-	background-color: #23232e;
+	background-color: #bcbcc5;
 	font: 14px normal Arial, Helvetica, sans-serif;
 	z-index: -4;
 }
@@ -159,7 +159,7 @@ body {
 
 .filemanager .data li {
 	border-radius: 3px;
-	background-color: #373743;
+	background-color: #787879;
 	width: 307px;
 	height: 118px;
 	list-style-type: none;

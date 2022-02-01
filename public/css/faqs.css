@@ -1,57 +1,29 @@
-.faq-heading{
-    border-bottom: #777;
-    padding: 20px 60px;
+.faqHeader {
+    font-size: 27px;
+    margin: 20px;
 }
-.faq-container{
-display: flex;
-justify-content: center;
-flex-direction: column;
-}
-.hr-line{
-  width: 60%;
-  margin: auto;
-  
-}
-/* Style the buttons that are used to open and close the faq-page body */
-.faq-page {
-    /* background-color: #eee; */
-    color: #444;
-    cursor: pointer;
-    padding: 30px 20px;
-    width: 60%;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    margin: auto;
-}
-.faq-body{
-    margin: auto;
-    /* text-align: center; */
-   width: 50%; 
-   padding: auto;
-   
-}
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.faq-page:hover {
-    background-color: #F9F9F9;
-}
-/* Style the faq-page panel. Note: hidden by default */
-.faq-body {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-}
-.faq-page:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
+
+.panel-heading [data-toggle="collapse"]:after {
+    font-family: 'Glyphicons Halflings';
+    content: "e072"; /* "play" icon */
     float: right;
-    margin-left: 5px;
+    color: #F58723;
+    font-size: 18px;
+    line-height: 22px;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
-.active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
+
+.panel-heading [data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #454444;
 }

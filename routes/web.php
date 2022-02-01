@@ -67,11 +67,6 @@ Route::get('/paroquia', function(){
 })->name('paroquia');
 
 
-Route::get('/faqs', function(){
-    return view('faqs');
-})->name('faqs');
-
-
 Route::get('/register', '\App\Http\Controllers\RegistrationController@create')->name('register');
 
 Route::post('register', '\App\Http\Controllers\RegistrationController@store');
@@ -228,3 +223,4 @@ Route::resource('insertFaqs', 'App\Http\Controllers\FaqsController');
 Route::delete('delete-inserirFaqs/{id}', ['as' => 'delete-inserirFaqs', 'uses' => 'App\Http\Controllers\FaqsController@destroy']);
 Route::get('open-inserirFaqs/{id}', ['as' => 'open-inserirFaqs', 'uses' => 'App\Http\Controllers\FaqsController@open']);
 Route::put('update-inserirFaqs/{id}', ['as' => 'update-inserirFaqs', 'uses' => 'App\Http\Controllers\FaqsController@update']);
+Route::get('/faqs', 'App\Http\Controllers\FaqsController@indexSite')->name('faqs');

@@ -14,6 +14,11 @@ class FaqsController extends Controller
         return view('/backoffice/faqsBackoffice', compact('faqs'));
     }
 
+    public function indexSite(){
+        $faqs = Faq::all();
+        return view('/faqs', compact('faqs'));
+    }
+
     public function create(){
         return view('/backoffice/insereFaqs');
     }

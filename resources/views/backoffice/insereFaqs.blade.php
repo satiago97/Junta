@@ -97,9 +97,9 @@ textarea {
 <div class="form-style-2-heading">Inserir dados para a rede escolar</div>
 <form action="{{route('insertFaqs.store')}}" method="post" enctype="multipart/form-data" id="faqsForm">
 @csrf
-<label for="field1"><span>Pergunta<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" /></label>
+<label for="field1"><span>Pergunta<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
 
-<label for="field1"><span>Resposta<span class="required">*</span></span><textarea class="textArea" name="texto" form="faqsForm" ></textarea></label>
+<label for="field1"><span>Resposta<span class="required">*</span></span><textarea class="textArea" name="texto" form="faqsForm" required ></textarea></label>
 
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>

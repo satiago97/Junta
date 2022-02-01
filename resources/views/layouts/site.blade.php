@@ -182,7 +182,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Contactos da Freguesisa</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Contactos Gerais</a></li>
+                                                            <li><a href="{{route('contactosGerais')}}">Contactos Gerais</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{route('faqs')}}">Faqs</a></li>
                                                             <li class="divider"></li>

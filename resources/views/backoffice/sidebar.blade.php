@@ -121,6 +121,7 @@
                             <li><a href="{{route('inserirGaleria')}}"><i class="fa fa-camera"></i> <span>Galeria</span></a></li>
                             <li><a href=""><i class="fa fa-list"></i> <span>Lista de atividades</span></a></li>
                             <li><a href=""><i class="fa fa-map-marker"></i> <span>Locais de voto</span></a></li>
+                            <li><a href="{{route('contactosGeraisBackoffice')}}"><i class="fa fa-id-card"></i> <span>Contactos gerais</span></a></li>
                             <li><a href=""><i class="fa fa-user-plus"></i><span>Gerir utilizadores</span></a></li>
                             
                         </ul>

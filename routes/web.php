@@ -224,3 +224,13 @@ Route::delete('delete-inserirFaqs/{id}', ['as' => 'delete-inserirFaqs', 'uses' =
 Route::get('open-inserirFaqs/{id}', ['as' => 'open-inserirFaqs', 'uses' => 'App\Http\Controllers\FaqsController@open']);
 Route::put('update-inserirFaqs/{id}', ['as' => 'update-inserirFaqs', 'uses' => 'App\Http\Controllers\FaqsController@update']);
 Route::get('/faqs', 'App\Http\Controllers\FaqsController@indexSite')->name('faqs');
+
+
+//Contactos gerais
+Route::get('/contactosBackoffice', 'App\Http\Controllers\ContactosGeraisController@indexBackoffice')->name('contactosGeraisBackoffice');
+Route::get('/insereContactos', 'App\Http\Controllers\ContactosGeraisController@create')->name('insereContactos');
+Route::resource('insertContactos' , 'App\Http\Controllers\ContactosGeraisController');
+Route::delete('delete-contactosGeraisBackoffice/{id}', ['as' => 'delete-contactosGeraisBackoffice', 'uses' => 'App\Http\Controllers\ContactosGeraisController@destroy']);
+Route::get('open-contactosGeraisBackoffice/{id}', ['as' => 'open-contactosGeraisBackoffice', 'uses' => 'App\Http\Controllers\ContactosGeraisController@open']);
+Route::put('update-contactosGeraisBackoffice/{id}', ['as' => 'update-contactosGeraisBackoffice', 'uses' => 'App\Http\Controllers\ContactosGeraisController@update']);
+Route::get('/contactosGerais', 'App\Http\Controllers\ContactosGeraisController@indexSite')->name('contactosGerais');

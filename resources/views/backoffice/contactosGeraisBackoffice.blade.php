@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
     <link rel="stylesheet" href="css/table.css">
-    <link rel="stylesheet" href="css/form.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -30,19 +29,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <style> 
-textarea {
-  width: 48%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  font-size: 16px;
-  resize: none;
-}
-</style>
+   
 </head>
 
 
@@ -78,7 +65,8 @@ textarea {
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Faqs</span></li>
+                                <li><span>Contactos Gerais</span></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -91,21 +79,60 @@ textarea {
                     </div>
                 </div>
             </div>
+    
+    
+            <div class="containerMarginButton">
+            <a id="containerButton" href="{{route('insereContactos')}}">Adicionar</a>
+            </div>
 
 
-            <div class="form-style-2">
-<div class="form-style-2-heading">Inserir dados para as FAQS</div>
-<form action="{{route('insertFaqs.store')}}" method="post" enctype="multipart/form-data" id="faqsForm">
-@csrf
-<label for="field1"><span>Pergunta<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
 
-<label for="field1"><span>Resposta<span class="required">*</span></span><textarea class="textArea" name="texto" form="faqsForm" required ></textarea></label>
 
-<label><span> </span><input type="submit" value="Submit" /></label>
-</form>
-</div>
           
-
+<div class="table-wrapper">
+    <table class="fl-table">
+        
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Morada</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Horário</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+    @foreach($contactos as $item)
+        <tbody>
+        <tr>
+            <td>{{$item->titulo}}</td>
+            <td>{{$item->morada}}</td>
+            <td>{{$item->contacto}}</td>
+            <td>{{$item->email}}</td>
+            <td>{{$item->horario}}</td>
+            
+            <td>
+            <a href="{{ url('open-contactosGeraisBackoffice/'.$item->id)}}" class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            <span><strong>Editar</strong></span>     
+            </a>
+            <form action="{{route('delete-contactosGeraisBackoffice', [$item->id])}}" method="post" id="form1">
+                @method('DELETE')
+                @csrf
+                <input  class="btn btn-primary" type="submit" value="Eliminar" style="margin-top: 5px; background: red; border-color: red; width: 90px;"> 
+                        
+            </form>
+             
+            </td>
+        </tr>
+      
+        <tbody>
+@endforeach
+    </table>
+</div>
+           
+          
+    
         
             
                

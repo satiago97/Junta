@@ -78,7 +78,7 @@ textarea {
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Faqs</span></li>
+                                <li><span>Contactos Gerais</span></li>
                             </ul>
                         </div>
                     </div>
@@ -94,12 +94,15 @@ textarea {
 
 
             <div class="form-style-2">
-<div class="form-style-2-heading">Inserir dados para as FAQS</div>
-<form action="{{route('insertFaqs.store')}}" method="post" enctype="multipart/form-data" id="faqsForm">
+<div class="form-style-2-heading">Inserir dados para os contactos gerais</div>
+<form action="{{route('insertContactos.store')}}" method="post" enctype="multipart/form-data" id="faqsForm">
 @csrf
-<label for="field1"><span>Pergunta<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
+<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
+<label for="field1"><span>Morada<span class="required">*</span></span><input type="text" class="input-field" id="morada" name="morada" value="" required/></label>
+<label for="field1"><span>Contacto<span class="required">*</span></span><input type="text" class="input-field" id="contacto" name="contacto" value="" required/></label>
+<label for="field1"><span>E-mail<span class="required">*</span></span><input type="text" class="input-field" id="email" name="email" value="" required/></label>
+<label for="field1"><span>Horário<span class="required">*</span></span><input type="text" class="input-field" id="horario" name="horario" value="" required/></label>
 
-<label for="field1"><span>Resposta<span class="required">*</span></span><textarea class="textArea" name="texto" form="faqsForm" required ></textarea></label>
 
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>

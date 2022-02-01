@@ -52,7 +52,7 @@
 
 .registoContainer {
     background-color: #FFFFFF;
-    width: 100%;
+    width: auto;
     padding: 20px;
     height: 500px;
     margin:  auto;
@@ -157,6 +157,7 @@
   .un {
       width: 100%;
   }
+
 
   .unTextArea{
       width: 100%;

@@ -16,6 +16,15 @@
     background-size: cover;
     height: 20%;
   }
+  .un{
+    width: 50%;
+  }
+  .b{
+    width: 50%;
+  }
+
+ 
+ 
   </style>
 
 <header>

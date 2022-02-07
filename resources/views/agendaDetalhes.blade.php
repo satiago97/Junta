@@ -84,7 +84,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Início</h6>
+                      <h6 class="mb-0">Data do início</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{$item->data_inicio}}
@@ -93,16 +93,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Contacto</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{$item->hora}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
+                      <h6 class="mb-0">Data do fim:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{$item->data_fim}}
@@ -111,10 +102,21 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Morada</h6>
+                      <h6 class="mb-0">Hora</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
+                    {{ $item->hora->format('H:i:s') }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Link</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <a href="{{$item->link}}">
                         {{$item->link}}
+                        </a>
                     </div>
                   </div>
                  

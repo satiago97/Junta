@@ -121,7 +121,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="{{route('Agenda')}}">Agenda</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Caracterização</a></li>
+                                                            <li><a href="{{route('caracterizacao')}}">Caracterização</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Empresas</a></li>
                                                             <li class="divider"></li>

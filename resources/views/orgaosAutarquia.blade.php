@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/texto.css">
-  <title>Galeria</title>
+  <title>Órgãos da Autarquia</title>
 </head>
 
 

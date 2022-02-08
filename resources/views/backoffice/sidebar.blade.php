@@ -78,8 +78,8 @@
                                     <li><a href="">Regimento</a></li>
                                     <li><a href="">Regulamentos</a></li>
                                     <li><a href="">Requerimentos</a></li>
-                                    <li><a href="">Mapa de pessoal</a></li>
-                                    <li><a href="">Concursos públicos</a></li>
+                                    <li><a href="{{route('orgaosBackoffice')}}">Órgãos da autarquia</a></li>
+                                    
                                     
                                 </ul>
                             </li>

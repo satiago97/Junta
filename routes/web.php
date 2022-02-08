@@ -234,3 +234,10 @@ Route::delete('delete-contactosGeraisBackoffice/{id}', ['as' => 'delete-contacto
 Route::get('open-contactosGeraisBackoffice/{id}', ['as' => 'open-contactosGeraisBackoffice', 'uses' => 'App\Http\Controllers\ContactosGeraisController@open']);
 Route::put('update-contactosGeraisBackoffice/{id}', ['as' => 'update-contactosGeraisBackoffice', 'uses' => 'App\Http\Controllers\ContactosGeraisController@update']);
 Route::get('/contactosGerais', 'App\Http\Controllers\ContactosGeraisController@indexSite')->name('contactosGerais');
+
+//Orgaos
+Route::get('/orgaosAutarquia', 'App\Http\Controllers\OrgaosController@indexBackoffice')->name('orgaosBackoffice');
+Route::get('insereOrgao', 'App\Http\Controllers\OrgaosController@create')->name('insereOrgao');
+Route::resource('insertOrgao', 'App\Http\Controllers\OrgaosController');
+Route::delete('delete-orgaosBackoffice/{id}', ['as' => 'delete-orgaosBackoffice', 'uses' => 'App\Http\Controllers\OrgaosController@destroy']);
+Route::get('/orgaosAutarquiaSite', 'App\Http\Controllers\OrgaosController@indexSite')->name('orgaosAutarquia');

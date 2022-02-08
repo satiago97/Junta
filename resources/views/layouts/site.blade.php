@@ -156,7 +156,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Infraestruturas</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Orgãos Autarquia</a></li>
+                                                            <li><a href="{{route('orgaosAutarquia')}}">Orgãos Autarquia</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Notícias</a></li>
                                                             <li class="divider"></li>

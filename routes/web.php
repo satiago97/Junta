@@ -241,3 +241,10 @@ Route::get('insereOrgao', 'App\Http\Controllers\OrgaosController@create')->name(
 Route::resource('insertOrgao', 'App\Http\Controllers\OrgaosController');
 Route::delete('delete-orgaosBackoffice/{id}', ['as' => 'delete-orgaosBackoffice', 'uses' => 'App\Http\Controllers\OrgaosController@destroy']);
 Route::get('/orgaosAutarquiaSite', 'App\Http\Controllers\OrgaosController@indexSite')->name('orgaosAutarquia');
+
+
+//Noticias
+Route::get('/noticiasBackoffice', 'App\Http\Controllers\NoticiasController@indexBackoffice')->name('noticiasBackoffice');
+Route::get('/insereNoticias', 'App\Http\Controllers\NoticiasController@create')->name('insereNoticias');
+Route::resource('insertNoticia', 'App\Http\Controllers\NoticiasController');
+Route::delete('delete-noticiasBackoffice/{id}', ['as' => 'delete-noticiasBackoffice', 'uses' => 'App\Http\Controllers\NoticiasController@destroy']);

@@ -70,7 +70,7 @@
                                     <li><a href="">Informação Trismestral</a></li>
                                     <li><a href="">Infraestruturas</a></li>
                                     <li><a href="">Normas</a></li>
-                                    <li><a href="">Notícias</a></li>
+                                    <li><a href="{{route('noticiasBackoffice')}}">Notícias</a></li>
                                     <li><a href="">Relatório de contas</a></li>
                                     <li><a href="">Programas e iniciativas</a></li>
                                     <li><a href="">Protocolos e parcerias</a></li>

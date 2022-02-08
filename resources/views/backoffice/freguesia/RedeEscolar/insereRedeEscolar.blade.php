@@ -97,13 +97,13 @@ textarea {
 <div class="form-style-2-heading">Inserir dados para a rede escolar</div>
 <form action="{{route('insertRedeEscolar.store')}}" method="post" enctype="multipart/form-data" id="redeEscolarForm">
 @csrf
-<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="nome" name="nome" value="" /></label>
-<label for="field1"><span>Morada<span class="required">*</span></span><input type="text" class="input-field" id="morada" name="morada" value="" placeholder="" /></label>
-<label for="field1"><span>Pequena descrição<span class="required">*</span></span><textarea class="textArea" name="descricao" form="redeEscolarForm" ></textarea></label>
-<label for="field2"><span>Link<span class="required">*</span></span><input type="text" class="input-field" id="link" name="link" value="" placeholder="http://..."/></label>
-<label for="field2"><span>Latitude<span class="required">*</span></span><input type="text" class="input-field" id="lat" name="lat" value="" /></label>
-<label for="field2"><span>Longitude<span class="required">*</span></span><input type="text" class="input-field" id="lng" name="lng" value="" /></label>
-<label for="field3"><span>Foto<span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" /></label>
+<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="nome" name="nome" value="" required/></label>
+<label for="field1"><span>Morada<span class="required">*</span></span><input type="text" class="input-field" id="morada" name="morada" value="" placeholder="" required/></label>
+<label for="field1"><span>Pequena descrição<span class="required">*</span></span><textarea class="textArea" name="descricao" form="redeEscolarForm" required></textarea></label>
+<label for="field2"><span>Link<span class="required">*</span></span><input type="text" class="input-field" id="link" name="link" value="" placeholder="http://..." required/></label>
+<label for="field2"><span>Latitude<span class="required">*</span></span><input type="text" class="input-field" id="lat" name="lat" value="" required/></label>
+<label for="field2"><span>Longitude<span class="required">*</span></span><input type="text" class="input-field" id="lng" name="lng" value="" required/></label>
+<label for="field3"><span>Foto<span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" required/></label>
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>
 </div>

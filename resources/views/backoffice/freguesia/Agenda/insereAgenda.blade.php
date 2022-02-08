@@ -97,13 +97,13 @@ textarea {
 <div class="form-style-2-heading">Inserir dados para a imprensa</div>
 <form action="{{route('insertAgenda.store')}}" method="post" enctype="multipart/form-data" id="agendaForm">
 @csrf
-<label for="field1"><span>Título<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" /></label>
-<label for="field1"><span>Link<span class="required">*</span></span><input type="text" class="input-field" id="link" name="link" value="" placeholder="http://..." /></label>
-<label for="field1"><span>Decrição do evento<span class="required">*</span></span><textarea class="textArea" name="descricao" form="agendaForm" ></textarea></label>
-<label for="field2"><span>Data Início<span class="required">*</span></span><input type="date" class="input-field" id="data_inicio" name="data_inicio" value="" /></label>
-<label for="field2"><span>Data Fim<span class="required">*</span></span><input type="date" class="input-field" id="data_fim" name="data_fim" value="" /></label>
-<label for="field2"><span>Hora<span class="required">*</span></span><input type="time" class="input-field" id="hora" name="hora" value="" /></label>
-<label for="field3"><span>Imagem <span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" /></label>
+<label for="field1"><span>Título<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
+<label for="field1"><span>Link<span class="required">*</span></span><input type="text" class="input-field" id="link" name="link" value="" placeholder="http://..." required/></label>
+<label for="field1"><span>Decrição do evento<span class="required">*</span></span><textarea class="textArea" name="descricao" form="agendaForm" required></textarea></label>
+<label for="field2"><span>Data Início<span class="required">*</span></span><input type="date" class="input-field" id="data_inicio" name="data_inicio" value="" required/></label>
+<label for="field2"><span>Data Fim<span class="required">*</span></span><input type="date" class="input-field" id="data_fim" name="data_fim" value="" required/></label>
+<label for="field2"><span>Hora<span class="required">*</span></span><input type="time" class="input-field" id="hora" name="hora" value="" required/></label>
+<label for="field3"><span>Imagem <span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" required/></label>
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>
 </div>

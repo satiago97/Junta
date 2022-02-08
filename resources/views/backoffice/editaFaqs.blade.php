@@ -99,9 +99,9 @@ textarea {
 <form action="{{route('update-inserirFaqs', [$item->id])}}" method="post" enctype="multipart/form-data" id="faqsForm">
 {{ csrf_field() }}
             @method('PUT')
-<label for="field1"><span>Pergunta<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="{{$item->titulo}}" /></label>
+<label for="field1"><span>Pergunta<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="{{$item->titulo}}" required/></label>
 
-<label for="field1"><span>Resposta<span class="required">*</span></span><textarea class="textArea" name="texto" form="faqsForm" >{{$item->texto}}</textarea></label>
+<label for="field1"><span>Resposta<span class="required">*</span></span><textarea class="textArea" name="texto" form="faqsForm" required>{{$item->texto}}</textarea></label>
 @endforeach
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>

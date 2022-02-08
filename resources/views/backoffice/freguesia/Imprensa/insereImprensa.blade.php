@@ -85,9 +85,9 @@
 <div class="form-style-2-heading">Inserir dados para a imprensa</div>
 <form action="{{route('insertImprensa.store')}}" method="post" enctype="multipart/form-data">
 @csrf
-<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="nome" name="nome" value="" /></label>
-<label for="field2"><span>Data <span class="required">*</span></span><input type="date" class="input-field" id="data" name="data" value="" /></label>
-<label for="field3"><span>Ficheiro <span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" /></label>
+<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="nome" name="nome" value="" required/></label>
+<label for="field2"><span>Data <span class="required">*</span></span><input type="date" class="input-field" id="data" name="data" value="" required/></label>
+<label for="field3"><span>Ficheiro <span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" required/></label>
 <label><span> </span><input type="submit" value="Submit" /></label>
 </form>
 </div>

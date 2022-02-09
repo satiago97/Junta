@@ -67,6 +67,10 @@ Route::get('/paroquia', function(){
     return view('freguesia/Paroquia/paroquia');
 })->name('paroquia');
 
+Route::get('/formulario-contacto', function(){
+    return view('site/informacoes/contact-form');
+})->name('contact-form'); 
+
 
 Route::get('/register', '\App\Http\Controllers\RegistrationController@create')->name('register');
 
@@ -220,3 +224,14 @@ Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', '
 //Routes Incidentes
 Route::resource('insertIncidente', 'App\Http\Controllers\IncidentesController');
 Route::get('/Incidentes', 'App\Http\Controllers\IncidentesController@index2')->name('Incidentes');
+
+
+
+//Route Freguesia Onde Comer
+Route::get('/insereServico', 'App\Http\Controllers\ServicosController@index')->name('servicos-backoffice');
+Route::get('/Servicos', 'App\Http\Controllers\ServicosController@index2')->name('servicos-frontoffice');
+Route::resource('servicos', 'App\Http\Controllers\ServicosController');
+Route::get('edit-servico/{id}', ['as' => 'edit-servico', 'uses' => 'App\Http\Controllers\ServicosController@edit']);
+Route::put('update-servico/{id}', ['as' => 'update-servico', 'uses' => 'App\Http\Controllers\ServicosController@update']);
+Route::delete('delete-servico/{id}', ['as' => 'delete-servico', 'uses' => 'App\Http\Controllers\ServicosController@destroy']);
+Route::get('/detalhesServico/{id}', ['as' => 'detalhesServico', 'uses' => 'App\Http\Controllers\ServicosController@detalhes']);

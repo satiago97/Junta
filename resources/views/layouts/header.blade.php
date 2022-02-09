@@ -164,7 +164,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Programas e Iniciativas</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Serviços</a></li>
+                                                            <li><a href="{{ route('servicos-frontoffice')}}">Serviços</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Toponímia</a></li>
                                                             <li class="divider"></li>
@@ -186,7 +186,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Faqs</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Formulário de contacto</a></li>
+                                                            <li><a href="{{ route('contact-form')}}">Formulário de contacto</a></li>
                                                             </ul>
                                                     </li>
                                                     <!-- End Dropdown Informações-->

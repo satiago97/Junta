@@ -6,7 +6,7 @@ $(function(){
 
 	// Start by fetching the file data from scan.php with an AJAX request
 
-	$.get('/storage/uploads_documentosExec/scan.php', function(data) {
+	$.get('/storage/uploads_documentosAssembleia/scan.php', function(data) {
 
 		var response = [data],
 			currentPath = '',

@@ -148,7 +148,7 @@
                                                             <ul class="dropdown-menu scrollbar" id="style-2" role="menu">
                                                             <li><a href="{{ route('list-docexec') }}">Documentos Executivo</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Documentos Assembleia</a></li>
+                                                            <li><a href="{{ route('list-docAssembleia') }}">Documentos Assembleia</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Concursos Publicos</a></li>
                                                             <li class="divider"></li>

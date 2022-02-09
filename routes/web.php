@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OndeComerController;
 use App\Http\Controllers\DocumentoExecController;
+use App\Http\Controllers\DocumentoAssembleiaController;
 
 
 /*
@@ -107,6 +108,13 @@ Route::get('/detalhesOndeDormir/{id}', ['as' => 'detalhesOndeDormir', 'uses' => 
 Route::get('upload-DocumentoExec', [DocumentoExecController::class, 'createForm'])->name('upload-docexec');
 Route::get('list-DocumentoExec', [DocumentoExecController::class, 'createList'])->name('list-docexec');
 Route::post('/upload-DocumentoExec', [DocumentoExecController::class, 'fileUpload'])->name('upload-DocumentoExec');
+
+
+//Routes Documentos Assembleia
+Route::get('upload-DocumentoAssembleia', [DocumentoAssembleiaController::class, 'createForm'])->name('upload-docAssembleia');
+Route::get('list-DocumentoAssembleia', [DocumentoAssembleiaController::class, 'createList'])->name('list-docAssembleia');
+Route::post('/upload-DocumentoAssembleia', [DocumentoAssembleiaController::class, 'fileUpload'])->name('upload-DocumentoAssembleia');
+
 
 // Routes Historia
 Route::get('/insereHistoria', 'App\Http\Controllers\InsertHistoryController@index')->name('inserirHistoria');

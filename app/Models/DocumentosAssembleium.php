@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property int $categoria_documento_assembleia
  * @property int $id_freguesia
- * @property int $id_detalhes
+ * @property date $data
  * 
  * @property Freguesium $freguesium
  * @property CategoriaDocumentoAssembleium $categoria_documento_assembleium
@@ -32,15 +32,16 @@ class DocumentosAssembleium extends Model
 
 	protected $casts = [
 		'id' => 'int',
+		'data' => 'date',
 		'categoria_documento_assembleia' => 'int',
-		'id_freguesia' => 'int',
-		'id_detalhes' => 'int'
+		'id_freguesia' => 'int'
+		
 	];
 
 	protected $fillable = [
+		'data',
 		'categoria_documento_assembleia',
-		'id_freguesia',
-		'id_detalhes'
+		'id_freguesia'
 	];
 
 	public function freguesium()

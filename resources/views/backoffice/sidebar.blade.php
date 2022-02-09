@@ -55,7 +55,7 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-university"></i></i><span>Autarquia</span></a>
                                 <ul class="collapse">
                                     <li><a href="{{ route('upload-docexec') }}">Executivo</a></li>
-                                    <li><a href="">Assembleia</a></li>
+                                    <li><a href="{{ route('upload-docAssembleia') }}">Assembleia</a></li>
                                     <li><a href="">Antigos</a></li>
                                     <li><a href="">Funcionários</a></li>
                                     <li><a href="">Atas</a></li>

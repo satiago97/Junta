@@ -104,7 +104,7 @@
                                             <!-- Collect the nav links, forms, and other content for toggling -->
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                             <ul class="nav navbar-nav navbar-right navBar">
-                                                    <li class="nav-item"><a href="{{ route('welcome') }}" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home <span class="sr-only"></span></a></li>
+                                                    <li class="nav-item"><a href="{{ route('welcome') }}" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Página Inicial <span class="sr-only"></span></a></li>
                                                     <!-- Dropdown Freguesia-->
                                                     <li class="HOVER open">
                                                         <a href="#" class="nav-link text-uppercase font-weight-bold js-scroll-trigger" style="background-color: transparent"; data-toggle="dropdown" role="button" aria-expanded="false">Freguesia</a>
@@ -117,17 +117,17 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Imprensa</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Rede escolar</a></li>
+                                                            <li><a href="{{route('redeEscolar')}}">Rede escolar</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Agenda</a></li>
+                                                            <li><a href="{{route('Agenda')}}">Agenda</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Caracterização</a></li>
+                                                            <li><a href="{{route('caracterizacao')}}">Caracterização</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('Empresas') }}">Empresas</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('Associacao')}}">Instituições e Associações</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Jornais</a></li>
+                                                            <li><a href="{{route('Jornal')}}">Jornais</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('Local') }}">Locais a Visitar</a></li>
                                                             <li class="divider"></li>
@@ -156,7 +156,7 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Infraestruturas</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Orgãos Autarquia</a></li>
+                                                            <li><a href="{{route('orgaosAutarquia')}}">Orgãos Autarquia</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="#">Notícias</a></li>
                                                             <li class="divider"></li>
@@ -182,9 +182,9 @@
                                                             <li class="divider"></li>
                                                             <li><a href="#">Contactos da Freguesisa</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Contactos Gerais</a></li>
+                                                            <li><a href="{{route('contactosGerais')}}">Contactos Gerais</a></li>
                                                             <li class="divider"></li>
-                                                            <li><a href="#">Faqs</a></li>
+                                                            <li><a href="{{route('faqs')}}">Faqs</a></li>
                                                             <li class="divider"></li>
                                                             <li><a href="{{ route('contact-form')}}">Formulário de contacto</a></li>
                                                             </ul>

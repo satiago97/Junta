@@ -71,7 +71,7 @@
                                     <li><a href="">Informação Trismestral</a></li>
                                     <li><a href="">Infraestruturas</a></li>
                                     <li><a href="">Normas</a></li>
-                                    <li><a href="">Notícias</a></li>
+                                    <li><a href="{{route('noticiasBackoffice')}}">Notícias</a></li>
                                     <li><a href="">Relatório de contas</a></li>
                                     <li><a href="">Programas e iniciativas</a></li>
                                     <li><a href="">Protocolos e parcerias</a></li>
@@ -79,8 +79,8 @@
                                     <li><a href="">Regimento</a></li>
                                     <li><a href="">Regulamentos</a></li>
                                     <li><a href="">Requerimentos</a></li>
-                                    <li><a href="">Mapa de pessoal</a></li>
-                                    <li><a href="">Concursos públicos</a></li>
+                                    <li><a href="{{route('orgaosBackoffice')}}">Órgãos da autarquia</a></li>
+                                    
                                     
                                 </ul>
                             </li>
@@ -117,11 +117,12 @@
                             <li><a href=""><i class="fa fa-plus-circle"></i> <span>SubMenus Dinâmicos</span></a></li>
                             <li><a href=""><i class="fa fa-users"></i> <span>Cidadãos</span></a></li>
                             <li><a href=""><i class="fa fa-book"></i> <span>Livro de reclamações</span></a></li>
-                            <li><a href=""><i class="fa fa-question"></i> <span>Faqs</span></a></li>
+                            <li><a href="{{route('inserirFaqs')}}"><i class="fa fa-question"></i> <span>Faqs</span></a></li>
                             <li><a href=""><i class="fa fa-folder"></i> <span>Ficheiros</span></a></li>
                             <li><a href="{{route('inserirGaleria')}}"><i class="fa fa-camera"></i> <span>Galeria</span></a></li>
                             <li><a href=""><i class="fa fa-list"></i> <span>Lista de atividades</span></a></li>
                             <li><a href=""><i class="fa fa-map-marker"></i> <span>Locais de voto</span></a></li>
+                            <li><a href="{{route('contactosGeraisBackoffice')}}"><i class="fa fa-id-card"></i> <span>Contactos gerais</span></a></li>
                             <li><a href=""><i class="fa fa-user-plus"></i><span>Gerir utilizadores</span></a></li>
                             
                         </ul>

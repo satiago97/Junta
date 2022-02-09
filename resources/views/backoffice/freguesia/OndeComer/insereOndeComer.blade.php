@@ -57,6 +57,25 @@
         }
 
         select:invalid {color: grey;}
+
+        .file-input label {
+            color: white;
+    display: block;
+    position: relative;
+     width: 20%;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+     transition: transform .2s ease-out;
+}
 	</style>
 </head>
 
@@ -174,7 +193,7 @@
 
       
   <!-- main content area end -->
-    <div class="container">
+    <div class="container" style="margin-top:10px;">
         <div class="row">
             @foreach($ondeComer as $item)
             <div class="mainContainerImage">

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/default-css2.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -28,8 +30,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+    <style> 
+textarea {
+  width: 48%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  resize: none;
+}
+</style>
 </head>
+
 
 <body>
 <div id="preloader">
@@ -37,29 +52,33 @@
     </div>
 
     <div class="page-container">
-         @include('backoffice/sidebar')
+    @include('backoffice/sidebar')
+    <div class="main-content">
 
-
-         <div class="main-content">
-             <div class="header-area">
-                 <div class="row align-items-center">
-                     <div class="col-md-6 col-sm-8 clearfix">
-                     <div class="nav-btn pull-left">
+            <div class="header-area">
+                <div class="row align-items-center">
+              
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="page-title-area">
+                        
+                    </div>
+          
+           
+                </div>
+            </div>
+     
+            <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Heráldica</span></li>
+                                <li><span>Contactos Gerais</span></li>
                             </ul>
                         </div>
                     </div>
@@ -72,43 +91,36 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="form-style-2">
+<div class="form-style-2-heading">Inserir dados para os contactos gerais</div>
+<form action="{{route('insertContactos.store')}}" method="post" enctype="multipart/form-data" id="faqsForm">
+@csrf
+<label for="field1"><span>Nome<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
+<label for="field1"><span>Morada<span class="required">*</span></span><input type="text" class="input-field" id="morada" name="morada" value="" required/></label>
+<label for="field1"><span>Contacto<span class="required">*</span></span><input type="text" class="input-field" id="contacto" name="contacto" value="" required/></label>
+<label for="field1"><span>E-mail<span class="required">*</span></span><input type="text" class="input-field" id="email" name="email" value="" required/></label>
+<label for="field1"><span>Horário<span class="required">*</span></span><input type="text" class="input-field" id="horario" name="horario" value="" required/></label>
+
+
+<label><span> </span><input type="submit" value="Submit" /></label>
+</form>
+</div>
+          
+
+        
             
-            <div class="container" style="margin-top:20px;">
-                    <div class="row">
-                        <div class="mainTextFormContainer">
-                        @foreach($heraldica as $item)
-            <form class="form1" method="post" action="{{ url('update-insereHeraldica/'.$item->id)}} " id="heraldicaForm">
-            {{ csrf_field() }}
-            @method('PUT')
+               
 
-            <label>Título</label>
-              <input class="un" type="text"  id="titulo" name="titulo" value="{{$item -> titulo}}" required>
-              <p>
-              <label>Heráldica</label>
-              <textarea class="unTextArea" name="descricao" form="heraldicaForm" required>{{$item -> descricao}}</textarea>
-              <p>
-              <button style="cursor:pointer" type="submit" class="btn btn-primary">Alterar</button>
-                
-              
+        <footer>
 
-              @include('partials.formerrors')
-
-            </form>
-
-            
-            @endforeach
-            
-
-                        </div>
-                    </div>
-                </div>
-                <footer>
-                <div id="footer">
+        <div id="footer">
         <p>© Copyright 2021. All right reserved.</p>
         </div>
+            
         </footer>
-       
-         </div>
+
     </div>
 
 

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/default-css2.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
+    <link rel="stylesheet" href="css/table.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -28,8 +29,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+   
 </head>
+
 
 <body>
 <div id="preloader">
@@ -37,29 +39,34 @@
     </div>
 
     <div class="page-container">
-         @include('backoffice/sidebar')
+    @include('backoffice/sidebar')
+    <div class="main-content">
 
-
-         <div class="main-content">
-             <div class="header-area">
-                 <div class="row align-items-center">
-                     <div class="col-md-6 col-sm-8 clearfix">
-                     <div class="nav-btn pull-left">
+            <div class="header-area">
+                <div class="row align-items-center">
+              
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="page-title-area">
+                        
+                    </div>
+          
+           
+                </div>
+            </div>
+     
+            <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Heráldica</span></li>
+                                <li><span>Faqs</span></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -72,43 +79,64 @@
                     </div>
                 </div>
             </div>
+    
+    
+            <div class="containerMarginButton">
+            <a id="containerButton" href="{{route('insereFaqs')}}">Adicionar</a>
+            </div>
+
+
+
+
+          
+<div class="table-wrapper">
+    <table class="fl-table">
+        
+        <thead>
+        <tr>
+            <th>Pergunta</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+    @foreach($faqs as $item)
+        <tbody>
+        <tr>
+            <td>{{$item->titulo}}</td>
             
-            <div class="container" style="margin-top:20px;">
-                    <div class="row">
-                        <div class="mainTextFormContainer">
-                        @foreach($heraldica as $item)
-            <form class="form1" method="post" action="{{ url('update-insereHeraldica/'.$item->id)}} " id="heraldicaForm">
-            {{ csrf_field() }}
-            @method('PUT')
-
-            <label>Título</label>
-              <input class="un" type="text"  id="titulo" name="titulo" value="{{$item -> titulo}}" required>
-              <p>
-              <label>Heráldica</label>
-              <textarea class="unTextArea" name="descricao" form="heraldicaForm" required>{{$item -> descricao}}</textarea>
-              <p>
-              <button style="cursor:pointer" type="submit" class="btn btn-primary">Alterar</button>
-                
-              
-
-              @include('partials.formerrors')
-
+            <td>
+            <a href="{{ url('open-inserirFaqs/'.$item->id)}}" class="btn btn-primary a-btn-slide-text">
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            <span><strong>Editar</strong></span>     
+            </a>
+            <form action="{{route('delete-inserirFaqs', [$item->id])}}" method="post" id="form1">
+                @method('DELETE')
+                @csrf
+                <input  class="btn btn-primary" type="submit" value="Eliminar" style="margin-top: 5px; background: red; border-color: red; width: 90px;"> 
+                        
             </form>
-
+             
+            </td>
+        </tr>
+      
+        <tbody>
+@endforeach
+    </table>
+</div>
+           
+          
+    
+        
             
-            @endforeach
-            
+               
 
-                        </div>
-                    </div>
-                </div>
-                <footer>
-                <div id="footer">
+        <footer>
+
+        <div id="footer">
         <p>© Copyright 2021. All right reserved.</p>
         </div>
+            
         </footer>
-       
-         </div>
+
     </div>
 
 

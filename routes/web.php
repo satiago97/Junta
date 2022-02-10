@@ -17,9 +17,7 @@ use App\Http\Controllers\DocumentoAssembleiaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', 'App\Http\Controllers\WelcomeController@index')->name('welcome');
 
 Route::get('/backoffice', function(){
     return view('backoffice/painel');
@@ -224,14 +222,19 @@ Route::resource('insertRedeEscolar', 'App\Http\Controllers\RedeEscolarController
 Route::delete('delete-inserirRedeEscolar/{id}', ['as' => 'delete-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@destroy']);
 Route::put('update-inserirRedeEscolar/{id}', ['as' => 'update-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@update']);
 Route::get('open-inserirRedeEscolar/{id}', ['as' => 'open-inserirRedeEscolar', 'uses' => 'App\Http\Controllers\RedeEscolarController@open']);
+Route::get('/redeEscolar', 'App\Http\Controllers\RedeEscolarController@indexSite')->name('redeEscolar');
+Route::get('openSite-redeEscolar/{id}', ['as' => 'openSite-redeEscolar', 'uses'=>'App\Http\Controllers\RedeEscolarController@openSite']);
 
 //Routes Incidentes
 Route::resource('insertIncidente', 'App\Http\Controllers\IncidentesController');
+Route::get('/incidentes', 'App\Http\Controllers\IncidentesController@index')->name('incidentes');
 Route::get('/Incidentes', 'App\Http\Controllers\IncidentesController@index2')->name('Incidentes');
+Route::put('start-incidente/{id}', ['as' => 'start-incidente', 'uses' => 'App\Http\Controllers\IncidentesController@update1']);
+Route::put('end-incidente/{id}', ['as' => 'end-incidente', 'uses' => 'App\Http\Controllers\IncidentesController@update2']);
 
 
 
-//Route Freguesia Onde Comer
+//Route Serviços
 Route::get('/insereServico', 'App\Http\Controllers\ServicosController@index')->name('servicos-backoffice');
 Route::get('/Servicos', 'App\Http\Controllers\ServicosController@index2')->name('servicos-frontoffice');
 Route::resource('servicos', 'App\Http\Controllers\ServicosController');
@@ -240,8 +243,7 @@ Route::put('update-servico/{id}', ['as' => 'update-servico', 'uses' => 'App\Http
 Route::delete('delete-servico/{id}', ['as' => 'delete-servico', 'uses' => 'App\Http\Controllers\ServicosController@destroy']);
 Route::get('/detalhesServico/{id}', ['as' => 'detalhesServico', 'uses' => 'App\Http\Controllers\ServicosController@detalhes']);
 
-Route::get('/redeEscolar', 'App\Http\Controllers\RedeEscolarController@indexSite')->name('redeEscolar');
-Route::get('openSite-redeEscolar/{id}', ['as' => 'openSite-redeEscolar', 'uses'=>'App\Http\Controllers\RedeEscolarController@openSite']);
+
 
 
 //Faqs

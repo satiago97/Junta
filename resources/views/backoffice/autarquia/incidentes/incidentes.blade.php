@@ -1,12 +1,4 @@
-@if( auth()->check() )
-<!doctype html>
-<html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
  
@@ -25,45 +17,34 @@
     <link rel="stylesheet" href="css/default-css2.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive2.css">
+    <link rel="stylesheet" href="css/table.css">
 
     <link rel="stylesheet" href="css/paginasContainer.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/texto.css">
-    <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/texto.css">
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Documentos Executivo</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <style>
-        .container {
-            max-width: 500px;
-        }
-        dl, ol, ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <title>Incidentes</title>
 </head>
 
+
 <body>
-
-
-    <div id="preloader">
+<div id="preloader">
         <div class="loader"></div>
     </div>
 
     <div class="page-container">
     @include('backoffice/sidebar')
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
+    <div class="main-content">
+
             <div class="header-area">
                 <div class="row align-items-center">
-                    <!-- nav and search button -->
+              
                     <div class="col-md-6 col-sm-8 clearfix">
                         <div class="nav-btn pull-left">
                             <span></span>
@@ -72,20 +53,20 @@
                         </div>
                         
                     </div>
-                    <!-- profile info & task notification -->
+          
            
                 </div>
             </div>
-            <!-- header area end -->
-            <!-- page title area start -->
+     
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="{{route('painel')}}">Home</a></li>
-                                <li><span>Documentos Executivo</span></li>
+                                <li><a href="{{ route('painel')}}">Home</a></li>
+                                <li><span>Incidentes</span></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -98,51 +79,74 @@
                     </div>
                 </div>
             </div>
-
-    <div class="form-style-2">
-        <div class="form-style-2-heading">Upload Documento Executivo</div>
-        <form action="{{route('upload-DocumentoExec')}}" method="post" enctype="multipart/form-data" id="docsForm">
-        @csrf
-        @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <strong>{{ $message }}</strong>
-        </div>
-        @endif
-
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        <label for="field1"><span>Titulo<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
-        <label for="field1"><span>Data<span class="required">*</span></span><input type="date" class="input-field" id="data" name="data" value="" required/></label>
-        <label for="field3"><span>Partido<span class="required">*</span></span><select id="categoria" name="categoria">
-            @foreach($documentoExecCategoria as $item)
-            <option value="{{$item->id}}">{{$item->descricao}}</option>
-            @endforeach
-        </select></label>
-        <label for="field3"><span>Documento <span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" /></label>
+       
+<div class="table-wrapper col-md-12">
+    <table class="fl-table">
         
-        <label><span> </span><input type="submit" value="Submit" /></label>
-        </form>
-        </div>
-                  
-        
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Morada</th>
+            <th>Mensagem</th>
+            <th>Data</th>
+            <th>Foto</th>
+            <th>Estado</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+      @foreach($incidente as $item)
+        <tbody>
+        <tr>
+            <td>{{$item->nome}}</td>
+            <td>{{$item->morada}}</td>
+            <td>{{$item->mensagem}}</td>
+            <td>{{$item->data}}</td>
+            <td><a href="">{{$item->imagem}}</a></td>
+            <td>{{$item->estado}}</td>
+            <td>
+            <form action="{{route('start-incidente', [$item->id])}}" method="post" id="form1">
+                @method('PUT')
+                @csrf
+                <input  class="btn btn-primary" type="submit" value="Em Tratamento" style="margin-top: 5px; background: #B34E01;"> 
+                <input type="text" name="estado" id="estado" value="Em Tratamento" hidden>        
+            </form>
 
-           <!-- footer area start-->
-           <footer>
-            <div class="footer-area">
-                <p>© Copyright 2021. All right reserved.</p>
-            </div>
+            <form action="{{route('end-incidente', [$item->id])}}" method="post" id="form1">
+                @method('PUT')
+                @csrf
+                <input  class="btn btn-primary" type="submit" value="Concluido" style="margin-top: 5px; background: #008F35;"> 
+                <input type="text" name="estado1" id="estado1" value="Concluido" hidden>       
+            </form>
+           
+             
+            </td>
+        </tr>
+      
+        <tbody>
+     @endforeach
+    </table>
+</div>
+           
+          
+    
+        
+            
+               
+
+        <footer>
+
+        <div id="footer">
+        <p>© Copyright 2021. All right reserved.</p>
+        </div>
+            
         </footer>
-        <!-- footer area end-->
+
     </div>
-   
-    <!-- offset area end -->
+
+
+
+
+ <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -166,11 +170,4 @@
     <!-- others plugins -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
-
 </body>
-</html>
-@else
-<script>
-    window.location.href='http://127.0.0.1:8000/login';
-</script>
-@endif

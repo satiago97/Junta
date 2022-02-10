@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/paginasContainer.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/texto.css">
+    <link rel="stylesheet" href="css/form.css">
     <!-- modernizr css -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -98,65 +99,40 @@
                 </div>
             </div>
 
-    <div class="container mt-5">
-        <form action="{{route('upload-DocumentoAssembleia')}}" method="post" enctype="multipart/form-data">
-          <h3 class="text-center mb-5">Upload de Documento Assembleia</h3>
-            @csrf
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                <strong>{{ $message }}</strong>
-            </div>
-          @endif
-
-          @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
+            <div class="form-style-2">
+                <div class="form-style-2-heading">Upload Documento Assembleia</div>
+                <form action="{{route('upload-DocumentoAssembleia')}}" method="post" enctype="multipart/form-data" id="docsForm">
+                @csrf
+                @csrf
+                @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <strong>{{ $message }}</strong>
+                </div>
+                @endif
+        
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <label for="field1"><span>Titulo<span class="required">*</span></span><input type="text" class="input-field" id="titulo" name="titulo" value="" required/></label>
+                <label for="field1"><span>Data<span class="required">*</span></span><input type="date" class="input-field" id="data" name="data" value="" required/></label>
+                <label for="field3"><span>Partido<span class="required">*</span></span><select id="categoria" name="categoria">
+                    @foreach($documentoAssembleiaCategoria as $item)
+                    <option value="{{$item->id}}">{{$item->descricao}}</option>
                     @endforeach
-                </ul>
-            </div>
-          @endif
-
-
-            <input type="text" name="data" id="data" placeholder="data">
-            <input type="text" name="titulo" id="titulo" placeholder="titulo">
-            <select class="un" name="categoria" id="categoria" >
-                <option value="" disabled selected hidden>Categoria</option>
-                @foreach($documentoAssembleiaCategoria as $categoria )
-                  <option value="{{ $categoria->id }}">{{ $categoria->descricao }}</option>
-                @endforeach
-            </select>
-
-            <div class="custom-file">
-                <label class="custom-file-label" for="chooseFile">Select file</label>
-                <input type="file" name="file" class="custom-file-input" id="chooseFile">
-                <div id="file-upload-filename" style="font-size: 9px"></div>
-            </div>
-
-            <button type="submit" name="submit" class="btn btn-primary btn-block mt-4">
-                Upload Files
-            </button>
-            <script>
-            var input = document.getElementById( 'chooseFile' );
-            var infoArea = document.getElementById( 'file-upload-filename' );
-
-            input.addEventListener( 'change', showFileName );
-
-            function showFileName( event ) {
-            
-            // the change event gives us the input it occurred in 
-            var input = event.srcElement;
-            
-            // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-            var fileName = input.files[0].name;
-            
-            // use fileName however fits your app best, i.e. add it into a div
-            infoArea.textContent = 'Selected file: ' + fileName;
-            }
-            </script>
-        </form>
-    </div>
+                </select></label>
+                <label for="field3"><span>Documento <span class="required">*</span></span><input type="file" class="" name="file" id="file" value="" /></label>
+                
+                <label><span> </span><input type="submit" value="Submit" /></label>
+                </form>
+                </div>
+                          
+                
 
            <!-- footer area start-->
            <footer>

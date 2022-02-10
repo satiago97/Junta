@@ -145,7 +145,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="counter blue">
                         <div class="counter-content">
-                            <span class="counter-value">812</span>
+                            <span class="counter-value">{{$count}}</span>
                             <h3>Todos</h3>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="counter red">
                         <div class="counter-content">
-                            <span class="counter-value">812</span>
+                            <span class="counter-value">{{$count1}}</span>
                             <h3>Por Tratar</h3>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="counter orange">
                         <div class="counter-content">
-                            <span class="counter-value">767</span>
+                            <span class="counter-value">{{$count2}}</span>
                             <h3>Em Analise</h3>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="counter green">
                         <div class="counter-content">
-                            <span class="counter-value">767</span>
+                            <span class="counter-value">{{$count3}}</span>
                             <h3>Concluido</h3>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                         //.setHTML( '<div class="containerPopup"><h2>"Titulo popup"</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><img src="https://images.unsplash.com/photo-1523978591478-c753949ff840?w=900" alt="Imagem ponto do trilho" width: auto;" height="200px"></div>'))
                         .setHTML('<div width="300px"><div class="profile-card text-center"><img class="img-responsive" src="'+image+'"><div class="profile-info"><h2 class="hvr-underline-from-center">Mensagem<span>'+saved_markers[i].mensagem+'</span></h2><div>'+saved_markers[i].data+'</div><div style="background-color:'+color+'">'+saved_markers[i].estado+'</div></div></div>'))
                         .addTo(map);
-                    }else if(saved_markers[i].estado == "Em Analise"){
+                    }else if(saved_markers[i].estado == "Em Tratamento"){
                         color = "#ed6702";       
                         let marker = new mapboxgl.Marker({ "color": "#ed6702" })
                         .setLngLat(myLatlng)

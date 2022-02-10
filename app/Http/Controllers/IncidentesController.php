@@ -17,14 +17,30 @@ class IncidentesController extends Controller
         public function index(){
             $incidente = Incidente::all();
             $tipoIncidente = TipoIncidente::all();
-            return view('/backoffice/freguesia/OndeComer/insereOndeComer', compact('incidente','tipoIncidente'));
+            return view('/backoffice/autarquia/incidentes/incidentes', compact('incidente','tipoIncidente'));
         }
     
         public function index2(){
             $incidente = Incidente::all();
             $tipoIncidente = TipoIncidente::all();
             $tipoSituacao = TipoSituacao::all();
-            return view('/site/autarquia/Incidentes/incidentes', compact('incidente','tipoIncidente','tipoSituacao'));
+
+            $count=0;
+            $count1=0;
+            $count2=0;
+            $count3=0;
+            foreach($incidente as $item){
+                $count++;
+                if($item->estado == 'Por tratar'){
+                    $count1++;
+                }elseif($item->estado == 'Em Tratamento'){
+                    $count2++;
+                }elseif($item->estado == 'Concluido'){
+                    $count3++;
+                }
+            }
+
+            return view('/site/autarquia/Incidentes/incidentes', compact('incidente','tipoIncidente','tipoSituacao','count1','count2','count3','count'));
         }
     
         public function store(Request $request){
@@ -58,10 +74,20 @@ class IncidentesController extends Controller
             
         }
     
-        public function update(Request $request, $id){
+        public function update1(Request $request, $id){
 
             $incidente = Incidente::find($id);
             $incidente->estado = $request->input('estado');
+            $incidente->update();
+            //return view('/backoffice/painel');
+            //return redirect()->back()->with('status','OndeComer Updated Successfully');
+            return redirect()->route('painel');
+        }
+
+        public function update2(Request $request, $id){
+
+            $incidente = Incidente::find($id);
+            $incidente->estado = $request->input('estado1');
             $incidente->update();
             //return view('/backoffice/painel');
             //return redirect()->back()->with('status','OndeComer Updated Successfully');

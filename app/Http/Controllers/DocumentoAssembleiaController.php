@@ -40,13 +40,14 @@ class DocumentoAssembleiaController extends Controller
                 ]);
         
                 $fileModel = new DetalhesDocumentoAssembleium;
-        
+      
                 if($req->file()) {
                     $fileName = time().'_'.$req->file->getClientOriginalName();
                     $fileModel->titulo = $req->input('titulo');
                     $fileModel->id_documento_assembleia = DocumentosAssembleium::orderBy('id', 'desc')->first()->id;
     
                     $ano = date("Y",strtotime($req->input('data')));
+
                     $cats = CategoriaDocumentoAssembleium::all();
                     foreach($cats as $cat){
                       if($cat->id == $req->input('categoria')){

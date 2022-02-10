@@ -49,9 +49,9 @@
                                     <li><a href="{{ route('upload-docexec') }}">Executivo</a></li>
                                     <li><a href="{{ route('upload-docAssembleia') }}">Assembleia</a></li>
                                     <li><a href="{{ route('servicos-backoffice') }}">Servicos</a></li>
+                                    <li><a href="{{ route('incidentes')}}">Incidentes</a></li>
                                     <li><a href="">Antigos</a></li>
                                     <li><a href="">Funcionários</a></li>
-                                    <li><a href="">Atas</a></li>
                                     <li><a href="">Plano de atividades</a></li>
                                     <li><a href="">Avisos</a></li>
                                     <li><a href="">Contactos Rodapé</a></li>

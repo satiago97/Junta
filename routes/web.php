@@ -23,6 +23,11 @@ Route::get('/backoffice', function(){
     return view('backoffice/painel');
 })->name('painel'); 
 
+Route::get('/calendar', function(){
+    return view('calendar');
+})->name('calendar'); 
+
+
 
 Route::get('/imprensa', function(){
     return view('imprensa');
@@ -278,3 +283,17 @@ Route::get('/noticiasBackoffice', 'App\Http\Controllers\NoticiasController@index
 Route::get('/insereNoticias', 'App\Http\Controllers\NoticiasController@create')->name('insereNoticias');
 Route::resource('insertNoticia', 'App\Http\Controllers\NoticiasController');
 Route::delete('delete-noticiasBackoffice/{id}', ['as' => 'delete-noticiasBackoffice', 'uses' => 'App\Http\Controllers\NoticiasController@destroy']);
+
+
+//Routes Slider
+Route::get('/slider', 'App\Http\Controllers\SliderController@index')->name('slider');
+Route::resource('slide' , 'App\Http\Controllers\SliderController');
+Route::delete('delete-slide/{id}', ['as' => 'delete-slide', 'uses' => 'App\Http\Controllers\SliderController@destroy']);
+Route::get('edit-slide/{id}', ['as' => 'edit-slide', 'uses' => 'App\Http\Controllers\SliderController@edit']);
+Route::put('update-slide/{id}', ['as' => 'update-slide', 'uses' => 'App\Http\Controllers\SliderController@update']);
+
+
+//Routes Utilizadores
+Route::get('/utilizadores', 'App\Http\Controllers\UtilizadoresController@index')->name('utilizadores');
+Route::put('approve-user/{id}', ['as' => 'approve-user', 'uses' => 'App\Http\Controllers\UtilizadoresController@update1']);
+Route::put('reject-user/{id}', ['as' => 'reject-user', 'uses' => 'App\Http\Controllers\UtilizadoresController@update2']);

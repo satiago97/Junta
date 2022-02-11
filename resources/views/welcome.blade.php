@@ -5,55 +5,30 @@
         <section id="section0" class="slider-area"> 
             <div class="main-slider owl-theme owl-carousel"> 
                 <!-- Start Slingle Slide -->
-                <div class="single-slide item" style="background-image: url(/img/appGesautarquia.png)">
 
-
-                    <!-- <img src="img/slider/placehold.png"> -->
-
-                    <!-- Start Slider Content -->
-
-                        <div class="slider-content-area">  
-                                <div class="row">
-                                        <div class="slide-content-wrapper text-center">
-                                            <div class="slide-content">
-                                                <h2>App GESautarquia</h2>
-                                                <h3>A autarquia na palma da sua mão</h3>
-                                                <p>Reporte incidentes e sugestões<br>Aproxima a população da autarquia</p>
-
-                                                <a class="default-btn" href="https://play.google.com/store/apps/details?id=com.gesautarquia">Descarregue já</a>
-                                                <img class="classic" src="/img/new/icon.png">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                    </div>
-                    <!-- Start Slider Content -->
-                </div>
-                <!-- End Single Slide -->
-                <!-- Start Slingle Slide -->
-                <div class="single-slide item" style="background-image: url(/img/slider1.jpg)">
+                @foreach ($slider as $item)
+ 
+                <div class="single-slide item" style="background-image: url({{asset('/storage/Slider/'.$item->imagem)}})">
 
                     <!-- <img src="img/slider/bakery.jpg"> -->
                     <!-- Start Slider Content -->
-
                         <div class="slider-content-area">   
                                 <div class="row">
                                         <div class="slide-content-wrapper text-center">
                                             <div class="slide-content">
-                                                <h2>Balcão Virtual</h2>
-                                                <h3>Área do cidadão</h3>
-                                                <p>Já experimentou solicitar ou renovar licenças dos canídeos <br> pelo Balcão Virtual da Freguesia? É simples!</p>
-                                                <a class="default-btn" href="{{ route('register') }}">Registe-se e aceda aqui!</a>
+                                                <h2>{{$item->titulo}}</h2>
+                                                <h3>{{$item->subtitulo}}</h3>
+                                                <p>{{$item->descricao}}</p>
+                                                <a class="default-btn" href="{{$item->link}}">{{$item->textobotao}}</a>
                                                 <img class="classic" src="/img/new/icon.png">
 
                                             </div>
                                     </div>
                             </div>
                   </div>
-                  
-                </div>	
-                
-                
+                </div>       
+                  @endforeach
+               
              </div>
         </section>
 
@@ -203,38 +178,18 @@
         </section>
         
 
-        <section id="section2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12 ">
-                        <div class="maintext text-center">
-
-                            <img class="classic" src="/img/new/icon.png">
-                            
-                            <h2>Agenda de eventos</h2>
-                            <iframe src="https://calendar.google.com/calendar/embed?src=osaefixe%40gmail.com&ctz=Europe%2FLondon"  style="border: 0" width="600" height="300" frameborder="0" scrolling="no" ></iframe>
-                            </div> 
-                            
-                    </div>
-                </div>
-               
-            </div>
-        </section>
+    
    
-<!--
         <div class="container">
             <div class="banner">
                 <div class="content text-center">
-                <h2>Meteorologia</h2>
-                <br>
-                <a class="weatherwidget-io" href="https://forecast7.com/en/41d69n8d83/viana-do-castelo/" data-label_1="VIANA DO CASTELO" data-label_2="WEATHER" data-theme="original" >VIANA DO CASTELO WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+                    <img class="classic" src="/img/new/icon.png">
+                <h2>Agenda de Eventos</h2>
+                </div></div></div>
+                <div style="width:100%; height: 1300px">
+                <iframe src="{{url('calendar')}}" style="display: table;margin: 0 auto;width: 100vw; height:1300px;"></iframe>
                 </div>
-            </div>
-        </div>-->
-
+      
         <div class="container">
             <div class="banner">
                 <div class="content text-center">

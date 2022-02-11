@@ -106,6 +106,8 @@
                                     <li><a href="">Categorias</a></li>
                                 </ul>
                             </li>
+                            <li><a href="{{ route('slider') }}"><i class="fa fa-user-plus"></i><span>Slider</span></a></li>
+                            <li><a href="{{ route('utilizadores') }}"><i class="fa fa-user-plus"></i><span>Utilizadores</span></a></li>
                             <li><a href=""><i class="fa fa-plus-circle"></i> <span>SubMenus Dinâmicos</span></a></li>
                             <li><a href=""><i class="fa fa-users"></i> <span>Cidadãos</span></a></li>
                             <li><a href=""><i class="fa fa-book"></i> <span>Livro de reclamações</span></a></li>

@@ -1,3 +1,4 @@
+@if( auth()->check() )
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -171,3 +172,8 @@
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
 </body>
+@else
+<script>
+    window.location.href='http://127.0.0.1:8000/login';
+</script>
+@endif

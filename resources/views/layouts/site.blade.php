@@ -103,7 +103,7 @@
                                                      
                                             <!-- Collect the nav links, forms, and other content for toggling -->
                                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                            <ul class="nav navbar-nav navbar-right navBar">
+                                            <ul class="nav navbar-nav navbar-right navBar" style="margin-top: revert;">
                                                     <li class="nav-item"><a href="{{ route('welcome') }}" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Página Inicial <span class="sr-only">(current)</span></a></li>
                                                     <!-- Dropdown Freguesia-->
                                                     <li class="HOVER open">
@@ -227,6 +227,7 @@
 
         <!-- Adress Section End -->
         <!-- Footer Start -->
+        <hr>
         <footer class="footer-area">
             <div class="container main-footer">
                 

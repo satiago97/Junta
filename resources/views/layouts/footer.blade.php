@@ -1,3 +1,4 @@
+<hr>
 <footer class="footer-area">
             <div class="container main-footer">
                 

@@ -95,7 +95,7 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Painel de controlo</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="{{ route('welcome') }}">Home</a></li>
+                                <li><a href="{{ route('painel') }}">Home</a></li>
                                 <li><span>Onde Dormir</span></li>
                             </ul>
                         </div>

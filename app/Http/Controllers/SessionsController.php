@@ -17,6 +17,10 @@ class SessionsController extends Controller
             return back()->withErrors(['message' => 'O e-mail ou a password estão errados, tente outra vez!']);
         }
 
+        if(auth()->user()->estado != 1){
+            return back()->withErrors(['message' => 'O utilizador não foi aprovado, contacte o admin']);
+        }
+
         return redirect()->to('/backoffice');
     }
 

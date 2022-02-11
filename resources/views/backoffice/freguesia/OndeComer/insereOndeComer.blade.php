@@ -62,7 +62,7 @@
             color: white;
     display: block;
     position: relative;
-     width: 20%;
+     width: 30%;
     margin: 0 auto;
     height: 50px;
     border-radius: 25px;

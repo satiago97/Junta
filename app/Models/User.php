@@ -18,6 +18,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property string $email
  * @property Carbon|null $email_verified_at
  * @property string $password
+ *  @property string $estado
  * @property string|null $remember_token
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -42,7 +43,8 @@ class User extends Authenticatable
 		'email',
 		'email_verified_at',
 		'password',
-		'remember_token'
+		'remember_token',
+		'estado'
 	];
 
 	public function setPasswordAttribute($password)

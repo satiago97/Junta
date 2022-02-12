@@ -75,8 +75,17 @@
             <!-- page title area end -->
             <div class="main-content-inner">
                 
-                
-                
+                <div class="metabase" style="margin-top: 20px;">
+                <iframe
+                    src="http://localhost:3000/public/dashboard/038c7431-5e99-4652-937e-58c615281eb6"
+                    frameborder="0"
+                    width="100%"
+                    margin-top="20px"
+                    height="1000px"
+                    allowtransparency
+                ></iframe>
+                </div>
+     
                
          
         </div>

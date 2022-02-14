@@ -119,7 +119,7 @@
         <!-- Add CSRF Token -->
         @csrf
     <div class="form-group">
-        <h1>Adicionar Onde Comer</h1>
+        <h1>Adicionar Onde Dormir</h1>
     </div>
     <div class="form-group">
         <div class="row">

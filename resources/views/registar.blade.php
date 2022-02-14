@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/texto.css">
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <title>Sign in</title>
 </head>
 <style>
@@ -52,6 +53,13 @@
               <input class="un" type="email" id="email" name="email" placeholder="E-mail">
               <input class="un" type="password" id="password"  name="password" placeholder="Palavra-passe">
               <input class="un" type="password" id="password_confirmation" name="password_confirmation"  placeholder="Confirmar palavra-passe">
+              <p></p>
+              <span>{!! captcha_img() !!}</span>
+              <div class="form-group mb-4">
+                <input class="un" id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+              </div>
+             
+              
               <button style="cursor:pointer; margin:0 auto; display:block;" type="submit" class="button-62">Registar</button>
 
               @include('partials.formerrors')
@@ -70,4 +78,3 @@
 
 
 
- 

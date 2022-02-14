@@ -47,7 +47,8 @@ class IncidentesController extends Controller
     
             if($request->hasFile('file')){
                 $request->validate([
-                    'image'=>'mimes:jpeg,bmp,png'
+                    'image'=>'mimes:jpeg,bmp,png',
+                    'captcha' => 'required|captcha'
                 ]);
     
                 $request->file->store('incidentes', 'public');

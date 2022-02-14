@@ -132,6 +132,10 @@
                   <div id="mapForm"></div>
                    </div>            
               </div>
+              
+                    <span style="margin-left: 50px;">{!! captcha_img() !!}</span>
+                    <input class="un" id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+               
               <button style="cursor:pointer;" type="submit" class="button-62 posButton">Registar Incidente</button>
                 </form>
             </div>

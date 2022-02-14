@@ -64,6 +64,7 @@ final class Versions
   'guzzlehttp/promises' => '1.5.1@fe752aedc9fd8fcca3fe7ad05d419d32998a06da',
   'guzzlehttp/psr7' => '2.1.0@089edd38f5b8abba6cb01567c2a8aaa47cec4c72',
   'hamcrest/hamcrest-php' => 'v2.0.1@8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
+  'intervention/image' => '2.7.1@744ebba495319501b873a4e48787759c72e3fb8c',
   'jmikola/geojson' => '1.0.2@6ec3016cc0215667b7775f6ead7bd0337ad66eee',
   'justinrainbow/json-schema' => '5.2.11@2ab6744b7296ded80f8cc4f9509abbff393399aa',
   'laravel/framework' => 'v8.74.0@004ea195012d5132eca07a176a6e587c6a74815e',
@@ -75,6 +76,7 @@ final class Versions
   'league/flysystem' => '1.1.8@c995bb0c23c58c9813d081f9523c9b7bb496698e',
   'league/mime-type-detection' => '1.9.0@aa70e813a6ad3d1558fc927863d47309b4c23e69',
   'livewire/livewire' => 'v2.10.1@0d417b27791af09c79108eafd1344842f83a26ee',
+  'mews/captcha' => '3.2.7@c4dec4963ea19a89aaf679fac1921323dd7decd8',
   'mockery/mockery' => '1.4.4@e01123a0e847d52d186c5eb4b9bf58b0c6d00346',
   'monolog/monolog' => '2.3.5@fd4380d6fc37626e2f799f29d91195040137eba9',
   'nesbot/carbon' => '2.54.0@eed83939f1aed3eee517d03a33f5ec587ac529b5',
@@ -173,7 +175,7 @@ final class Versions
   'sebastian/type' => '2.3.4@b8cd8a1c753c90bc1a0f5372170e3e489136f914',
   'sebastian/version' => '3.0.2@c6c1022351a901512170118436c764e473f6de8c',
   'theseer/tokenizer' => '1.2.1@34a41e998c2183e22995f158c581e7b5e755ab9e',
-  'laravel/laravel' => 'dev-master@40f1c20faf1d82817e70e331989938874437d693',
+  'laravel/laravel' => 'dev-master@656486d620eb92c022140097103848fdf1e313f0',
 );
 
     private function __construct()
